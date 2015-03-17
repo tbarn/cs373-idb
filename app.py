@@ -1,5 +1,5 @@
 #!flask/bin/python
-from flask import Flask, jsonify, abort
+from flask import Flask, jsonify, abort, make_response, render_template
 
 app = Flask(__name__)
 
@@ -106,56 +106,62 @@ ingredients = [
         "name": "sushi rice", 
         "description": "Sushi-meshi is a preparation of white, short-grained, Japanese rice mixed with a dressing consisting of rice vinegar, sugar, salt, and occasionally kombu and sake.", 
         "image_URL": "http://cdn2.norecipes.com/wp-content/uploads/2012/06/sushi-rice-8.jpg?e77857", 
-        "youtube_URL": "", 
+        "youtube_URL": "http://www.youtube.com/embed/tNcs3mf1uTU", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
     },
     {
         "id": 2, 
         "name": "avocado", 
-        "description": "", 
-        "image_URL": "", 
-        "youtube_URL": "", 
+        "description": "like a herd of crawfish tickling your ears with their mandibles", 
+        "image_URL": "http://www.shooter-szene.de/content/wp-content/uploads/2014/04/gabe-newell-steam-valve.jpg", 
+        "youtube_URL": "https://www.youtube.com/embed/tNcs3mf1uTU", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
     }
 ]
 
-@app.route('/todo/api/v1.0/cuisines', methods=['GET'])
+@app.route('/flask/todo/api/v1.0/cuisines', methods=['GET'])
 def get_cuisines():
     return jsonify({'cuisines': cuisines})
 
-@app.route('/todo/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
+@app.route('/flask/todo/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
 def get_cuisine(cuisine_id):
     cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
     if len(cuisine) == 0:
         abort(404)
     return jsonify({'cuisine': cuisine[0]})
 
-
-
-@app.route('/todo/api/v1.0/recipes', methods=['GET'])
+@app.route('/flask/todo/api/v1.0/recipes', methods=['GET'])
 def get_recipes():
     return jsonify({'recipes': recipes})
 
-@app.route('/todo/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
+@app.route('/flask/todo/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
 def get_recipe(recipe_id):
     recipe = [recipe for recipe in recipes if recipe['id'] == recipe_id]
     if len(recipe) == 0:
         abort(404)
     return jsonify({'recipe': recipe[0]})
-@app.route('/todo/api/v1.0/ingredients', methods=['GET'])
+
+@app.route('/flask/todo/api/v1.0/ingredients', methods=['GET'])
 def get_ingredients():
     return jsonify({'ingredients': ingredients})
 
-@app.route('/todo/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
+@app.route('/flask/todo/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
 def get_ingredient(ingredient_id):
     ingredient = [ingredient for ingredient in ingredients if ingredient['id'] == ingredient_id]
     if len(ingredient) == 0:
         abort(404)
     return jsonify({'ingredient': ingredient[0]})
 
+@app.route('/flask/ingredient/<int:ingredient_id>', methods=['GET'])
+def get_ingredient_template(ingredient_id):
+    ingredient1 = ingredients[ingredient_id - 1]
+    #img1 = ingredients[ingedient_id].image_URL
+    #ingredientVideo = ingredients[ingedient_id].video_URL
+    return render_template("ingredient.html",
+       ingredient=ingredient1)
+    #return make_response(home)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
-
