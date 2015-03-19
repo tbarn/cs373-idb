@@ -1,3 +1,4 @@
+{% block body %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,24 +45,24 @@
   <div id='info' class='jumbotron'>
     <div class='row'>
       <div class='col-md-4 text-center'>
-        <img src="/static/mexican_peppers.jpeg" class="img-rounded" alt="Buffet" width="250" height="236"> 
+        <img src="{{ index.peppers }}" class="img-rounded" alt="Buffet" width="250" height="236"> 
         <h2>Ingredients</h2>
         <p>
-          <a href='/flask/ingredients/'>Ingredients</a>
+          <a href='/ingredients/'>Ingredients</a>
         </p>
       </div>
       <div class='col-md-4 text-center'>
-        <img src="/static/french_bagel.jpeg" class="img-rounded" alt="Buffet" width="250" height="236"> 
+        <img src="{{ index.bagel }}" class="img-rounded" alt="Buffet" width="250" height="236"> 
         <h2>Recipes</h2>
         <p>
-          <a href='flask/recipes/'>Recipes</a>
+          <a href='/cuisines/'>Recipes</a>
         </p>
       </div>
       <div class='col-md-4 text-center'>
-       <img src="/static/pisa_tower.jpeg" class="img-rounded" alt="Buffet" width="250" height="236"> 
+       <img src="{{ index.leaning }}" class="img-rounded" alt="Buffet" width="250" height="236"> 
         <h2>Cuisines</h2>
         <p>
-          <a href='/flask/cuisines/'>Cuisines</a>
+          <a href='/cuisines/'>Cuisines</a>
         </p>
       </div>
     </div>
@@ -107,3 +108,4 @@
     <script src=/static/js/bootstrap.min.js></script>
   </body>
 </html>
+{% endblock %}
