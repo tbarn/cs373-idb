@@ -121,33 +121,33 @@ ingredients = [
     }
 ]
 
-@app.route('/flask/todo/api/v1.0/cuisines', methods=['GET'])
+@app.route('/flask/api/v1.0/cuisines', methods=['GET'])
 def get_cuisines():
     return jsonify({'cuisines': cuisines})
 
-@app.route('/flask/todo/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
+@app.route('/flask/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
 def get_cuisine(cuisine_id):
     cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
     if len(cuisine) == 0:
         abort(404)
     return jsonify({'cuisine': cuisine[0]})
 
-@app.route('/flask/todo/api/v1.0/recipes', methods=['GET'])
+@app.route('/flask/api/v1.0/recipes', methods=['GET'])
 def get_recipes():
     return jsonify({'recipes': recipes})
 
-@app.route('/flask/todo/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
+@app.route('/flask/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
 def get_recipe(recipe_id):
     recipe = [recipe for recipe in recipes if recipe['id'] == recipe_id]
     if len(recipe) == 0:
         abort(404)
     return jsonify({'recipe': recipe[0]})
 
-@app.route('/flask/todo/api/v1.0/ingredients', methods=['GET'])
+@app.route('/flask/api/v1.0/ingredients', methods=['GET'])
 def get_ingredients():
     return jsonify({'ingredients': ingredients})
 
-@app.route('/flask/todo/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
+@app.route('/flask/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
 def get_ingredient(ingredient_id):
     ingredient = [ingredient for ingredient in ingredients if ingredient['id'] == ingredient_id]
     if len(ingredient) == 0:
