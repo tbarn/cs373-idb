@@ -15,8 +15,8 @@ cuisines = [
         "name": "Japanese", 
         "description": "The Japanese diet consists principally of rice; fresh, lean seafood; and pickled or boiled vegetables.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/a/a5/Tempura%2C_sashimi%2C_pickles%2C_ris_og_misosuppe_%286289116752%29.jpg", 
-        "youtube_URL": "", 
-        "map": "", 
+        "youtube_URL": "https://www.youtube.com/watch?v=nxxx0-CgQ0o", 
+        "map": "https://www.google.com/maps/place/Japan/@37.4900318,136.4664008,6z/data=!3m1!4b1!4m2!3m1!1s0x34674e0fd77f192f:0xf54275d47c665244", 
         "ingredients": [
         {"id": 1, "name": "sushi rice"}, 
         {"id": 2, "name": "avocado"}, 
@@ -31,9 +31,9 @@ cuisines = [
         "id": 2, 
         "name": "French", 
         "description": "Meals range from the very basic, such as the traditional baguette plus cheese plus inexpensive wine, to very elaborate affairs than can involve a dozen courses and different wines consumed over several hours.", 
-        "image_URL": "", 
-        "youtube_URL": "", 
-        "map": "", 
+        "image_URL": "http://www.henit.ie/wp-content/uploads/2013/12/french_cuisine.jpeg", 
+        "youtube_URL": "https://www.youtube.com/watch?v=B7EgCPAca_0", 
+        "map": "https://www.google.com/maps/place/France/@46.71109,1.7191036,5z/data=!3m1!4b1!4m2!3m1!1s0xd54a02933785731:0x6bfd3f96c747d9f7", 
         "ingredients": [
         {"id": 7, "name": "thinly sliced onions"}, 
         {"id": 8, "name": "sugar"}, 
