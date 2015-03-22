@@ -214,5 +214,9 @@ def get_cuisine_template(cuisine_id):
     return render_template("cuisine.html",
        cuisine=cuisine1)
 
+@app.errorhandler(404)
+def error_404(error):
+    return make_response(jsonify({'error': 'Not found', 'error_code': 404}), 404)
+
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
