@@ -164,6 +164,10 @@ def get_ingredient(ingredient_id):
 def get_index_template():
     return render_template("index.html",index=index)
 
+@app.route('/team.html', methods=['GET'])
+def get_team_template():
+    return render_template("team.html")
+
 @app.route('/ingredients.html', methods=['GET'])
 def get_ingredients_template():
     return render_template("ingredients.html", ingredients=ingredients)
