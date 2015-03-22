@@ -169,7 +169,7 @@ def get_ingredients_template():
     return render_template("ingredients.html", ingredients=ingredients)
 
 @app.route('/recipes.html', methods=['GET'])
-def get_ingredients_template():
+def get_recipes_template():
     return render_template("recipes.html", recipes=recipes)
 
 @app.route('/cuisines.html', methods=['GET'])
