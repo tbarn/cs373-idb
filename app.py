@@ -124,7 +124,23 @@ ingredients = [
         "youtube_URL": "https://www.youtube.com/embed/tNcs3mf1uTU", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
-    }
+    },
+    {
+		"id": 3, 
+		"name": "imitation crab meat", 
+        "description": "Imitation crab meat is processed seafood made of finely pulverized white fish flesh (surimi), shaped and cured to resemble leg meat of snow crab or Japanese spider crab, widely used in America as a replacement for 100% crab meat in many dishes - popularly used in American sushi.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Kanikama.jpg", 
+        "recipes": [{"id": 1, "name": "California Roll"}], 
+        "cuisines": [{"id": 1, "name": "Japanese"}]
+	},
+    {
+		"id": 4, 
+        "name": "cucumber", 
+        "description": "Long cylindrical green-skinned fruit with edible seeds and soft white flesh. Smaller cucumbers (kirbys) are used for pickling.", 
+          "image_URL": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Cucumber_and_cross_section.jpg", 
+        "recipes": [{"id": 1, "name": "California Roll"}], 
+        "cuisines": [{"id": 1, "name": "Japanese"}]
+	}
 ]
 
 @app.route('/api/v1.0/cuisines', methods=['GET'])
