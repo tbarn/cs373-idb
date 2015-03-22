@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<!--{% block title %}Cuisines{% endblock %}-->
+{% block content %}
+<div  class='container-fluid'>
+  <div class='container'>
+  <div id='info' class='jumbotron'>
+    <div class='row'>
+      {% for cuisine in cuisines %}
+      <div class='col-md-4 text-center'>
+        <img src="{{ cuisine.image_URL }}" class="img-rounded" alt="Buffet" width="250" height="236"> 
+        <h2>{{ cuisine.name }}</h2>
+        <p>
+          <a href='/flask/ingredient/{{ cuisine.id }}'>{{ cuisine.name }}</a>
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+   </div>
+  </div>
+</div>
+{% endblock %}

@@ -168,11 +168,31 @@ def get_index_template():
 def get_ingredients_template():
     return render_template("ingredients.html", ingredients=ingredients)
 
+@app.route('/recipes.html', methods=['GET'])
+def get_ingredients_template():
+    return render_template("recipes.html", recipes=recipes)
+
+@app.route('/cuisines.html', methods=['GET'])
+def get_cuisines_template():
+    return render_template("cuisines.html", cuisines=cuisines)
+
 @app.route('/ingredient/<int:ingredient_id>', methods=['GET'])
 def get_ingredient_template(ingredient_id):
     ingredient1 = ingredients[ingredient_id - 1]
     return render_template("ingredient.html",
        ingredient=ingredient1)
+
+@app.route('/recipe/<int:recipe_id>', methods=['GET'])
+def get_recipe_template(recipe_id):
+    recipe1 = recipes[recipe_id - 1]
+    return render_template("recipe.html",
+       recipe=recipe1)
+
+@app.route('/cuisine/<int:cuisine_id>', methods=['GET'])
+def get_cuisine_template(cuisine_id):
+    cuisine1 = cuisines[cuisine_id - 1]
+    return render_template("cuisine.html",
+       cuisine=cuisine1)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
