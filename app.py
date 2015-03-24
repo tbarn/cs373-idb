@@ -435,7 +435,6 @@ ingredients = [
         "name": "sushi rice", 
         "description": "Sushi-meshi is a preparation of white, short-grained, Japanese rice mixed with a dressing consisting of rice vinegar, sugar, salt, and occasionally kombu and sake.", 
         "image_URL": "http://cdn2.norecipes.com/wp-content/uploads/2012/06/sushi-rice-8.jpg?e77857", 
-        "youtube_URL": "http://www.youtube.com/embed/tNcs3mf1uTU", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
     },
@@ -444,7 +443,6 @@ ingredients = [
         "name": "avocado", 
         "description": "like a herd of crawfish tickling your ears with their mandibles", 
         "image_URL": "http://www.shooter-szene.de/content/wp-content/uploads/2014/04/gabe-newell-steam-valve.jpg", 
-        "youtube_URL": "https://www.youtube.com/embed/tNcs3mf1uTU", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
     },
@@ -460,10 +458,450 @@ ingredients = [
 		"id": 4, 
         "name": "cucumber", 
         "description": "Long cylindrical green-skinned fruit with edible seeds and soft white flesh. Smaller cucumbers (kirbys) are used for pickling.", 
-          "image_URL": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Cucumber_and_cross_section.jpg", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Cucumber_and_cross_section.jpg", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
-	}
+	},
+    {
+        "id": 5, 
+        "name": "nori", 
+        "description": "Nori is the Japanese name for edible seaweed and is commonly used as a wrap for sushi and onigiri.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Nori.jpg/969px-Nori.jpg", 
+        "recipes": [{"id": 1, "name": "California Roll"}], 
+        "cuisines": [{"id": 1, "name": "Japanese"}]
+    },
+    {
+        "id": 6, 
+        "name": "sesame seeds", 
+        "description": "Sesame seed is one of the first recorded seasonings. It grows widely in India and Asia. These tiny seeds come in shades of brown, red and black, but the most common color is a pale grayish-ivory. Sesame seeds have a nutty, sweet aroma with a milk-like, buttery taste.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/3/38/Sesame_seeds.JPG", 
+        "recipes": [
+        {"id": 1, "name": "California Roll"},
+        {"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisines": [
+        {"id": 1, "name": "Japanese"},
+        {"id": 9, "name": "Korean"}]
+    },
+    {
+        "id": 7, 
+        "name": "thinly sliced onions", 
+        "description": "An evenly sliced onion is a great addition to many dishes and can entirely change the texture and flavor when cut to a specific thickness.", 
+        "image_URL": "http://steamykitchen.com/wp-content/uploads/2012/08/how-to-slice-paper-thin-slivers-onion-video-8981.jpg", 
+        "recipes": [{"id": 2, "name": "French Onion Soup"}], 
+        "cuisines": [{"id": 2, "name": "French"}]
+    },
+    {
+        "id": 8, 
+        "name": "sugar", 
+        "description": "Sugar cane and sugar beets are the common sources of this pentiful sweetener, which also lends tenderness to doughs, stability to mixtures, browning properties to baked goods and perservative qualities in large quantities. Granulated or white sugar is the common form, though superfine (known as castor) dissolves better in baking. Confectioner's or powdered sugar is often used decoratively, as are sugar crystals or decorating suar. Brown sugar is simply white sugar combined with molasses, not be be confused with raw sugar, the residue left after sugarcane has been processed ro remove the molasses and refine the sugar crystals.", 
+        "image_URL": "http://a.abcnews.com/images/Health/gty_sugar_jtm_130918_16x9_608.jpg", 
+        "recipes": [
+        {"id": 2, "name": "French Onion Soup"}, 
+        {"id": 6, "name": "Pad Thai"},
+        {"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisines": [
+        {"id": 2, "name": "French"}, 
+        {"id": 6, "name": "Thai"},
+        {"id": 9, "name": "Korean"}]
+    },
+    {
+        "id": 9, 
+        "name": "pepper", 
+        "description": "The world's most popular spice, a berry grown in grapelike clusters on the pepper plant (a climbing vine native to India and Indonesia. The berry is processed to produce three basic types: black, white, and green. Black is the most common; when picken the berry is not quite ripe, then dried until it shrivels and the skin turns dark brown to black. Black is the strongest (slightly hot with a hint of sweetness) flavor of the three. ", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/d/dd/Black_Pepper_Grains.jpg", 
+        "recipes": [
+        {"id": 2, "name": "French Onion Soup"},
+        {"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisines": [
+        {"id": 2, "name": "French"},
+        {"id": 9, "name": "Korean"}]
+    },
+    {
+        "id": 10, 
+        "name": "vegetable oil", 
+        "description": "Many vegetable oils are consumed directly, or indirectly as ingredients in food – a role that they share with some animal fats, including butter and ghee. Secondly, oils can be heated and used to cook other foods.", 
+        "image_URL": "http://static.jmslinks.com/WebService/ProdAdminImage.ashx?id=214", 
+        "recipes": [
+        {"id": 2, "name": "French Onion Soup"}, 
+        {"id": 6, "name": "Pad Thai"}], 
+        "cuisines": [
+        {"id": 2, "name": "French"}, 
+        {"id": 6, "name": "Thai"}]
+    },
+    {
+        "id": 11, 
+        "name": "beef broth", 
+        "description": "Broth is a liquid food preparation, typically consisting of water, in which bones, meat, fish, cereal grains, or vegetables have been simmered. Broth is used as a basis for other edible liquids such as soup, gravy, or sauce. It can be eaten alone or with garnish.", 
+        "image_URL": "http://www.bonappetit.com/wp-content/uploads/2008/08/ttar_beefbroth_h.jpg", 
+        "recipes": [{"id": 2, "name": "French Onion Soup"}], 
+        "cuisines": [{"id": 2, "name": "French"}]
+    },
+    {
+        "id": 12, 
+        "name": "sliced French bread", 
+        "description": "A baguette is a long thin loaf of French bread that is commonly made from basic lean dough. The baguette is distinguishable by its length and crisp crust and is often considered one of the symbols of French culture.", 
+        "image_URL": "http://hopefulhomemaker.com/wp/wp-content/uploads/2010/01/IMG_7877-Large.jpg",
+        "recipes": [{"id": 2, "name": "French Onion Soup"}], 
+        "cuisines": [{"id": 2, "name": "French"}]
+    },
+    {
+        "id": 13, 
+        "name": "shredded swiss cheese", 
+        "description": "Swiss cheese is a mild cheese made from cow's milk and has a firmer texture than baby Swiss. The flavor is mild, sweet and nut-like. Swiss cheese is known for being shiny, pale yellow, and having large holes (called eyes) resulting from carbon dioxide released during the maturation process.", 
+        "image_URL": "http://wildflourskitchen.com/wp-content/uploads/2015/02/swiss-cheese-shredded.jpg", 
+        "recipes": [{"id": 2, "name": "French Onion Soup"}], 
+        "cuisines": [{"id": 2, "name": "French"}]
+    },
+    {
+        "id": 14, 
+        "name": "extra firm tofu", 
+        "description": "A bean curd made from coagulating soymilk with salts or acids and pressing the curds to remove water and form into a block. Tofu has very little flavor and absorbs the flavors of the other ingredients. Regular tofu is not fermented and does not have bacteria and/or molds added as do dairy cheeses. Can be used instead of meat in vegetarian and vegan dishes, such as breakfast or other burritos, chili, enchiladas, lasagna, pates, salads, sandwiches, soups, on shish kebabs with vegetables and mushrooms, and stir fries, etc. Can also be scrambled with turmeric and/or nutritional yeast and other spices for a taste, appearance and texture similar to scrambled eggs.", 
+        "image_URL": "http://pad1.whstatic.com/images/thumb/c/c2/Cook-Extra-Firm-Tofu-Step-2.jpg/670px-Cook-Extra-Firm-Tofu-Step-2.jpg", 
+        "recipes": [{"id": 3, "name": "Tofu Lo-Mein"}], 
+        "cuisines": [{"id": 3, "name": "Chinese"}]
+    }, 
+    {
+        "id": 15, 
+        "name": "olive oil", 
+        "description": "Olive oil is the main cooking oil in countries surrounding the Mediterranean Sea. It is also used with foods to be eaten cold. If uncompromised by heat, the flavor is stronger. It also can be used for sautéing.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/1/10/Olives_in_olive_oil.jpg", 
+        "recipes": [
+        {"id": 3, "name": "Tofu Lo-Mein"}, 
+        {"id": 4, "name": "Spinach Garlic Pasta"}], 
+        "cuisines": [
+        {"id": 3, "name": "Chinese"}, 
+        {"id": 4, "name": "Italian"}]
+    }, 
+    {
+        "id": 16, 
+        "name": "ramen noodles", 
+        "description": "Ramen is a Japanese noodle soup dish. It consists of Chinese-style wheat noodles served in broth. The term ramen is mostly used in North America to refer to instant noodles, a precooked and usually dried noodle block.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/a/a8/Fresh_ramen_noodle_001.jpg",
+        "recipes": [{"id": 3, "name": "Tofu Lo-Mein"}], 
+        "cuisines": [{"id": 3, "name": "Chinese"}]
+    }, 
+    {
+        "id": 17, 
+        "name": "frozen stir-fry vegetables", 
+        "description": "Frozen vegetables are commercially packaged and sold in supermarkets. They have a very long shelf life when kept in a freezer and may be more economical to purchase than their fresh counterparts.", 
+        "image_URL": "http://www.mccain.com.au/resources.ashx/Products/218/ProductImage/15957480D2E1E945B1271B50F28C4BD1/87638_StirfrySupreme1kg.png", 
+        "recipes": [{"id": 3, "name": "Tofu Lo-Mein"}], 
+        "cuisines": [{"id": 3, "name": "Chinese"}]
+    }, 
+    {
+        "id": 18, 
+        "name": "water", 
+        "description": "Boiling is the method of cooking food in boiling water", 
+        "image_URL": "http://www.seriouseats.com/images/20100813-boiling-water-primary.jpg", 
+        "recipes": [{"id": 3, "name": "Tofu Lo-Mein"}], 
+        "cuisines": [{"id": 3, "name": "Chinese"}]
+    }, 
+    {
+        "id": 19, 
+        "name": "soy sauce", 
+        "description": "Soy sauce is a staple condiment and ingredient throughout all of Asia. Produced for thousands of years, soy sauce is a salty, brown liquid made from fermented soy beans mixed with some type of roasted grain (wheat, barley, or rice are common), injected with a special yeast mold, and liberally flavored with salt. After being left to age for several months, the mixture is strained and bottled.", 
+        "image_URL": "http://www.opposingviews.com/sites/default/files/featured_image/soy.jpg", 
+        "recipes": [
+        {"id": 3, "name": "Tofu Lo-Mein"},
+        {"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisines": [
+        {"id": 3, "name": "Chinese"},
+        {"id": 9, "name": "Korean"}]
+    },
+    {
+        "id": 20, 
+        "name": "angel hair pasta", 
+        "description": "Capellini (literally 'little hairs') is a very thin variety of Italian pasta. Like spaghetti, it is rod-shaped, in the form of long strands.", 
+        "image_URL": "http://www.finecooking.com/assets/uploads/posts/5024/ING-angel-hair-pasta_sql.jpg", 
+        "recipes": [{"id": 4, "name": "Spinach Garlic Pasta"}], 
+        "cuisines": [{"id": 4, "name": "Italian"}]
+    }, 
+    {
+        "id": 21, 
+        "name": "minced garlic", 
+        "description": "Garlic is a very popular cooking ingredient for this very reason and is widely used as a seasoning or condiment in most cultures around the globe. Due to its strong taste and flavor, a little garlic goes a long way in most recipes.", 
+        "image_URL": "http://p-fst1.pixstatic.com/5069ee0adbd0cb3061000daa._w.1500_s.fit_.jpg", 
+        "recipes": [
+        {"id": 4, "name": "Spinach Garlic Pasta"},
+        {"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisines": [
+        {"id": 4, "name": "Italian"},
+        {"id": 9, "name": "Korean"}]
+    }, 
+    {
+        "id": 22, 
+        "name": "frozen chopped spinach, thawed", 
+        "description": "Frozen vegetables are commercially packaged and sold in supermarkets. They have a very long shelf life when kept in a freezer and may be more economical to purchase than their fresh counterparts.", 
+        "image_URL": "http://www.gianteagle.com/ProductImages/PRODUCT_NODE_729/14500001900.jpg", 
+        "recipes": [{"id": 4, "name": "Spinach Garlic Pasta"}], 
+        "cuisines": [{"id": 4, "name": "Italian"}]
+    }, 
+    {
+        "id": 23, 
+        "name": "biscuit baking mix", 
+        "description": "A multi-purpose mix made up of flour, sugar, salt, vegetable shortening and baking soda.", 
+        "image_URL": "http://hostedmedia.reimanpub.com/TOH/Images/Photos/37/300x300/exps22167_TH2379800B05_07_3b.jpg", 
+        "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
+        "cuisine": [{"id": 5, "name": "American"}]
+    }, 
+    {
+        "id": 24, 
+        "name": "milk", 
+        "description": "Milk has been used for human consumption for thousands of years. Today cow's milk is one of the most popular animal milks consumed by humans. Around the world, people drink the milk of many other animals including camels, goats, llamas, reindeer, sheep and water buffalo. Milk is available in many varieties. Raw milk has not been pastuerized, and is usually available in natural food stores. Whole milk is the milk as it came from the cow and contains about 3.5% milk fat. Low-fat milk is available in two types, 2% and 1%. The 1% and 2% designations refer to the percent of fat by weight that the milk contains.. Nonfat or skim milk must by law contain less than .5% milk fat.", 
+        "image_URL": "http://en.wikipedia.org/wiki/Milk#/media/File:Milk_glass.jpg", 
+        "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
+        "cuisine": [{"id": 5, "name": "American"}]
+    }, 
+    {
+        "id": 25, 
+        "name": "chicken broth", 
+        "description": "Broth is a liquid food preparation, typically consisting of water, in which bones, meat, fish, cereal grains, or vegetables have been simmered. Broth is used as a basis for other edible liquids such as soup, gravy, or sauce. It can be eaten alone or with garnish.", 
+        "image_URL": "http://www.campbellsoup.com/Images/products/10880.png", 
+        "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
+        "cuisine": [{"id": 5, "name": "American"}]
+    }, 
+    {
+        "id": 26, 
+        "name": "chicken", 
+        "description": "Chicken is the most common type of poultry in the world and is prepared as food in a wide variety of ways, varying by region and culture. The prevalence of chickens is due to their being almost completely edible, and the ease of raising them.", 
+        "image_URL": "http://p-fst1.pixstatic.com/5069f3d6d9127e30f0000bfc._w.1500_s.fit_.jpg", 
+        "recipes": [
+        {"id": 5, "name": "Chicken and Dumplings"},
+        {"id": 6, "name": "Pad Thai"},
+        {"id": 7, "name": "Chicken Quesadilla"}], 
+        "cuisine": [
+        {"id": 5, "name": "American"},
+        {"id": 6, "name": "Thai"},
+        {"id": 7, "name": "Mexican"}]
+    }, 
+    {
+        "id": 27, 
+        "name": "rice noodles", 
+        "description": "Rice noodles are noodles that are made from rice. Their principal ingredients are rice flour and water. Rice noodles are most commonly used in the cuisines of East and Southeast Asia, and are available fresh, frozen, or dried, in various shapes and thicknesses.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Reisnudeln.JPG", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    }, 
+    {
+        "id": 28, 
+        "name": "butter", 
+        "description": "Butter is a dairy product made by churning fresh or fermented cream or milk, to separate the butterfat from the buttermilk. It is generally used as a spread and a condiment, as well as in cooking, such as baking, sauce making, and pan frying. Butter consists of butterfat, milk proteins and water and is most frequently made from cows' milk", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/f/fd/Western-pack-butter.jpg", 
+        "recipes": [
+        {"id": 6, "name": "Pad Thai"},
+        {"id": 10, "name": "Persian Rice"}], 
+        "cuisine": [
+        {"id": 6, "name": "Thai"},
+        {"id": 10, "name": "Persian"}]
+    }, 
+    {
+        "id": 29, 
+        "name": "eggs", 
+        "description": "The egg most often consumed by humans is the chicken egg, though duck, goose and other fowl are available in some areas. Chicken eggs are widely used in many types of dishes, both sweet and savory, including many baked goods. Some of the most common preparation methods include scrambled, fried, hard-boiled, soft-boiled, omelettes and pickled. They can also be eaten raw.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/White-%26-Brown-Eggs.jpg", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    }, 
+    {
+        "id": 30, 
+        "name": "white wine vinegar", 
+        "description": "Wine vinegar is made from wine and is the most commonly used vinegar in Southern and Central Europe. As with wine, there is a considerable range in quality. Better-quality wine vinegars are matured in wood for up to two years, and exhibit a complex, mellow flavor. Wine vinegar tends to have a lower acidity than white or cider vinegars. More expensive wine vinegars are made from individual varieties of wine, such as champagne, sherry, or pinot gris.", 
+        "image_URL": "http://muscofood.com/images/products/2204/original.jpg", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    }, 
+    {
+        "id": 31, 
+        "name": "fish sauce", 
+        "description": "Fish sauce is an amber-coloured liquid extracted from the fermentation of fish with sea salt. It is used as a condiment in various cuisines.", 
+        "image_URL": "http://www.finecooking.com/assets/uploads/posts/5043/ING-asian-fish-sauce_sql.jpg", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    }, 
+    {
+        "id": 32, 
+        "name": "crushed red pepper", 
+        "description": "Crushed red pepper or red pepper flakes is a condiment consisting of dried and crushed red chili peppers.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/4/45/Redchiliflakes.jpg", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    }, 
+    {
+        "id": 33, 
+        "name": "bean sprouts", 
+        "description": "Bean sprouts are a common ingredient, especially in Eastern Asian cuisine, made from sprouting beans.", 
+        "image_URL": "http://barfblog.com/wp-content/uploads/2014/04/Bean_sprouts.jpg", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    }, 
+    {
+        "id": 34, 
+        "name": "crushed peanuts", 
+        "description": "Peanuts are a flavorful and important ingredient in many dishes, particularly in Asian cuisine.", 
+        "image_URL": "https://nuts.com/images/auto/801x534/assets/8e1399aa8143229d.jpg", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    }, 
+    {
+        "id": 35, 
+        "name": "green onions", 
+        "description": "Scallions or green onions may be cooked or used raw as a part of salads, salsas, or Asian recipes. Diced scallions are used in soup, noodle and seafood dishes, as well as sandwiches, curries or as part of a stir fry.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/4/41/Spring_onion.jpg", 
+        "recipes": [
+        {"id": 6, "name": "Pad Thai"},
+        {"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisine": [
+        {"id": 6, "name": "Thai"},
+        {"id": 9, "name": "Korean"}]
+    }, 
+    {
+        "id": 36, 
+        "name": "lemon", 
+        "description": "A very sour citrus fruit similar to limes with the same refreshing smell and tart flavor, but generally larger. The whole fruit can be used (juice, skin, and less often the pulp).", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Lemon-Whole-Split.jpg", 
+        "recipes": [{"id": 6, "name": "Pad Thai"}], 
+        "cuisine": [{"id": 6, "name": "Thai"}]
+    },
+    {
+        "id": 37, 
+        "name": "refrigerated fresh salsa", 
+        "description": "Salsa is the Spanish term for sauce, and in English-speaking countries usually refers to the sauces typical of Mexican cuisine known as salsa picante, particularly those used as dips. They are often tomato-based, and they are typically piquant, ranging from mild to extremely hot.", 
+        "image_URL": "http://sweetpeaskitchen.com/wp-content/uploads/2013/09/Thick-and-Chunky-Salsa1.jpg", 
+        "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
+        "cuisine": [{"id": 7, "name": "Mexican"}]
+    },
+    {
+        "id": 38, 
+        "name": "canned black beans, rinsed drained", 
+        "description": "The black turtle bean, or simply called black bean, has a dense, meaty texture, which makes it popular in vegetarian dishes, such as frijoles negros and the Mexican-American black bean burrito.", 
+        "image_URL": "http://www.rosarita.com/images/product-details/canned-black-beans.png", 
+        "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
+        "cuisine": [{"id": 7, "name": "Mexican"}]
+    },
+    {
+        "id": 39, 
+        "name": "chopped pickled jalapeno pepper", 
+        "description": "Pickled jalapeños are often served hot or cold on top of nachos, which are tortilla chips with melted cheese on top, a traditional Tex-Mex dish.", 
+        "image_URL": "http://www.simplyscratch.com/wp-content/uploads/2013/05/Easy-Homemade-Pickled-Jalapenos-www.SimplyScratch.com_-620x415.jpg", 
+        "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
+        "cuisine": [{"id": 7, "name": "Mexican"}]
+    },
+    {
+        "id": 40, 
+        "name": "flour tortillas", 
+        "description": "A flour tortilla is a type of soft, thin flatbread made from finely ground wheat flour. Flour tortillas are commonly prepared with meat, mashed potatoes, cheese and other ingredients to make dishes such as tacos, quesadillas and burritos (a dish originating in northern Mexico).", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/5/56/NCI_flour_tortillas.jpg", 
+        "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
+        "cuisine": [{"id": 7, "name": "Mexican"}]
+    },
+    {
+        "id": 41, 
+        "name": "shredded Monterey Jack cheese", 
+        "description": "Monterey Jack (sometimes shortened simply to Jack cheese) is an American semihard cheese, customarily pale yellow, made using cow's milk.", 
+        "image_URL": "http://www.everydaybites.com/wp-content/uploads/2010/07/IMG_8584.jpg", 
+        "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
+        "cuisine": [{"id": 7, "name": "Mexican"}]
+    },
+    {
+        "id": 42, 
+        "name": "peeled and deveined large shrimp", 
+        "description": "Shrimp and prawn are important types of seafood that are consumed worldwide. Shrimp and prawns are versatile ingredients, and are often used as an accompaniment to fried rice. Common methods of preparation include baking, boiling, frying and grilling.", 
+        "image_URL": "http://www.shrimpdelight.com/images/16-20%20and%2021-25%20Peeled%20&%20Devained%20Tail-On%20Raw.JPG", 
+        "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
+        "cuisine": [{"id": 8, "name": "Indian"}]
+    },
+    {
+        "id": 43, 
+        "name": "plain yogurt", 
+        "description": "Yogurt is a food produced by bacterial fermentation of milk. Consistency can range from very thick and creamy (Greek and Turkish yoghurt) to almost fat-free and thin.", 
+        "image_URL": "http://www.womenshealthmag.com/files/wh6_uploads/images/chobani-yogurt_0.jpg", 
+        "recipes": [
+        {"id": 8, "name": "Tandoori Shrimp"},
+        {"id": 10, "name": "Persian Rice"}], 
+        "cuisine": [
+        {"id": 8, "name": "Indian"},
+        {"id": 10, "name": "Persian"}]
+    },
+    {
+        "id": 44, 
+        "name": "garam masala", 
+        "description": "Garam masala is a blend of ground spices common in North Indian and other South Asian cuisines. A typical Indian version of garam masala contains black and white peppercorns, cloves, cinnamon or cassia bark, nutmeg and mace, black and green cardamom pods, bay leaf, and caraway.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/5/58/Garammasalaphoto.jpg", 
+        "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
+        "cuisine": [{"id": 8, "name": "Indian"}]
+    },
+    {
+        "id": 45, 
+        "name": "cayenne pepper", 
+        "description": "Cayenne is used in cooking spicy dishes, as a powder or in its whole form (such as in Korean, Sichuan, and other Asian cuisine), or in a thin, vinegar-based sauce.", 
+        "image_URL": "http://www.samuitimes.com/wp-content/uploads/2013/07/cayenne-pepper.jpg", 
+        "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
+        "cuisine": [{"id": 8, "name": "Indian"}]
+    },
+    {
+        "id": 46, 
+        "name": "long-grain white rice", 
+        "description": "Long-grain rice is 4-5 times its width and are light, dry grains that separate easily when cooked. Basmati rice is a perfumy East Indian variety of long-grain rice.", 
+        "image_URL": "http://www.thehealthjournals.com/wp-content/uploads/2013/06/6121221-raw-long-grain-white-rice-grains-in-burlap-bag.jpg", 
+        "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
+        "cuisine": [{"id": 8, "name": "Indian"}]
+    },
+    {
+        "id": 47, 
+        "name": "frozen peas", 
+        "description": "Frozen vegetables are commercially packaged and sold in supermarkets. They have a very long shelf life when kept in a freezer and may be more economical to purchase than their fresh counterparts.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/e/e3/Frozen_peas.JPG", 
+        "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
+        "cuisine": [{"id": 8, "name": "Indian"}]
+    },
+    {
+        "id": 48, 
+        "name": "carrot, grated", 
+        "description": "Carrots are commonly used in soups and stews. Grated carrots can be used for salads. Carrots can also be cut in thin strips and added to rice, can form part of a dish of mixed roast vegetables or can be blended with tamarind to make chutney.", 
+        "image_URL": "http://chefhermes.com/wp-content/uploads/2011/03/rcb-grated-carrot.jpg", 
+        "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
+        "cuisine": [{"id": 8, "name": "Indian"}]
+    },
+    {
+        "id": 49, 
+        "name": "flank steak", 
+        "description": "The flank steak is a beef steak cut from the abdominal muscles or butt of the cow. A relatively long and flat cut, flank steak is used in a variety of dishes including London broil and as an alternative to the traditional skirt steak in fajitas. It can be grilled, pan-fried, broiled, or braised for increased tenderness.", 
+        "image_URL": "http://cookingwithdrew.com/wp-content/uploads/2010/10/Cut-Raw-Flank.jpg", 
+        "recipes": [{"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisine": [{"id": 9, "name": "Korean"}]
+    },
+    {
+        "id": 50, 
+        "name": "sesame oil", 
+        "description": "Sesame oil is an edible vegetable oil derived from sesame seeds. Besides being used as a cooking oil in South India, it is often used as a flavor enhancer in Chinese, Japanese, Middle Eastern, Korean, and Southeast Asian cuisine.", 
+        "image_URL": "http://www.secretsofsushi.com/wp-content/uploads/2014/07/SesameOil.jpg?7eacfa", 
+        "recipes": [{"id": 9, "name": "Beef Bulgogi"}], 
+        "cuisine": [{"id": 9, "name": "Korean"}]
+    },
+    {
+        "id": 51, 
+        "name": "basmati rice", 
+        "description": "Basmati rice is a variety of long grain rice which is traditionally from North India and Pakistan.", 
+        "image_URL": "http://lowfatveganchef.com/blog/wp-content/uploads/2012/10/Basmati-Rice.jpg", 
+        "recipes": [{"id": 10, "name": "Persian Rice"}], 
+        "cuisine": [{"id": 10, "name": "Persian"}]
+    },
+    {
+        "id": 52, 
+        "name": "kosher salt", 
+        "description": "Kosher salt is a variety of edible salt with a much larger grain size than some common table salt.", 
+        "image_URL": "http://i.kinja-img.com/gawker-media/image/upload/s--1qhwSClX--/c_fit,fl_progressive,q_80,w_636/18hzxx2mshgl9jpg.jpg", 
+        "recipes": [{"id": 10, "name": "Persian Rice"}], 
+        "cuisine": [{"id": 10, "name": "Persian"}]
+    },
+    {
+        "id": 53, 
+        "name": "saffron threads", 
+        "description": "Saffron's aroma is often described by connoisseurs as reminiscent of metallic honey with grassy or hay-like notes, while its taste has also been noted as hay-like and sweet. Saffron also contributes a luminous yellow-orange colouring to foods. Saffron is widely used in Indian, Persian, European, Arab, and Turkish cuisines. Confectioneries and liquors also often include saffron.", 
+        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/7/79/Iran_saffron_threads.jpg", 
+        "recipes": [{"id": 10, "name": "Persian Rice"}], 
+        "cuisine": [{"id": 10, "name": "Persian"}]
+    }
 ]
 
 # API Routes, may split these out later
