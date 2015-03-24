@@ -243,8 +243,190 @@ recipes = [
         "Top each with bread and cheese", 
         "Broil until cheese is bubbly"], 
         "cuisine": {"id": 2, "name": "French"}
+    },
+    {
+        "id": 3, 
+        "name": "Tofu Lo-Mein", 
+        "description": "The term lo-mein translates to 'stirred noodles' in Cantonese. This dish contains tofu and vegetables.", 
+        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/8711.jpg", 
+        "youtube_URL": "https://www.youtube.com/embed/XdXyFAIsxMc", 
+        "ingredients": [
+        {"id": 14, "name": "extra firm tofu", "quantity": "16 ounces"}, 
+        {"id": 15, "name": "olive oil", "quantity": "2 tablespoons"}, 
+        {"id": 16, "name": "ramen noodles", "quantity": "6 ounces"}, 
+        {"id": 17, "name": "frozen stir-fry vegetables", "quantity": "16 ounces"}, 
+        {"id": 18, "name": "water", "quantity": "1 1/2 cups"}, 
+        {"id": 19, "name": "soy sauce", "quantity": "1 tablespoon"}], 
+        "instructions": [
+        "Press tofu between paper towels to remove some of the water; cut in to bite size cubes. ",
+        "Heat olive oil in large skillet over medium-high heat. Add tofu, and fry until golden brown, about 15 minutes. Stir occasionally to prevent burning.", 
+        "Meanwhile bring water to a boil in a medium saucepan.", 
+        "Add noodles from ramen packages, reserving the seasoning envelopes.", 
+        "Boil for about 2 minutes, until the noodles break apart. Drain.", 
+        "Add the stir-fry vegetables to the pan with the tofu, and season with the ramen noodle seasoning packet.", 
+        "Cook, stirring occasionally until vegetables are tender, but not mushy.", 
+        "Add noodles, and stir to blend. Season with soy sauce to taste and serve."], 
+        "cuisine": {"id": 3, "name": "Chinese"}
+    },
+    {
+        "id": 4, 
+        "name": "Spinach Garlic Pasta", 
+        "description": "A quick and easy Italian dish.", 
+        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/658664.jpg", 
+        "youtube_URL": "https://www.youtube.com/embed/Uknj5jGk04s", 
+        "ingredients": [
+        {"id": 15, "name": "olive oil", "quantity": "1 tablespoon"},
+        {"id": 20, "name": "angel hair pasta", "quantity": "16 ounce"}, 
+        {"id": 21, "name": "minced garlic", "quantity": "4 cloves"}, 
+        {"id": 22, "name": "frozen chopped spinach, thawed", "quantity": "10 ounce"}], 
+        "instructions": [
+        "Cook the pasta in a large pot of boiling salted water until al dente. Drain.",
+        "Heat oil in a large skillet. Add the garlic, and cook for 1 minute.",
+        "Add the spinach and the cooked pasta.",
+        "Mix well, and cook for approximately 2 minutes, stirring often."], 
+        "cuisine": {"id": 4, "name": "Italian"}
+    },
+    {
+        "id": 5, 
+        "name": "Chicken and Dumplings", 
+        "description": "It is a popular comfort food dish, commonly found in the Southern and Midwestern United States, that is also attributed to being a French Canadian meal that originated during the Great Depression. Chicken and dumplings as a dish is prepared with a combination of boiled chicken meat, broth produced by boiling the chicken, multiple dumplings, and salt and pepper for seasoning. In some areas, this meal is known as chicken and sliders.", 
+        "image_URL": "http://s3.amazonaws.com/gmi-digital-library/da8c34c7-095e-4a39-92a7-819e37b2daf7.jpg", 
+        "youtube_URL": "https://www.youtube.com/embed/2gpA_Y2Rxyw", 
+        "ingredients": [
+        {"id": 23, "name": "biscuit baking mix", "quantity": "2 1/4 cup"},
+        {"id": 24, "name": "milk", "quantity": "2/3 cup"},
+        {"id": 25, "name": "chicken broth", "quantity": "2 cans"},
+        {"id": 26, "name": "chicken", "quantity": "2 cans chunk"}], 
+        "instructions": [
+        "In a medium bowl, stir together the biscuit mix and milk just until it pulls together. Set aside.",
+        "Pour the cans of chicken broth into a saucepan along with the chicken; bring to a boil.",
+        "Once the broth is at a steady boil, take a handful of biscuit dough and flatten it in your hand.",
+        "Tear off 1 to 2 inch pieces and drop them into the boiling broth. Make sure they are fully immersed at least for a moment.",
+        "Once all of the dough is in the pot, carefully stir so that the newest dough clumps get covered by the broth.",
+        "Cover, and simmer over medium heat for about 10 minutes, stirring occasionally."], 
+        "cuisine": {"id": 5, "name": "American"}
+    },
+    {
+        "id": 6, 
+        "name": "Pad Thai", 
+        "description": "A stir-fried rice noodle dish commonly served as a street food and at casual local eateries in Thailand.", 
+        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/442101.jpg", 
+        "youtube_URL": "https://www.youtube.com/embed/Ns8su84olsQ", 
+        "ingredients": [
+        {"id": 8, "name": "sugar", "quantity": "3 tablespoons"},
+        {"id": 10, "name": "vegetable oil", "quantity": "1/4 cup"},
+        {"id": 26, "name": "chicken", "quantity": "1 pound boneless, skinless"},
+        {"id": 27, "name": "rice noodles", "quantity": "12 ounce"}, 
+        {"id": 28, "name": "butter", "quantity": "2 tablespoons"},
+        {"id": 29, "name": "eggs", "quantity": "4"},
+        {"id": 30, "name": "white wine vinegar", "quantity": "1 tablespoon"},
+        {"id": 31, "name": "fish sauce", "quantity": "2 tablespoons"},
+        {"id": 32, "name": "crushed red pepper", "quantity": "1/8 tablespoon"},
+        {"id": 33, "name": "bean sprouts", "quantity": "2 cups"},
+        {"id": 34, "name": "crushed peanuts", "quantity": "1/4 cup"},
+        {"id": 35, "name": "green onions", "quantity": "3"},
+        {"id": 36, "name": "lemon", "quantity": "1"}], 
+        "instructions": [
+        "Soak rice noodles in cold water 30 to 50 minutes, or until soft. Drain, and set aside.",
+        "Heat butter in a wok or large heavy skillet. Saute chicken until browned. Remove, and set aside.",
+        "Heat oil in wok over medium-high heat. Crack eggs into hot oil, and cook until firm.",
+        "Stir in chicken, and cook for 5 minutes.",
+        "Add softened noodles, and vinegar, fish sauce, sugar and red pepper. Adjust seasonings to taste.",
+        "Mix while cooking, until noodles are tender.",
+        "Add bean sprouts, and mix for 3 minutes."], 
+        "cuisine": {"id": 6, "name": "Thai"}
+    },
+    {
+        "id": 7, 
+        "name": "Chicken Quesadilla", 
+        "description": "A flour tortilla or a corn tortilla filled with a savoury mixture containing cheese, chicken, other ingredients, and/or vegetables, cooked often on a griddle, then folded in half to form a half-moon shape.", 
+        "image_URL": "http://cdn-image.myrecipes.com/sites/default/files/styles/300x300/public/image/recipes/ck/12/01/spicy-chicken-quesadillas-ck-x.jpg?itok=syRJ1vr2", 
+        "youtube_URL": "https://www.youtube.com/embed/TTagMrBZ1z8", 
+        "ingredients": [
+        {"id": 26, "name": "chicken", "quantity": "1 cup chopped skinless, boneless rotisserie"},
+        {"id": 37, "name": "refrigerated fresh salsa", "quantity": "1/3 cup"},
+        {"id": 38, "name": "canned black beans, rinsed drained", "quantity": "1/4 cup"},
+        {"id": 39, "name": "chopped pickled jalapeno pepper", "quantity": "1 1/2 tablespoons"},
+        {"id": 40, "name": "flour tortillas", "quantity": "8"},
+        {"id": 41, "name": "shredded Monterey Jack cheese", "quantity": "1 cup"}],
+        "instructions": [
+        "Combine first 5 ingredients in a medium bowl.",
+        "Divide chicken mixture evenly over 4 tortillas.",
+        "Sprinkle quesadillas evenly with cheese. Top with remaining 4 tortillas.",
+        "Heat a large skillet over medium-high heat. Coat pan with cooking spray.",
+        "Add 1 quesadilla to pan; cook 1 minute on each side or until golden.",
+        "Remove from pan, and repeat with remaining quesadillas."], 
+        "cuisine": {"id": 7, "name": "Mexican"}
+    },
+    {
+        "id": 8, 
+        "name": "Tandoori Shrimp", 
+        "description": "In India, tandoori cooking was traditionally associated with the Punjab[4][5] and became popular in the mainstream after the 1947 partition when Punjabis resettled in places such as Delhi. The name comes from the type of cylindrical clay oven, a tandoor, in which the dish is traditionally prepared.", 
+        "image_URL": "http://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/1203/tandoori-shrimp-rice_300.jpg?itok=UQ7fjdGr", 
+        "youtube_URL": "https://www.youtube.com/embed/wIpPkuwIuCw", 
+        "ingredients": [
+        {"id": 42, "name": "peeled and deveined large shrimp", "quantity": "1 pound"},
+        {"id": 43, "name": "plain yogurt", "quantity": "1 cup"},
+        {"id": 44, "name": "garam masala", "quantity": "2 teaspoons"},
+        {"id": 45, "name": "cayenne pepper", "quantity": "1/2 teaspoon"},
+        {"id": 46, "name": "long-grain white rice", "quantity": "1 cup"},
+        {"id": 47, "name": "frozen peas", "quantity": "1/2 cup"},
+        {"id": 48, "name": "carrot, grated", "quantity": "1"}],
+        "instructions": [
+        "In a medium bowl, mix the shrimp with the yogurt, garam masala, and cayenne to coat. Cover and let marinate, refrigerated, for at least 30 minutes and up to 12 hours.",
+        "Meanwhile, cook the rice according to the package directions, adding the peas and carrot in the last 5 minutes.",
+        "Heat broiler. Soak 8 wooden skewers in water for at least 10 minutes.",
+        "Thread the shrimp onto the skewers, season with ½ teaspoon salt and ¼ teaspoon pepper, and broil until opaque, 4 to 5 minutes. Serve with the rice."], 
+        "cuisine": {"id": 8, "name": "Indian"}
+    },
+    {
+        "id": 9, 
+        "name": "Beef Bulgogi", 
+        "description": "Bulgogi is traditionally grilled, but pan-cooking has become popular as well. Whole cloves of garlic, sliced onions and chopped green peppers are often grilled or fried with the meat. This dish is sometimes served with a side of lettuce or other leafy vegetable, which is used to wrap a slice of cooked meat, often along with a dab of ssamjang, or other side dishes, and then eaten together.", 
+        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/00/69/36/693632.jpg", 
+        "youtube_URL": "https://www.youtube.com/embed/3qBjL_HGvco", 
+        "ingredients": [
+        {"id": 6, "name": "sesame seeds", "quantity": "2 tablespoons"},
+        {"id": 8, "name": "sugar", "quantity": "2 1/2 tablespoons"},
+        {"id": 9, "name": "pepper", "quantity": "1/2 teaspoon"},
+        {"id": 19, "name": "soy sauce", "quantity": "5 tablespoons"},
+        {"id": 21, "name": "minced garlic", "quantity": "2 tablespoons"},
+        {"id": 35, "name": "green onions", "quantity": "1/4 cup chopped"},
+        {"id": 49, "name": "flank steak", "quantity": "1 pound"},
+        {"id": 50, "name": "sesame oil", "quantity": "2 tablespoons"}],
+        "instructions": [
+        "Place the beef in a shallow dish.",
+        "Combine soy sauce, sugar, green onion, garlic, sesame seeds, sesame oil, and ground black pepper in a small bowl. Pour over beef.",
+        "Cover and refrigerate for at least 1 hour or overnight.",
+        "Preheat an outdoor grill for high heat, and lightly oil the grate.",
+        "Quickly grill beef on hot grill until slightly charred and cooked through, 1 to 2 minutes per side."], 
+        "cuisine": {"id": 9, "name": "Korean"}
+    },
+    {
+        "id": 10, 
+        "name": "Persian Rice", 
+        "description": "Traditionally, rice was most prevalent as a major staple item in the rice growing region of northern Iran, and the homes of the wealthy, while in the rest of the country bread was the dominant staple. The varieties of rice most valued in Persian cuisine are prized for their aroma, and grow in the north of Iran.", 
+        "image_URL": "http://www.epicurious.com/images/recipesmenus/2012/2012_august/51109800.jpg", 
+        "youtube_URL": "https://www.youtube.com/embed/OuPABfgsa4g", 
+        "ingredients": [
+        {"id": 28, "name": "butter", "quantity": "3 tablespoons unsalted"},
+        {"id": 43, "name": "plain yogurt", "quantity": "2 cups"},
+        {"id": 51, "name": "basmati rice", "quantity": "2 cups"},
+        {"id": 52, "name": "kosher salt", "quantity": "3 teaspoons"},
+        {"id": 53, "name": "saffron threads", "quantity": "1 pinch"}],
+        "instructions": [
+        "Place rice in a medium saucepan; add 2 teaspoons salt and cold water to cover by 2.",
+        "Bring to a boil over medium heat; reduce heat to low and simmer for 5 minutes. Drain rice, reserving 3/4 cup cooking liquid.",
+        "Place saffron and 1/2 cup reserved cooking liquid in a small bowl; let saffron soften for 5 minutes.",
+        "Place yogurt in a medium bowl and stir in remaining 1 teaspoon salt and saffron water. Add rice and stir to coat.",
+        "Melt butter in a large deep nonstick skillet over medium heat; swirl to coat bottom and sides of pan.",
+        "Add rice, mounding slightly in center. Poke 6-7 holes in rice with the end of a wooden spoon. Cover with foil, then a lid.",
+        "Cook, rotating skillet over burner for even cooking, for 10 minutes (do not stir).",
+        "Reduce heat to low; cook, adding more reserved cooking liquid by tablespoonfuls if rice has not finished cooking when water evaporates, until a golden brown crust forms on bottom of rice, 20-25 minutes.",
+        "Remove lid and foil; invert a plate over skillet.",
+        "Using oven mitts, carefully invert rice onto plate; use a heatproof spatula to remove any crust remaining in skillet."], 
+        "cuisine": {"id": 10, "name": "Persian"}
     }
-
 ]
 
 ingredients = [
