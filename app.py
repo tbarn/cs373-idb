@@ -772,7 +772,7 @@ ingredients = [
     },
     {
         "id": 38, 
-        "name": "canned black beans, rinsed drained", 
+        "name": "canned black beans", 
         "description": "The black turtle bean, or simply called black bean, has a dense, meaty texture, which makes it popular in vegetarian dishes, such as frijoles negros and the Mexican-American black bean burrito.", 
         "image_URL": "http://www.rosarita.com/images/product-details/canned-black-beans.png", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
