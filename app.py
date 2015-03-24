@@ -143,38 +143,42 @@ ingredients = [
 	}
 ]
 
+# API Routes, may split these out later
+
 @app.route('/api/v1.0/cuisines', methods=['GET'])
 def get_cuisines():
-    return jsonify({'cuisines': cuisines})
+    return jsonify({'status': 'success', 'data': {'cuisines': cuisines}})
 
 @app.route('/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
 def get_cuisine(cuisine_id):
     cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
     if len(cuisine) == 0:
         abort(404)
-    return jsonify({'cuisine': cuisine[0]})
+    return jsonify({'status': 'success', 'data': {'cuisine': cuisine[0]}})
 
 @app.route('/api/v1.0/recipes', methods=['GET'])
 def get_recipes():
-    return jsonify({'recipes': recipes})
+    return jsonify({'status': 'success', 'data': {'recipes': recipes}})
 
 @app.route('/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
 def get_recipe(recipe_id):
     recipe = [recipe for recipe in recipes if recipe['id'] == recipe_id]
     if len(recipe) == 0:
         abort(404)
-    return jsonify({'recipe': recipe[0]})
+    return jsonify({'status': 'success', 'data': {'recipe': recipe[0]}})
 
 @app.route('/api/v1.0/ingredients', methods=['GET'])
 def get_ingredients():
-    return jsonify({'ingredients': ingredients})
+    return jsonify({'status': 'success', 'data': {'ingredients': ingredients}})
 
 @app.route('/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
 def get_ingredient(ingredient_id):
     ingredient = [ingredient for ingredient in ingredients if ingredient['id'] == ingredient_id]
     if len(ingredient) == 0:
         abort(404)
-    return jsonify({'ingredient': ingredient[0]})
+    return jsonify({'status': 'success', 'data': {'ingredient': ingredient[0]}})
+
+# Website routes
 
 @app.route('/', methods=['GET'])
 def get_index_template():
@@ -198,25 +202,30 @@ def get_cuisines_template():
 
 @app.route('/ingredient/<int:ingredient_id>', methods=['GET'])
 def get_ingredient_template(ingredient_id):
+    # TODO: Out of index errors
     ingredient1 = ingredients[ingredient_id - 1]
     return render_template("ingredient.html",
        ingredient=ingredient1)
 
 @app.route('/recipe/<int:recipe_id>', methods=['GET'])
 def get_recipe_template(recipe_id):
+    # TODO: Out of index errors
     recipe1 = recipes[recipe_id - 1]
     return render_template("recipe.html",
        recipe=recipe1)
 
 @app.route('/cuisine/<int:cuisine_id>', methods=['GET'])
 def get_cuisine_template(cuisine_id):
+    # TODO: Out of index errors
     cuisine1 = cuisines[cuisine_id - 1]
     return render_template("cuisine.html",
        cuisine=cuisine1)
 
+# Error responses
+
 @app.errorhandler(404)
 def error_404(error):
-    return make_response(jsonify({'error': 'Not found', 'error_code': 404}), 404)
+    return make_response(jsonify({'status': 'error', 'error_message': 'Not found', 'error_code': 404}), 404)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
