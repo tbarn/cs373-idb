@@ -7,8 +7,7 @@
     <div class='row'>
       {% for cuisine in cuisines %}
       <div class='col-md-4 text-center'>
-        <img src="{{ cuisine.image_URL }}" class="img-rounded" alt="Buffet" width="250" height="236"> 
-        <h2>{{ cuisine.name }}</h2>
+        <a href='/cuisine/{{ cuisine.id }}'><img src="{{ cuisine.image_URL }}" class="img-rounded" alt="Buffet" width="250" height="236"></a>
         <p>
           <a href='/cuisine/{{ cuisine.id }}'>{{ cuisine.name }}</a>
         </p>
