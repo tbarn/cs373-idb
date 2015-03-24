@@ -376,7 +376,7 @@ recipes = [
         "In a medium bowl, mix the shrimp with the yogurt, garam masala, and cayenne to coat. Cover and let marinate, refrigerated, for at least 30 minutes and up to 12 hours.",
         "Meanwhile, cook the rice according to the package directions, adding the peas and carrot in the last 5 minutes.",
         "Heat broiler. Soak 8 wooden skewers in water for at least 10 minutes.",
-        "Thread the shrimp onto the skewers, season with ½ teaspoon salt and ¼ teaspoon pepper, and broil until opaque, 4 to 5 minutes. Serve with the rice."], 
+        "Thread the shrimp onto the skewers, season with 1/2 teaspoon salt and 1/4 teaspoon pepper, and broil until opaque, 4 to 5 minutes. Serve with the rice."], 
         "cuisine": {"id": 8, "name": "Indian"}
     },
     {
