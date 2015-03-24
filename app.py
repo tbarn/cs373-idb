@@ -642,7 +642,7 @@ ingredients = [
         "description": "A multi-purpose mix made up of flour, sugar, salt, vegetable shortening and baking soda.", 
         "image_URL": "http://hostedmedia.reimanpub.com/TOH/Images/Photos/37/300x300/exps22167_TH2379800B05_07_3b.jpg", 
         "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
-        "cuisine": [{"id": 5, "name": "American"}]
+        "cuisines": [{"id": 5, "name": "American"}]
     }, 
     {
         "id": 24, 
@@ -650,7 +650,7 @@ ingredients = [
         "description": "Milk has been used for human consumption for thousands of years. Today cow's milk is one of the most popular animal milks consumed by humans. Around the world, people drink the milk of many other animals including camels, goats, llamas, reindeer, sheep and water buffalo. Milk is available in many varieties. Raw milk has not been pastuerized, and is usually available in natural food stores. Whole milk is the milk as it came from the cow and contains about 3.5% milk fat. Low-fat milk is available in two types, 2% and 1%. The 1% and 2% designations refer to the percent of fat by weight that the milk contains.. Nonfat or skim milk must by law contain less than .5% milk fat.", 
         "image_URL": "http://en.wikipedia.org/wiki/Milk#/media/File:Milk_glass.jpg", 
         "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
-        "cuisine": [{"id": 5, "name": "American"}]
+        "cuisines": [{"id": 5, "name": "American"}]
     }, 
     {
         "id": 25, 
@@ -658,7 +658,7 @@ ingredients = [
         "description": "Broth is a liquid food preparation, typically consisting of water, in which bones, meat, fish, cereal grains, or vegetables have been simmered. Broth is used as a basis for other edible liquids such as soup, gravy, or sauce. It can be eaten alone or with garnish.", 
         "image_URL": "http://www.campbellsoup.com/Images/products/10880.png", 
         "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
-        "cuisine": [{"id": 5, "name": "American"}]
+        "cuisines": [{"id": 5, "name": "American"}]
     }, 
     {
         "id": 26, 
@@ -669,7 +669,7 @@ ingredients = [
         {"id": 5, "name": "Chicken and Dumplings"},
         {"id": 6, "name": "Pad Thai"},
         {"id": 7, "name": "Chicken Quesadilla"}], 
-        "cuisine": [
+        "cuisines": [
         {"id": 5, "name": "American"},
         {"id": 6, "name": "Thai"},
         {"id": 7, "name": "Mexican"}]
@@ -680,7 +680,7 @@ ingredients = [
         "description": "Rice noodles are noodles that are made from rice. Their principal ingredients are rice flour and water. Rice noodles are most commonly used in the cuisines of East and Southeast Asia, and are available fresh, frozen, or dried, in various shapes and thicknesses.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Reisnudeln.JPG", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
     {
         "id": 28, 
@@ -690,7 +690,7 @@ ingredients = [
         "recipes": [
         {"id": 6, "name": "Pad Thai"},
         {"id": 10, "name": "Persian Rice"}], 
-        "cuisine": [
+        "cuisines": [
         {"id": 6, "name": "Thai"},
         {"id": 10, "name": "Persian"}]
     }, 
@@ -700,7 +700,7 @@ ingredients = [
         "description": "The egg most often consumed by humans is the chicken egg, though duck, goose and other fowl are available in some areas. Chicken eggs are widely used in many types of dishes, both sweet and savory, including many baked goods. Some of the most common preparation methods include scrambled, fried, hard-boiled, soft-boiled, omelettes and pickled. They can also be eaten raw.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/White-%26-Brown-Eggs.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
     {
         "id": 30, 
@@ -708,7 +708,7 @@ ingredients = [
         "description": "Wine vinegar is made from wine and is the most commonly used vinegar in Southern and Central Europe. As with wine, there is a considerable range in quality. Better-quality wine vinegars are matured in wood for up to two years, and exhibit a complex, mellow flavor. Wine vinegar tends to have a lower acidity than white or cider vinegars. More expensive wine vinegars are made from individual varieties of wine, such as champagne, sherry, or pinot gris.", 
         "image_URL": "http://muscofood.com/images/products/2204/original.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
     {
         "id": 31, 
@@ -716,7 +716,7 @@ ingredients = [
         "description": "Fish sauce is an amber-coloured liquid extracted from the fermentation of fish with sea salt. It is used as a condiment in various cuisines.", 
         "image_URL": "http://www.finecooking.com/assets/uploads/posts/5043/ING-asian-fish-sauce_sql.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
     {
         "id": 32, 
@@ -724,7 +724,7 @@ ingredients = [
         "description": "Crushed red pepper or red pepper flakes is a condiment consisting of dried and crushed red chili peppers.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/4/45/Redchiliflakes.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
     {
         "id": 33, 
@@ -732,7 +732,7 @@ ingredients = [
         "description": "Bean sprouts are a common ingredient, especially in Eastern Asian cuisine, made from sprouting beans.", 
         "image_URL": "http://barfblog.com/wp-content/uploads/2014/04/Bean_sprouts.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
     {
         "id": 34, 
@@ -740,7 +740,7 @@ ingredients = [
         "description": "Peanuts are a flavorful and important ingredient in many dishes, particularly in Asian cuisine.", 
         "image_URL": "https://nuts.com/images/auto/801x534/assets/8e1399aa8143229d.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
     {
         "id": 35, 
@@ -750,7 +750,7 @@ ingredients = [
         "recipes": [
         {"id": 6, "name": "Pad Thai"},
         {"id": 9, "name": "Beef Bulgogi"}], 
-        "cuisine": [
+        "cuisines": [
         {"id": 6, "name": "Thai"},
         {"id": 9, "name": "Korean"}]
     }, 
@@ -760,7 +760,7 @@ ingredients = [
         "description": "A very sour citrus fruit similar to limes with the same refreshing smell and tart flavor, but generally larger. The whole fruit can be used (juice, skin, and less often the pulp).", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Lemon-Whole-Split.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
-        "cuisine": [{"id": 6, "name": "Thai"}]
+        "cuisines": [{"id": 6, "name": "Thai"}]
     },
     {
         "id": 37, 
@@ -768,7 +768,7 @@ ingredients = [
         "description": "Salsa is the Spanish term for sauce, and in English-speaking countries usually refers to the sauces typical of Mexican cuisine known as salsa picante, particularly those used as dips. They are often tomato-based, and they are typically piquant, ranging from mild to extremely hot.", 
         "image_URL": "http://sweetpeaskitchen.com/wp-content/uploads/2013/09/Thick-and-Chunky-Salsa1.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
-        "cuisine": [{"id": 7, "name": "Mexican"}]
+        "cuisines": [{"id": 7, "name": "Mexican"}]
     },
     {
         "id": 38, 
@@ -776,7 +776,7 @@ ingredients = [
         "description": "The black turtle bean, or simply called black bean, has a dense, meaty texture, which makes it popular in vegetarian dishes, such as frijoles negros and the Mexican-American black bean burrito.", 
         "image_URL": "http://www.rosarita.com/images/product-details/canned-black-beans.png", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
-        "cuisine": [{"id": 7, "name": "Mexican"}]
+        "cuisines": [{"id": 7, "name": "Mexican"}]
     },
     {
         "id": 39, 
@@ -784,7 +784,7 @@ ingredients = [
         "description": "Pickled jalapeños are often served hot or cold on top of nachos, which are tortilla chips with melted cheese on top, a traditional Tex-Mex dish.", 
         "image_URL": "http://www.simplyscratch.com/wp-content/uploads/2013/05/Easy-Homemade-Pickled-Jalapenos-www.SimplyScratch.com_-620x415.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
-        "cuisine": [{"id": 7, "name": "Mexican"}]
+        "cuisines": [{"id": 7, "name": "Mexican"}]
     },
     {
         "id": 40, 
@@ -792,7 +792,7 @@ ingredients = [
         "description": "A flour tortilla is a type of soft, thin flatbread made from finely ground wheat flour. Flour tortillas are commonly prepared with meat, mashed potatoes, cheese and other ingredients to make dishes such as tacos, quesadillas and burritos (a dish originating in northern Mexico).", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/5/56/NCI_flour_tortillas.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
-        "cuisine": [{"id": 7, "name": "Mexican"}]
+        "cuisines": [{"id": 7, "name": "Mexican"}]
     },
     {
         "id": 41, 
@@ -800,7 +800,7 @@ ingredients = [
         "description": "Monterey Jack (sometimes shortened simply to Jack cheese) is an American semihard cheese, customarily pale yellow, made using cow's milk.", 
         "image_URL": "http://www.everydaybites.com/wp-content/uploads/2010/07/IMG_8584.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
-        "cuisine": [{"id": 7, "name": "Mexican"}]
+        "cuisines": [{"id": 7, "name": "Mexican"}]
     },
     {
         "id": 42, 
@@ -808,7 +808,7 @@ ingredients = [
         "description": "Shrimp and prawn are important types of seafood that are consumed worldwide. Shrimp and prawns are versatile ingredients, and are often used as an accompaniment to fried rice. Common methods of preparation include baking, boiling, frying and grilling.", 
         "image_URL": "http://www.shrimpdelight.com/images/16-20%20and%2021-25%20Peeled%20&%20Devained%20Tail-On%20Raw.JPG", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
-        "cuisine": [{"id": 8, "name": "Indian"}]
+        "cuisines": [{"id": 8, "name": "Indian"}]
     },
     {
         "id": 43, 
@@ -818,7 +818,7 @@ ingredients = [
         "recipes": [
         {"id": 8, "name": "Tandoori Shrimp"},
         {"id": 10, "name": "Persian Rice"}], 
-        "cuisine": [
+        "cuisines": [
         {"id": 8, "name": "Indian"},
         {"id": 10, "name": "Persian"}]
     },
@@ -828,7 +828,7 @@ ingredients = [
         "description": "Garam masala is a blend of ground spices common in North Indian and other South Asian cuisines. A typical Indian version of garam masala contains black and white peppercorns, cloves, cinnamon or cassia bark, nutmeg and mace, black and green cardamom pods, bay leaf, and caraway.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/5/58/Garammasalaphoto.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
-        "cuisine": [{"id": 8, "name": "Indian"}]
+        "cuisines": [{"id": 8, "name": "Indian"}]
     },
     {
         "id": 45, 
@@ -836,7 +836,7 @@ ingredients = [
         "description": "Cayenne is used in cooking spicy dishes, as a powder or in its whole form (such as in Korean, Sichuan, and other Asian cuisine), or in a thin, vinegar-based sauce.", 
         "image_URL": "http://www.samuitimes.com/wp-content/uploads/2013/07/cayenne-pepper.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
-        "cuisine": [{"id": 8, "name": "Indian"}]
+        "cuisines": [{"id": 8, "name": "Indian"}]
     },
     {
         "id": 46, 
@@ -844,7 +844,7 @@ ingredients = [
         "description": "Long-grain rice is 4-5 times its width and are light, dry grains that separate easily when cooked. Basmati rice is a perfumy East Indian variety of long-grain rice.", 
         "image_URL": "http://www.thehealthjournals.com/wp-content/uploads/2013/06/6121221-raw-long-grain-white-rice-grains-in-burlap-bag.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
-        "cuisine": [{"id": 8, "name": "Indian"}]
+        "cuisines": [{"id": 8, "name": "Indian"}]
     },
     {
         "id": 47, 
@@ -852,7 +852,7 @@ ingredients = [
         "description": "Frozen vegetables are commercially packaged and sold in supermarkets. They have a very long shelf life when kept in a freezer and may be more economical to purchase than their fresh counterparts.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/e/e3/Frozen_peas.JPG", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
-        "cuisine": [{"id": 8, "name": "Indian"}]
+        "cuisines": [{"id": 8, "name": "Indian"}]
     },
     {
         "id": 48, 
@@ -860,7 +860,7 @@ ingredients = [
         "description": "Carrots are commonly used in soups and stews. Grated carrots can be used for salads. Carrots can also be cut in thin strips and added to rice, can form part of a dish of mixed roast vegetables or can be blended with tamarind to make chutney.", 
         "image_URL": "http://chefhermes.com/wp-content/uploads/2011/03/rcb-grated-carrot.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
-        "cuisine": [{"id": 8, "name": "Indian"}]
+        "cuisines": [{"id": 8, "name": "Indian"}]
     },
     {
         "id": 49, 
@@ -868,7 +868,7 @@ ingredients = [
         "description": "The flank steak is a beef steak cut from the abdominal muscles or butt of the cow. A relatively long and flat cut, flank steak is used in a variety of dishes including London broil and as an alternative to the traditional skirt steak in fajitas. It can be grilled, pan-fried, broiled, or braised for increased tenderness.", 
         "image_URL": "http://cookingwithdrew.com/wp-content/uploads/2010/10/Cut-Raw-Flank.jpg", 
         "recipes": [{"id": 9, "name": "Beef Bulgogi"}], 
-        "cuisine": [{"id": 9, "name": "Korean"}]
+        "cuisines": [{"id": 9, "name": "Korean"}]
     },
     {
         "id": 50, 
@@ -876,7 +876,7 @@ ingredients = [
         "description": "Sesame oil is an edible vegetable oil derived from sesame seeds. Besides being used as a cooking oil in South India, it is often used as a flavor enhancer in Chinese, Japanese, Middle Eastern, Korean, and Southeast Asian cuisine.", 
         "image_URL": "http://www.secretsofsushi.com/wp-content/uploads/2014/07/SesameOil.jpg?7eacfa", 
         "recipes": [{"id": 9, "name": "Beef Bulgogi"}], 
-        "cuisine": [{"id": 9, "name": "Korean"}]
+        "cuisines": [{"id": 9, "name": "Korean"}]
     },
     {
         "id": 51, 
@@ -884,7 +884,7 @@ ingredients = [
         "description": "Basmati rice is a variety of long grain rice which is traditionally from North India and Pakistan.", 
         "image_URL": "http://lowfatveganchef.com/blog/wp-content/uploads/2012/10/Basmati-Rice.jpg", 
         "recipes": [{"id": 10, "name": "Persian Rice"}], 
-        "cuisine": [{"id": 10, "name": "Persian"}]
+        "cuisines": [{"id": 10, "name": "Persian"}]
     },
     {
         "id": 52, 
@@ -892,7 +892,7 @@ ingredients = [
         "description": "Kosher salt is a variety of edible salt with a much larger grain size than some common table salt.", 
         "image_URL": "http://i.kinja-img.com/gawker-media/image/upload/s--1qhwSClX--/c_fit,fl_progressive,q_80,w_636/18hzxx2mshgl9jpg.jpg", 
         "recipes": [{"id": 10, "name": "Persian Rice"}], 
-        "cuisine": [{"id": 10, "name": "Persian"}]
+        "cuisines": [{"id": 10, "name": "Persian"}]
     },
     {
         "id": 53, 
@@ -900,7 +900,7 @@ ingredients = [
         "description": "Saffron's aroma is often described by connoisseurs as reminiscent of metallic honey with grassy or hay-like notes, while its taste has also been noted as hay-like and sweet. Saffron also contributes a luminous yellow-orange colouring to foods. Saffron is widely used in Indian, Persian, European, Arab, and Turkish cuisines. Confectioneries and liquors also often include saffron.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/7/79/Iran_saffron_threads.jpg", 
         "recipes": [{"id": 10, "name": "Persian Rice"}], 
-        "cuisine": [{"id": 10, "name": "Persian"}]
+        "cuisines": [{"id": 10, "name": "Persian"}]
     }
 ]
 
