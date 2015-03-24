@@ -519,7 +519,7 @@ ingredients = [
     {
         "id": 10, 
         "name": "vegetable oil", 
-        "description": "Many vegetable oils are consumed directly, or indirectly as ingredients in food – a role that they share with some animal fats, including butter and ghee. Secondly, oils can be heated and used to cook other foods.", 
+        "description": "Many vegetable oils are consumed directly, or indirectly as ingredients in food - a role that they share with some animal fats, including butter and ghee. Secondly, oils can be heated and used to cook other foods.", 
         "image_URL": "http://static.jmslinks.com/WebService/ProdAdminImage.ashx?id=214", 
         "recipes": [
         {"id": 2, "name": "French Onion Soup"}, 
@@ -563,7 +563,7 @@ ingredients = [
     {
         "id": 15, 
         "name": "olive oil", 
-        "description": "Olive oil is the main cooking oil in countries surrounding the Mediterranean Sea. It is also used with foods to be eaten cold. If uncompromised by heat, the flavor is stronger. It also can be used for sautéing.", 
+        "description": "Olive oil is the main cooking oil in countries surrounding the Mediterranean Sea. It is also used with foods to be eaten cold. If uncompromised by heat, the flavor is stronger. It also can be used for sauteing.", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/1/10/Olives_in_olive_oil.jpg", 
         "recipes": [
         {"id": 3, "name": "Tofu Lo-Mein"}, 
@@ -772,7 +772,7 @@ ingredients = [
     },
     {
         "id": 38, 
-        "name": "canned black beans, rinsed drained", 
+        "name": "canned black beans", 
         "description": "The black turtle bean, or simply called black bean, has a dense, meaty texture, which makes it popular in vegetarian dishes, such as frijoles negros and the Mexican-American black bean burrito.", 
         "image_URL": "http://www.rosarita.com/images/product-details/canned-black-beans.png", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
@@ -781,7 +781,7 @@ ingredients = [
     {
         "id": 39, 
         "name": "chopped pickled jalapeno pepper", 
-        "description": "Pickled jalapeños are often served hot or cold on top of nachos, which are tortilla chips with melted cheese on top, a traditional Tex-Mex dish.", 
+        "description": "Pickled jalapenos are often served hot or cold on top of nachos, which are tortilla chips with melted cheese on top, a traditional Tex-Mex dish.", 
         "image_URL": "http://www.simplyscratch.com/wp-content/uploads/2013/05/Easy-Homemade-Pickled-Jalapenos-www.SimplyScratch.com_-620x415.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
         "cuisines": [{"id": 7, "name": "Mexican"}]
