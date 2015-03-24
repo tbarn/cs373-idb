@@ -442,7 +442,7 @@ ingredients = [
         "id": 2, 
         "name": "avocado", 
         "description": "like a herd of crawfish tickling your ears with their mandibles", 
-        "image_URL": "http://www.shooter-szene.de/content/wp-content/uploads/2014/04/gabe-newell-steam-valve.jpg", 
+        "image_URL": "http://authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
     },
