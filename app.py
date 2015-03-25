@@ -963,24 +963,26 @@ def get_cuisines_template():
 
 @app.route('/ingredient/<int:ingredient_id>', methods=['GET'])
 def get_ingredient_template(ingredient_id):
-    # TODO: Out of index errors
+    if ingredient_id > len(ingredients) or ingredient_id == 0:
+        abort(404)
     ingredient1 = ingredients[ingredient_id - 1]
     return render_template("ingredient.html",
        ingredient=ingredient1)
 
 @app.route('/recipe/<int:recipe_id>', methods=['GET'])
 def get_recipe_template(recipe_id):
-    # TODO: Out of index errors
+    if recipe_id > len(recipes) or recipe_id == 0:
+        abort(404)
     recipe1 = recipes[recipe_id - 1]
     return render_template("recipe.html",
        recipe=recipe1)
 
 @app.route('/cuisine/<int:cuisine_id>', methods=['GET'])
 def get_cuisine_template(cuisine_id):
-    # TODO: Out of index errors
+    if cuisine_id > len(cuisines) or cuisine_id == 0:
+        abort(404)
     cuisine1 = cuisines[cuisine_id - 1]
-    return render_template("cuisine.html",
-       cuisine=cuisine1)
+    return render_template("cuisine.html",cuisine=cuisine1)
 
 # Error responses
 
