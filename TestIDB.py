@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 
 # -------------------------------
 # TestIDB.py
@@ -10,9 +10,8 @@
 
 from io       import StringIO
 from unittest import main, TestCase
-import re
 import requests
-#from lxml import html
+from lxml import html
 
 from app import *
 
