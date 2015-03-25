@@ -996,7 +996,7 @@ def get_cuisine_template(cuisine_id):
 def error_404(error):
     if request.path.startswith('/api'):
         return make_response(jsonify({'status': 'error', 'error_message': 'Not found', 'error_code': 404}), 404)
-    return "Non-API 404 Error"
+    return render_template("404.html",err=request.path)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')

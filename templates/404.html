@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<!--{% block title %}Index{% endblock %}-->
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error 404</title>
+<style>
+@media (max-width:2000px){
+    body {
+
+    }
+    .jumbotron{
+	padding: 2em
+    }
+}
+</style>
+</head>
+<body>
+<div id='info' class='jumbotron'>
+<h1>Are you sure you typed that right? Maybe you clicked a wrong button?</h1>
+<p>Sorry, the page identifed by {{ err }} , doesn't seem to exist.<br/></p>
+</div>
+</body>
+</html>
+{% endblock %}
