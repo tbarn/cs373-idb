@@ -1,5 +1,5 @@
 #!flask/bin/python
-from flask import Flask, jsonify, abort, make_response, render_template
+from flask import Flask, jsonify, abort, make_response, render_template, request
 
 app = Flask(__name__)
 
@@ -988,7 +988,9 @@ def get_cuisine_template(cuisine_id):
 
 @app.errorhandler(404)
 def error_404(error):
-    return make_response(jsonify({'status': 'error', 'error_message': 'Not found', 'error_code': 404}), 404)
+    if request.path.startswith('/api'):
+        return make_response(jsonify({'status': 'error', 'error_message': 'Not found', 'error_code': 404}), 404)
+    return "Non-API 404 Error"
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
