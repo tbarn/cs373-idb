@@ -35,6 +35,10 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        # Test Content
+        self.assertEqual(j['data']['cuisines'][0]['name'], 'Japanese')
+        self.assertEqual(j['data']['cuisines'][9]['name'], 'Persian')
+
 
     def test_api_cuisines_2 (self) :
 # Should this really be an error?
@@ -54,6 +58,7 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['cuisine']['name'], 'Japanese')
 
     def test_api_cuisine_2 (self) :
         r = requests.get('http://104.239.168.220/api/v1.0/cuisines/10')
@@ -62,6 +67,7 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['cuisine']['name'], 'Persian')
 
     # Error case
     def test_api_cuisine_3 (self) :
@@ -81,6 +87,15 @@ class TestIDB (TestCase) :
         j = r.json()
         self.assertEqual(j['status'], 'error')
 
+    # Error case
+    def test_api_cuisine_5 (self) :
+        r = requests.get('http://104.239.168.220/api/v1.0/cuisines/11')
+        #r = get_cuisine(11)
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = r.json()
+        self.assertEqual(j['status'], 'error')
+
     # -- API Recipes --
 
     def test_api_recipes_1 (self) :
@@ -90,6 +105,8 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['recipes'][0]['name'], 'California Roll')
+        self.assertEqual(j['data']['recipes'][9]['name'], 'Persian Rice')
 
     def test_api_recipes_2 (self) :
 # Should this really be an error?
@@ -100,7 +117,7 @@ class TestIDB (TestCase) :
         j = r.json()
         self.assertEqual(j['status'], 'error')
 
-    # -- API Recipe --
+# -- API Recipe --
 
     def test_api_recipe_1 (self) :
         r = requests.get('http://104.239.168.220/api/v1.0/recipes/1')
@@ -109,6 +126,7 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['recipe']['name'], 'California Roll')
 
     def test_api_recipe_2 (self) :
         r = requests.get('http://104.239.168.220/api/v1.0/recipes/10')
@@ -117,6 +135,7 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['recipe']['name'], 'Persian Rice')
 
     # Error case
     def test_api_recipe_3 (self) :
@@ -136,6 +155,15 @@ class TestIDB (TestCase) :
         j = r.json()
         self.assertEqual(j['status'], 'error')
 
+    # Error case
+    def test_api_recipe_5 (self) :
+        r = requests.get('http://104.239.168.220/api/v1.0/recipes/11')
+        #r = get_recipe(11)
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = r.json()
+        self.assertEqual(j['status'], 'error')
+
     # -- API Ingredients --
 
     def test_api_ingredients_1 (self) :
@@ -145,6 +173,8 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['ingredients'][0]['name'], 'sushi rice')
+        self.assertEqual(j['data']['ingredients'][52]['name'], 'saffron threads')
 
     def test_api_ingredients_2 (self) :
 # Should this really be an error?
@@ -164,14 +194,16 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['ingredient']['name'], 'sushi rice')
 
     def test_api_ingredient_2 (self) :
-        r = requests.get('http://104.239.168.220/api/v1.0/ingredients/10')
+        r = requests.get('http://104.239.168.220/api/v1.0/ingredients/53')
         #r = get_ingredient(10)
         c = r.headers['content-type']
         self.assertEqual(c, 'application/json')
         j = r.json()
         self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['ingredient']['name'], 'saffron threads')
 
     # Error case
     def test_api_ingredient_3 (self) :
@@ -191,6 +223,14 @@ class TestIDB (TestCase) :
         j = r.json()
         self.assertEqual(j['status'], 'error')
 
+    # Error case
+    def test_api_ingredient_5 (self) :
+        r = requests.get('http://104.239.168.220/api/v1.0/ingredients/54')
+        #r = get_ingredient(11)
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = r.json()
+        self.assertEqual(j['status'], 'error')
 
     # --------------
     # Website Routes
@@ -278,6 +318,14 @@ class TestIDB (TestCase) :
         j = r.json()
         self.assertEqual(j['status'], 'error')
 
+    # Error case
+    def test_html_ingredient_6 (self) :
+        r = requests.get('http://104.239.168.220/ingredient/a')
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = r.json()
+        self.assertEqual(j['status'], 'error')
+
     # -- HTML Recipe --
 
     def test_html_recipe_1 (self) :
@@ -314,6 +362,14 @@ class TestIDB (TestCase) :
         j = r.json()
         self.assertEqual(j['status'], 'error')
 
+    # Error case
+    def test_html_recipe_6 (self) :
+        r = requests.get('http://104.239.168.220/recipe/a')
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = r.json()
+        self.assertEqual(j['status'], 'error')
+
     # -- HTML Cuisine --
 
     def test_html_cuisine_1 (self) :
@@ -345,6 +401,14 @@ class TestIDB (TestCase) :
     # Error case
     def test_html_cuisine_5 (self) :
         r = requests.get('http://104.239.168.220/cuisine/')
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = r.json()
+        self.assertEqual(j['status'], 'error')
+
+    # Error case
+    def test_html_cuisine_6 (self) :
+        r = requests.get('http://104.239.168.220/cuisine/a')
         c = r.headers['content-type']
         self.assertEqual(c, 'application/json')
         j = r.json()
