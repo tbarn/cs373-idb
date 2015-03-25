@@ -951,18 +951,33 @@ def get_team_template():
 
 @app.route('/ingredients.html', methods=['GET'])
 def get_ingredients_template():
+'''
+output: returns a flask template filled in with the ingredients
+'''
     return render_template("ingredients.html", ingredients=ingredients)
 
 @app.route('/recipes.html', methods=['GET'])
 def get_recipes_template():
+'''
+output: returns a flask template filled in with the recipes
+'''
     return render_template("recipes.html", recipes=recipes)
 
 @app.route('/cuisines.html', methods=['GET'])
 def get_cuisines_template():
+'''
+output: returns a flask template filled in with the cuisines
+'''
     return render_template("cuisines.html", cuisines=cuisines)
 
 @app.route('/ingredient/<int:ingredient_id>', methods=['GET'])
 def get_ingredient_template(ingredient_id):
+'''
+input: ingredient id number
+
+output: returns a flask template with the data from the ingredient that
+ corresponds to the ingredient id
+'''
     if ingredient_id > len(ingredients) or ingredient_id == 0:
         abort(404)
     ingredient1 = ingredients[ingredient_id - 1]
@@ -971,6 +986,12 @@ def get_ingredient_template(ingredient_id):
 
 @app.route('/recipe/<int:recipe_id>', methods=['GET'])
 def get_recipe_template(recipe_id):
+'''
+input: recipe id number
+
+output: returns a flask template filled in with the data from the recipe that
+ corresponds to the recipe id
+'''
     if recipe_id > len(recipes) or recipe_id == 0:
         abort(404)
     recipe1 = recipes[recipe_id - 1]
@@ -979,6 +1000,12 @@ def get_recipe_template(recipe_id):
 
 @app.route('/cuisine/<int:cuisine_id>', methods=['GET'])
 def get_cuisine_template(cuisine_id):
+'''
+input: cuisine id number
+
+output: returns a flask template filled in with the data from the cuisine that
+ corresponds to the cuisine id
+'''
     if cuisine_id > len(cuisines) or cuisine_id == 0:
         abort(404)
     cuisine1 = cuisines[cuisine_id - 1]

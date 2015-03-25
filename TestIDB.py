@@ -12,6 +12,7 @@ from io       import StringIO
 from unittest import main, TestCase
 import re
 import requests
+#from lxml import html
 
 from app import *
 
@@ -38,7 +39,6 @@ class TestIDB (TestCase) :
         # Test Content
         self.assertEqual(j['data']['cuisines'][0]['name'], 'Japanese')
         self.assertEqual(j['data']['cuisines'][9]['name'], 'Persian')
-
 
     def test_api_cuisines_2 (self) :
 # Should this really be an error?
@@ -296,6 +296,7 @@ class TestIDB (TestCase) :
         c = r.headers['content-type']
         self.assertEqual(c, 'text/html; charset=utf-8')
 
+#NEED TO FIX
     # Error case
     def test_html_ingredient_3 (self) :
         r = requests.get('http://104.239.168.220/ingredient/0')
@@ -303,6 +304,7 @@ class TestIDB (TestCase) :
         c = r.headers['content-type']
         self.assertEqual(c, 'text/html; charset=utf-8')
 
+#NEED TO FIX
     # Error case
     def test_html_ingredient_4 (self) :
         r = requests.get('http://104.239.168.220/ingredient/54')
@@ -314,17 +316,13 @@ class TestIDB (TestCase) :
     def test_html_ingredient_5 (self) :
         r = requests.get('http://104.239.168.220/ingredient/')
         c = r.headers['content-type']
-        self.assertEqual(c, 'application/json')
-        j = r.json()
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(c, 'text/html; charset=utf-8')
 
     # Error case
     def test_html_ingredient_6 (self) :
         r = requests.get('http://104.239.168.220/ingredient/a')
         c = r.headers['content-type']
-        self.assertEqual(c, 'application/json')
-        j = r.json()
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(c, 'text/html; charset=utf-8')
 
     # -- HTML Recipe --
 
@@ -340,6 +338,7 @@ class TestIDB (TestCase) :
         c = r.headers['content-type']
         self.assertEqual(c, 'text/html; charset=utf-8')
 
+#NEED TO FIX
     # Error case
     def test_html_recipe_3 (self) :
         r = requests.get('http://104.239.168.220/recipe/0')
@@ -347,6 +346,7 @@ class TestIDB (TestCase) :
         c = r.headers['content-type']
         self.assertEqual(c, 'text/html; charset=utf-8')
 
+#NEED TO FIX
     # Error case
     def test_html_recipe_4 (self) :
         r = requests.get('http://104.239.168.220/recipe/11')
@@ -358,17 +358,13 @@ class TestIDB (TestCase) :
     def test_html_recipe_5 (self) :
         r = requests.get('http://104.239.168.220/recipe/')
         c = r.headers['content-type']
-        self.assertEqual(c, 'application/json')
-        j = r.json()
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(c, 'text/html; charset=utf-8')
 
     # Error case
     def test_html_recipe_6 (self) :
         r = requests.get('http://104.239.168.220/recipe/a')
         c = r.headers['content-type']
-        self.assertEqual(c, 'application/json')
-        j = r.json()
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(c, 'text/html; charset=utf-8')
 
     # -- HTML Cuisine --
 
@@ -384,6 +380,7 @@ class TestIDB (TestCase) :
         c = r.headers['content-type']
         self.assertEqual(c, 'text/html; charset=utf-8')
 
+#NEED TO FIX
     # Error case
     def test_html_cuisine_3 (self) :
         r = requests.get('http://104.239.168.220/cuisine/0')
@@ -391,6 +388,7 @@ class TestIDB (TestCase) :
         c = r.headers['content-type']
         self.assertEqual(c, 'text/html; charset=utf-8')
 
+#NEED TO FIX
     # Error case
     def test_html_cuisine_4 (self) :
         r = requests.get('http://104.239.168.220/cuisine/11')
@@ -402,17 +400,13 @@ class TestIDB (TestCase) :
     def test_html_cuisine_5 (self) :
         r = requests.get('http://104.239.168.220/cuisine/')
         c = r.headers['content-type']
-        self.assertEqual(c, 'application/json')
-        j = r.json()
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(c, 'text/html; charset=utf-8')
 
     # Error case
     def test_html_cuisine_6 (self) :
         r = requests.get('http://104.239.168.220/cuisine/a')
         c = r.headers['content-type']
-        self.assertEqual(c, 'application/json')
-        j = r.json()
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(c, 'text/html; charset=utf-8')
 
     # -------------
     # Error Handler
@@ -423,6 +417,6 @@ class TestIDB (TestCase) :
 # ----
 
 if __name__ == "__main__" :
-    main()
+    main(warnings='ignore')
 
 
