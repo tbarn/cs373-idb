@@ -909,12 +909,18 @@ ingredients = [
 @app.route('/api/v1.0/cuisines', methods=['GET'])
 def get_cuisines():
     """
+    API GET request for all cuisines
     returns a response formatted in JSON with all the cuisines and their attributes
     """
     return jsonify({'status': 'success', 'data': {'cuisines': cuisines}})
 
 @app.route('/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
 def get_cuisine(cuisine_id):
+    """
+    API GET request for a specific cuisine
+    cuisine_id id of specific cuisine
+    returns a response formatted in JSON for the cuisine requested by id with its attributes
+    """
     cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
     if len(cuisine) == 0:
         abort(404)
@@ -923,12 +929,18 @@ def get_cuisine(cuisine_id):
 @app.route('/api/v1.0/recipes', methods=['GET'])
 def get_recipes():
     """
+    API GET request for all recipes
     returns a response formatted in JSON with all the recipes and their attributes
     """
     return jsonify({'status': 'success', 'data': {'recipes': recipes}})
 
 @app.route('/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
 def get_recipe(recipe_id):
+    """
+    API GET request for a specific recipe
+    recipe_id id of specific recipe
+    returns a response formatted in JSON for the recipe requested by id with its attributes
+    """
     recipe = [recipe for recipe in recipes if recipe['id'] == recipe_id]
     if len(recipe) == 0:
         abort(404)
@@ -936,10 +948,19 @@ def get_recipe(recipe_id):
 
 @app.route('/api/v1.0/ingredients', methods=['GET'])
 def get_ingredients():
+    """
+    API GET request for all ingredients
+    returns a response formatted in JSON with all the ingredients and their attributes
+    """
     return jsonify({'status': 'success', 'data': {'ingredients': ingredients}})
 
 @app.route('/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
 def get_ingredient(ingredient_id):
+    """
+    API GET request for a specific ingredient
+    ingredient_id id of specific ingredient
+    returns a response formatted in JSON for the ingredient requested by id with its attributes
+    """
     ingredient = [ingredient for ingredient in ingredients if ingredient['id'] == ingredient_id]
     if len(ingredient) == 0:
         abort(404)
