@@ -5,6 +5,7 @@
  <h1>Recipe: {{ recipe.name }}</h1>
  <h2>Description: {{ recipe.description }}</h2>
 </div>
+</br>
 <div  class='container-fluid'>
  <div  class='row line-height:75em'>
   <div class='col-sx-4 col-md-4 col-lg-4'>
@@ -12,7 +13,7 @@
     <p>Ingredients</p>
     <ul class="list-group">
       {% for ingredient in recipe.ingredients %}
-        <li class="list-group-item">{{ ingredient.quantity}} {{ ingredient.name }}</li>
+        <a href="/ingredient/{{ ingredient.id }}"><li class="list-group-item">{{ ingredient.quantity }} {{ ingredient.name }}</li></a>
       {% endfor %}
     </ul>      
     <p>Instructions</p>

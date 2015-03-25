@@ -3,27 +3,29 @@
 {% block content %}
 <div  class='container text-center'>
  <h1>Ingredient: {{ ingredient.name }}</h1>
- <h2>Description: {{ ingredient.description }}</h2>
+<!-- <h2>Description: {{ ingredient.description }}</h2>  -->
 </div>
+</br>
 <div  class='container-fluid'>
  <div  class='row line-height:75em'>
-  <div class='col-sx-4 col-md-4 col-lg-4'>
+  <div class='col-sx-6 col-md-6 col-lg-6'>
     <div class="container-fluid">
+    <h2>Description: {{ ingredient.description }}</h2>  
     <p>Recipes</p>
     <ul class="list-group">
       {% for recipe in ingredient.recipes %}
-        <li class="list-group-item">{{ recipe.name }}</li>
+        <a href="/recipe/{{ recipe.id }}"><li class="list-group-item">{{ recipe.name }}</li></a>
       {% endfor %}
     </ul>      
     <p>Cuisines</p>
     <ul class="list-group">
       {% for cuisine in ingredient.cuisines%}
-        <li class="list-group-item">{{ cuisine.name }}</li>
+        <a href="/cuisine/{{ cuisine.id }}"><li class="list-group-item">{{ cuisine.name }}</li></a>
       {% endfor %}
     </ul>      
     </div>
   </div>
-  <div class='col-sx-8 col-md-8 col-lg-8'>
+  <div class='col-sx-6 col-md-6 col-lg-6'>
     <div class="container-fluid">
     <div class="container-fluid">
         <img src="{{ ingredient.image_URL }}" class="img-rounded img-responsive" alt="Buffet"> 

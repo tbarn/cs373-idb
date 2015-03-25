@@ -441,7 +441,7 @@ ingredients = [
     {
         "id": 2, 
         "name": "avocado", 
-        "description": "like a herd of crawfish tickling your ears with their mandibles", 
+        "description": "The avocado is not sweet, but rich, and distinctly yet subtly flavored, and of smooth, almost creamy texture. It is used in both savory and sweet dishes, though in many countries not for both. The avocado is very popular in vegetarian cuisine, as substitute for meats in sandwiches and salads because of its high fat content.", 
         "image_URL": "http://authoritynutrition.com/wp-content/uploads/2014/09/avocado-sliced-in-half.jpg", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
@@ -648,7 +648,7 @@ ingredients = [
         "id": 24, 
         "name": "milk", 
         "description": "Milk has been used for human consumption for thousands of years. Today cow's milk is one of the most popular animal milks consumed by humans. Around the world, people drink the milk of many other animals including camels, goats, llamas, reindeer, sheep and water buffalo. Milk is available in many varieties. Raw milk has not been pastuerized, and is usually available in natural food stores. Whole milk is the milk as it came from the cow and contains about 3.5% milk fat. Low-fat milk is available in two types, 2% and 1%. The 1% and 2% designations refer to the percent of fat by weight that the milk contains.. Nonfat or skim milk must by law contain less than .5% milk fat.", 
-        "image_URL": "http://en.wikipedia.org/wiki/Milk#/media/File:Milk_glass.jpg", 
+        "image_URL": "http://www.mineravita.com/en/images/mleko.jpg", 
         "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
         "cuisines": [{"id": 5, "name": "American"}]
     }, 
