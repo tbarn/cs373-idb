@@ -908,6 +908,9 @@ ingredients = [
 
 @app.route('/api/v1.0/cuisines', methods=['GET'])
 def get_cuisines():
+    """
+    returns a response formatted in JSON with all the cuisines and their attributes
+    """
     return jsonify({'status': 'success', 'data': {'cuisines': cuisines}})
 
 @app.route('/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
@@ -919,6 +922,9 @@ def get_cuisine(cuisine_id):
 
 @app.route('/api/v1.0/recipes', methods=['GET'])
 def get_recipes():
+    """
+    returns a response formatted in JSON with all the recipes and their attributes
+    """
     return jsonify({'status': 'success', 'data': {'recipes': recipes}})
 
 @app.route('/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
