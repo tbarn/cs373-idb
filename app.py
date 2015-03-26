@@ -977,14 +977,14 @@ def get_ingredient(ingredient_id):
 @app.route('/', methods=['GET'])
 def get_index_template():
     """
-    Returns index page
+    output: returns index page
     """
     return render_template("index.html",index=index)
 
 @app.route('/team.html', methods=['GET'])
 def get_team_template():
     """
-    Renders team page
+    output: renders team page
     """
     return render_template("team.html")
 
@@ -1055,7 +1055,7 @@ def get_cuisine_template(cuisine_id):
 @app.errorhandler(404)
 def error_404(error):
     """
-    Output: returns a JSON formatted response for 404 errors from an API route
+    output: returns a JSON formatted response for 404 errors from an API route
      and a HTML 404 page when it the request is from a path not starting with '/api'
     """
     if request.path.startswith('/api'):
