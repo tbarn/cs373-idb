@@ -1,3 +1,21 @@
+commit c47e77d7ce39161f84c9ebd04f7c99d243677a7f
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Mar 26 17:07:17 2015 +0000
+
+    re-ran pydoc
+
+commit d83ed7d5f42b7e4652a6a49a1fc0041b3dc97cec
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Mar 26 12:03:11 2015 -0500
+
+    Adding Report
+
+commit da2cbbfe9fb60ed1a5f9418ec581a02e1c48bfbf
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 11:53:28 2015 -0500
+
+    Added log, closes issue #8
+
 commit ebe6a9436090f3c8740435f8151434ff5c8faa35
 Merge: 7c2110d 46932ee
 Author: Taylor Barnett <taylormbarnett@utexas.edu>
