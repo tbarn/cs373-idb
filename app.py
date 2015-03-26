@@ -248,7 +248,7 @@ recipes = [
         "id": 3, 
         "name": "Tofu Lo-Mein", 
         "description": "The term lo-mein translates to 'stirred noodles' in Cantonese. This dish contains tofu and vegetables.", 
-        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/8711.jpg", 
+        "image_URL": "http://thevword.net/wp-content/uploads/2015/02/crispy-tofu-lo-mein-8.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/XdXyFAIsxMc", 
         "ingredients": [
         {"id": 14, "name": "extra firm tofu", "quantity": "16 ounces"}, 
@@ -272,7 +272,7 @@ recipes = [
         "id": 4, 
         "name": "Spinach Garlic Pasta", 
         "description": "A quick and easy Italian dish.", 
-        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/658664.jpg", 
+        "image_URL": "https://cupsandspoonfuls.files.wordpress.com/2013/06/kh10055.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/Uknj5jGk04s", 
         "ingredients": [
         {"id": 15, "name": "olive oil", "quantity": "1 tablespoon"},
@@ -310,7 +310,7 @@ recipes = [
         "id": 6, 
         "name": "Pad Thai", 
         "description": "A stir-fried rice noodle dish commonly served as a street food and at casual local eateries in Thailand.", 
-        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/442101.jpg", 
+        "image_URL": "https://omnomculture.files.wordpress.com/2012/04/dsc_0804.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/Ns8su84olsQ", 
         "ingredients": [
         {"id": 8, "name": "sugar", "quantity": "3 tablespoons"},
@@ -340,7 +340,7 @@ recipes = [
         "id": 7, 
         "name": "Chicken Quesadilla", 
         "description": "A flour tortilla or a corn tortilla filled with a savoury mixture containing cheese, chicken, other ingredients, and/or vegetables, cooked often on a griddle, then folded in half to form a half-moon shape.", 
-        "image_URL": "http://cdn-image.myrecipes.com/sites/default/files/styles/300x300/public/image/recipes/ck/12/01/spicy-chicken-quesadillas-ck-x.jpg?itok=syRJ1vr2", 
+        "image_URL": "http://static.theliveinkitchen.com/wp-content/uploads/2011/11/BlackBeanButternutSquashQuesadillaCU.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/TTagMrBZ1z8", 
         "ingredients": [
         {"id": 26, "name": "chicken", "quantity": "1 cup chopped skinless, boneless rotisserie"},
@@ -362,7 +362,7 @@ recipes = [
         "id": 8, 
         "name": "Tandoori Shrimp", 
         "description": "In India, tandoori cooking was traditionally associated with the Punjab[4][5] and became popular in the mainstream after the 1947 partition when Punjabis resettled in places such as Delhi. The name comes from the type of cylindrical clay oven, a tandoor, in which the dish is traditionally prepared.", 
-        "image_URL": "http://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/1203/tandoori-shrimp-rice_300.jpg?itok=UQ7fjdGr", 
+        "image_URL": "http://d3vs4613l1445x.cloudfront.net/archive/x651133013/g32025800000000000053b03a7e3af1ec3548f1c2571a4368355f5568cb.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/wIpPkuwIuCw", 
         "ingredients": [
         {"id": 42, "name": "peeled and deveined large shrimp", "quantity": "1 pound"},
@@ -383,7 +383,7 @@ recipes = [
         "id": 9, 
         "name": "Beef Bulgogi", 
         "description": "Bulgogi is traditionally grilled, but pan-cooking has become popular as well. Whole cloves of garlic, sliced onions and chopped green peppers are often grilled or fried with the meat. This dish is sometimes served with a side of lettuce or other leafy vegetable, which is used to wrap a slice of cooked meat, often along with a dab of ssamjang, or other side dishes, and then eaten together.", 
-        "image_URL": "http://images.media-allrecipes.com/userphotos/250x250/00/69/36/693632.jpg", 
+        "image_URL": "http://www.saveur.com/sites/saveur.com/files/images/2012-09/7-SAV150-136.Bulgogi-750x750.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/3qBjL_HGvco", 
         "ingredients": [
         {"id": 6, "name": "sesame seeds", "quantity": "2 tablespoons"},
@@ -406,7 +406,7 @@ recipes = [
         "id": 10, 
         "name": "Persian Rice", 
         "description": "Traditionally, rice was most prevalent as a major staple item in the rice growing region of northern Iran, and the homes of the wealthy, while in the rest of the country bread was the dominant staple. The varieties of rice most valued in Persian cuisine are prized for their aroma, and grow in the north of Iran.", 
-        "image_URL": "http://www.epicurious.com/images/recipesmenus/2012/2012_august/51109800.jpg", 
+        "image_URL": "https://persiankitchen.files.wordpress.com/2009/06/white-rice1-medium.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/OuPABfgsa4g", 
         "ingredients": [
         {"id": 28, "name": "butter", "quantity": "3 tablespoons unsalted"},
