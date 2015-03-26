@@ -8,11 +8,9 @@
 # imports
 # -------
 
-from io       import StringIO
 from unittest import main, TestCase
 import requests
 
-from app import *
 
 # -----------
 # TestIDB
