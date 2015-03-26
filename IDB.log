@@ -1,0 +1,518 @@
+commit ebe6a9436090f3c8740435f8151434ff5c8faa35
+Merge: 7c2110d 46932ee
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 11:45:50 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 7c2110da02c171231f7fc11e048e4ae2d725997a
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 11:45:38 2015 -0500
+
+    Updated team page with stats
+
+commit 46932ee1506dcd4f3a82fb55792d6ca66b34ccfc
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Thu Mar 26 16:36:01 2015 +0000
+
+    updated info
+
+commit 2e0dd3ae7e2b8507b572971f8ed9ec96ecafbae8
+Merge: faba028 5fadf65
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Thu Mar 26 16:28:09 2015 +0000
+
+    added info to team.html
+
+commit faba0289f968f27f63a096a96dd33a4b42d7e8d2
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Thu Mar 26 16:20:58 2015 +0000
+
+    changed image URLs for some recipes
+
+commit 5fadf6585a98cf0cd1026ab72dbe1693674fa650
+Author: andy1815 <andycchow@utexas.edu>
+Date:   Thu Mar 26 11:16:43 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit d0122844257687c00360fb1538e92dc7c94df9eb
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 11:10:07 2015 -0500
+
+    Team page changes and OCD fixes
+
+commit efa1aa352f179f2d72476b27333c9a6e44c193d0
+Merge: bb14c3b cf95ef3
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 10:58:03 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit bb14c3b24d97adae271237c7f9a30bf1d635df4e
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 10:57:49 2015 -0500
+
+    Added twitter feed, moved docs link, and font size change
+
+commit cf95ef38e4b7f2bc542d52c9ec4087b9dec040da
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Mar 26 15:43:41 2015 +0000
+
+    Adding out file for unit tests, close #30
+
+commit cbcea9b5f11269ba992a4d33bc57fdef4d0974a6
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Mar 26 15:39:47 2015 +0000
+
+    added my team bio, got cs on cuisine page to look better but not perfect
+
+commit 1184f5c2a5e2ed3e590f52d5f6b7fedb4c300c0a
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Thu Mar 26 15:12:11 2015 +0000
+
+    added bio
+
+commit 6ba2a3d2383b6bedd402b654ecbef7ceba148d45
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Mar 26 09:59:09 2015 -0500
+
+    Updated UML to reflect transition to Pinterest
+
+commit ac00ff59337f3375f6d94042218fe76d61a61f55
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 09:24:05 2015 -0500
+
+    Added my own info on team page as well as structure for everyone else
+
+commit 3fcf1ef414f3a84e184f0c6aba3228352d62971c
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Mar 26 01:34:34 2015 +0000
+
+    wip google maps template
+
+commit ac9b3d9e7bc5cd70d936377c18e6afb8d3d2e3cd
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Mar 26 01:33:34 2015 +0000
+
+    Changed the spelling of pinterest
+
+commit c4cf7194f70e3eecbe03221fc9fb7187583cd037
+Merge: 3c5bbf9 26c86b2
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Thu Mar 26 01:30:35 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 3c5bbf98bacb2f66359ca9c22f6ef9f354c331ba
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Thu Mar 26 01:28:39 2015 +0000
+
+    added photo
+
+commit 26c86b2221b8fc0ce2af58a398bb56e3bc91339d
+Author: andy1815 <andycchow@utexas.edu>
+Date:   Wed Mar 25 20:19:10 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 97981a6708d09cad25337c326252f4d89881754b
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Mar 26 00:37:14 2015 +0000
+
+    Renamed test file closes #25
+
+commit db4c94498b50fc7f49c61b2898e0f49517754c73
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Mar 26 00:34:41 2015 +0000
+
+    Made HTML unit tests better, testing for content, closes #21 closes #20 closes #18
+
+commit 8adc17989cc1c8466131ddbd4ff16ed976c54720
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 25 19:13:49 2015 -0500
+
+    Minor docstring fixes
+
+commit 606adf6600f9f96043eaf061da88b75a4e77750c
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 25 19:12:16 2015 -0500
+
+    Added more docstrings
+
+commit 44ffb6f503695a08bd592c08629ac5948c678cb8
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Mar 26 00:00:20 2015 +0000
+
+    added documentation html for app.py
+
+commit 6b7877450c1821ce497a22984c8eb3ce67345ae9
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Mar 25 23:45:04 2015 +0000
+
+    fixed docstrings
+
+commit f7ffe4bef942f9a2e5f0f512ade8ed4fa7a6cce5
+Merge: b2197dd c02c3ad
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Mar 25 23:37:44 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit b2197dd59b6d3129566614a276a0866f0c7faddd
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Mar 25 23:37:10 2015 +0000
+
+    added some pydoc string comments to template rendering functions
+
+commit c02c3ada018050971dddc57d6c53aa3ac98c1709
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 25 18:33:18 2015 -0500
+
+    Added pydoc documentation for API functions
+
+commit e3b38a7562df37e7cac55dff4243312e0461f22f
+Merge: 5d26e7c aadef61
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 25 18:17:38 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 5d26e7c97ba68bafe0f403434ad3e4aebb67d950
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 25 18:17:19 2015 -0500
+
+    [WIP] Started pydoc strings
+
+commit aadef619e96f235cc12242f44dcead7c3dc3177a
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Mar 25 23:16:43 2015 +0000
+
+    added 404 page
+
+commit ffdad4c043af498bc5ab2e40e412c08780160527
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 25 18:04:24 2015 -0500
+
+    Added two types of 404, API and non-API calls
+
+commit fda74c56f1cbdd8482ff0788f753b01a21818699
+Merge: 263585e 7353157
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Mar 25 22:59:08 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 263585ede2b333b29bb8eb6f664e4e98bc8042dd
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Mar 25 22:58:37 2015 +0000
+
+    Fixed so 0 gives an error
+
+commit 73531572bd6d92c29c0745cac719fc2cf15a226f
+Author: andy1815 <andycchow@utexas.edu>
+Date:   Wed Mar 25 17:21:32 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 74cd9ccd758ce24d306b47d25f06e382b48723d8
+Author: andy1815 <andycchow@utexas.edu>
+Date:   Wed Mar 25 17:21:11 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 73be78ae527f9216669642c64fa5d248cb0b8df6
+Author: Joey <jjc2011@gmail.com>
+Date:   Wed Mar 25 19:51:52 2015 +0000
+
+    Pushing yesterdays changes
+
+commit 6f22d1983c07eb1c3c190e6768d5deaa55eeca4e
+Author: Joey <jjc2011@gmail.com>
+Date:   Wed Mar 25 19:34:30 2015 +0000
+
+    Added tests for website routes
+
+commit 4fe4d706d2abc158b320fda55ac617c28ccf94c0
+Merge: c265df3 c597e6b
+Author: Joey <jjc2011@gmail.com>
+Date:   Wed Mar 25 17:26:46 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit c265df3a4387ca15f3ae14ed2a9943516a304b05
+Author: Joey <jjc2011@gmail.com>
+Date:   Wed Mar 25 17:25:29 2015 +0000
+
+    Adding unit tests file
+
+commit c597e6b0a9582d4aaedb74f3d1774fa02be84d03
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Mar 24 20:57:23 2015 -0500
+
+    Added photo to team page
+
+commit c982f4f968c149a99189dfa32d2cd0994c61f231
+Merge: 0646315 9e46c46
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Mar 25 01:53:59 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 0646315e5cadcead40a5cfcbd81bdf5f3570a36c
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Mar 25 01:53:24 2015 +0000
+
+    Added Carl to teaml.html
+
+commit 9e46c4687860f2c2995952d2f5e73ec0d3cc8b09
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Mar 24 16:34:41 2015 -0500
+
+    Adding UML diagram
+
+commit f0b10307eebac48f5df975c149e7ef20e8e09680
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Mar 24 03:38:31 2015 +0000
+
+    Fixed Ingredients in Recipe to display properly (shows quantityt then name)
+
+commit 97cc9af6aa0980696805e35ec4b009ff40ff6b36
+Merge: 18fbd2d 573547f
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Mon Mar 23 22:12:18 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 18fbd2d08907a9dc5cf98bed6bfba5df3c39e3c8
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Mon Mar 23 22:11:49 2015 -0500
+
+    Fixed some cuisines not loading
+
+commit 573547fda026cb392cb159365997e5c124dd2691
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Mar 24 03:00:02 2015 +0000
+
+    Shortened canned black beans name because it was making rows weird
+
+commit e73e64750913607c81543387ffb5d0e8f17fe824
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Mar 24 02:56:36 2015 +0000
+
+    Fixed more non ascii characters
+
+commit 437b1638c998cbc181cb5f009f3aa8db2eaec42f
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Mon Mar 23 21:54:06 2015 -0500
+
+    Fixed avocado link
+
+commit 8a810421f69432a1c80db89a55045103326589c3
+Merge: da86164 8810b88
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Mar 24 02:51:14 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit da861641776e21ebad7ccb7b954129545b6e3c59
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Mar 24 02:50:52 2015 +0000
+
+    Fixed non ascii character
+
+commit 8810b88da67c404ba721bf7b509b5704702fc5ae
+Merge: 513741a fe99029
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Mon Mar 23 21:43:01 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 513741ab8cc25d40b4a58e8585caa4f2dfd6fecc
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Mon Mar 23 21:42:07 2015 -0500
+
+    Added rest of ingredients and removed old Youtube links
+
+commit fe990292faca64ccff517c2a8ede1e8a92914554
+Merge: 29f9fe1 95bf6d1
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Tue Mar 24 02:38:07 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+    
+    reasons
+
+commit 95bf6d1181e1a96b97dbd730539cac2c3a8584a9
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Mon Mar 23 21:36:04 2015 -0500
+
+    Added rest of recipes
+
+commit 29f9fe1968b4b513d19fc2c130d9b0bdce1c7db8
+Merge: 2b51e1c 1c9da38
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Tue Mar 24 02:35:39 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+    
+    making changes to css, added stuff to team page
+
+commit 2b51e1caf7adb5cb689b77521047e8655b157c26
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Tue Mar 24 02:35:18 2015 +0000
+
+    team.html, made pictures into links anyway
+
+commit 1c9da385b47d167f2f76e35a1bf0b2ab9ea06d47
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Mon Mar 23 21:30:24 2015 -0500
+
+    Added rest of the cuisines
+
+commit f625b29ea01a446ed2456e73ad587d571aa5fb69
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Mon Mar 23 19:32:43 2015 -0500
+
+    Changed JSON responses in API and organized routes
+
+commit b5266cc880373ec3d42333ca84d3571c89a85040
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Sun Mar 22 18:35:49 2015 -0500
+
+    Added 404 error API response
+
+commit c8e772ccc0eb503062eaa193701a4e3784dc033c
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Mar 22 23:29:50 2015 +0000
+
+    Added more ingredients to test website visual
+
+commit 3ae66651093f2a0f498e3db52b79b80ca2c84e09
+Merge: 953b206 a2f9ef0
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Mar 22 23:21:42 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 953b206e610cbb51898cf0b8c52379545bc6e52f
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Mar 22 23:20:19 2015 +0000
+
+    Added missing data in app.py
+
+commit a2f9ef0763eaa7b4be57c55931259b4996596aea
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Sun Mar 22 18:05:57 2015 -0500
+
+    Fixed team page link
+
+commit e1897f1e36e870791ff6bd66b5bad47db95697a1
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Sun Mar 22 18:00:56 2015 -0500
+
+    Added function to render team page
+
+commit 8b27f413c6f5b0d1bb7858e31625c958e919d18e
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Sun Mar 22 22:43:46 2015 +0000
+
+    stuffed pushed last time works now
+
+commit 5498c8f5c5bb8e061c9faebec897754c64726e28
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Sun Mar 22 22:29:01 2015 +0000
+
+    filled out all the rest of the templates based on ingredients.html and hooked up index to rest of pages
+
+commit 87ef08f5f1cd89e3be56ded11a4b074ad3327b99
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Sun Mar 22 13:00:24 2015 -0500
+
+    Fixed templates after base.html was added to repo
+
+commit a3d08048e14d333cd2e365822540261179b1e6f9
+Merge: 5232933 a72be7d
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Fri Mar 20 10:54:32 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 5232933789ae75a00779cfb715894e483070556b
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Fri Mar 20 10:53:56 2015 -0500
+
+    Added new base.html
+
+commit a72be7db036fcd25da30df5232a59872372728d7
+Merge: 70cc6f0 29de798
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Fri Mar 20 15:24:20 2015 +0000
+
+    ingredients.html page templated, not sure if will work with more than 3 items
+
+commit 70cc6f010a262684b9d4d5b358d942b556c5d101
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Fri Mar 20 15:19:15 2015 +0000
+
+    ingredients.html page templated, not sure if will work with more than 3 items
+
+commit 29de798d97ee69e26b94a6ed02067b05d4e3b908
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Fri Mar 20 01:20:48 2015 -0500
+
+    Inheritance added to team template, page WIP
+
+commit 95215f3cd95a444c85eec8990cff9dae6e751069
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Fri Mar 20 01:19:06 2015 -0500
+
+    Added inheritance to the rest of the templates
+
+commit efeb14548cfafefd5f804f9663a91ec95242e900
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 19 21:31:07 2015 -0500
+
+    Added new theme and template inheritance for index.html
+
+commit f225aa044f47b6b8d088ea247cfda9a1dfddde0f
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Mar 19 02:17:04 2015 +0000
+
+    moved css files into static, index.html is templated now
+
+commit 61a6921692f266ff2e4616d66641a7c11d80d144
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Mar 19 00:57:21 2015 +0000
+
+    changed static dir location
+
+commit 0e9684c6fdce3b9fdc7d006811bd1a987bf98197
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 18 19:46:58 2015 -0500
+
+    Remove todo from route paths
+
+commit 090023863b7bf983c27bfbf369a8895bad37aa19
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Mar 18 19:34:56 2015 -0500
+
+    Attempting to clean up repo and add gitignore
+
+commit 09060c7ca7cf5620e02fa493cdfe056b30e2b4bd
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Tue Mar 17 03:19:23 2015 +0000
+
+    added templateting for ingredient page, chaged pathing in app.py
+
+commit 322839275501cbc4d258b640c337c740627f01dc
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Mar 12 01:29:44 2015 +0000
+
+    Added pillars info
+
+commit 34748aff8b858568f4ed54948cf9ffd804c40807
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Mar 12 01:02:36 2015 +0000
+
+    Initial flask tutorial json
