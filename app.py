@@ -910,7 +910,7 @@ ingredients = [
 def get_cuisines():
     """
     API GET request for all cuisines
-    returns a response formatted in JSON with all the cuisines and their attributes
+    output: returns a response formatted in JSON with all the cuisines and their attributes
     """
     return jsonify({'status': 'success', 'data': {'cuisines': cuisines}})
 
@@ -918,8 +918,8 @@ def get_cuisines():
 def get_cuisine(cuisine_id):
     """
     API GET request for a specific cuisine
-    cuisine_id id of specific cuisine
-    returns a response formatted in JSON for the cuisine requested by id with its attributes
+    input: cuisine_id 
+    output: returns a response formatted in JSON for the cuisine requested by id with its attributes
     """
     cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
     if len(cuisine) == 0:
@@ -930,7 +930,8 @@ def get_cuisine(cuisine_id):
 def get_recipes():
     """
     API GET request for all recipes
-    returns a response formatted in JSON with all the recipes and their attributes
+
+    output: returns a response formatted in JSON with all the recipes and their attributes
     """
     return jsonify({'status': 'success', 'data': {'recipes': recipes}})
 
@@ -938,8 +939,10 @@ def get_recipes():
 def get_recipe(recipe_id):
     """
     API GET request for a specific recipe
-    recipe_id id of specific recipe
-    returns a response formatted in JSON for the recipe requested by id with its attributes
+
+    input: recipe_id 
+
+    output: returns a response formatted in JSON for the recipe requested by id with its attributes
     """
     recipe = [recipe for recipe in recipes if recipe['id'] == recipe_id]
     if len(recipe) == 0:
@@ -950,7 +953,8 @@ def get_recipe(recipe_id):
 def get_ingredients():
     """
     API GET request for all ingredients
-    returns a response formatted in JSON with all the ingredients and their attributes
+
+    output: returns a response formatted in JSON with all the ingredients and their attributes
     """
     return jsonify({'status': 'success', 'data': {'ingredients': ingredients}})
 
@@ -958,8 +962,10 @@ def get_ingredients():
 def get_ingredient(ingredient_id):
     """
     API GET request for a specific ingredient
-    ingredient_id id of specific ingredient
-    returns a response formatted in JSON for the ingredient requested by id with its attributes
+
+    input: ingredient_id
+    
+    output: returns a response formatted in JSON for the ingredient requested by id with its attributes
     """
     ingredient = [ingredient for ingredient in ingredients if ingredient['id'] == ingredient_id]
     if len(ingredient) == 0:
@@ -970,10 +976,16 @@ def get_ingredient(ingredient_id):
 
 @app.route('/', methods=['GET'])
 def get_index_template():
+    """
+    Returns index page
+    """
     return render_template("index.html",index=index)
 
 @app.route('/team.html', methods=['GET'])
 def get_team_template():
+    """
+    Renders team page
+    """
     return render_template("team.html")
 
 @app.route('/ingredients.html', methods=['GET'])
@@ -1042,6 +1054,10 @@ def get_cuisine_template(cuisine_id):
 
 @app.errorhandler(404)
 def error_404(error):
+    """
+    Output: returns a JSON formatted response for 404 errors from an API route
+     and a HTML 404 page when it the request is from a path not starting with '/api'
+    """
     if request.path.startswith('/api'):
         return make_response(jsonify({'status': 'error', 'error_message': 'Not found', 'error_code': 404}), 404)
     return render_template("404.html",err=request.path)
