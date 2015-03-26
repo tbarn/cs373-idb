@@ -1,3 +1,27 @@
+commit 4943ffc135ad1209d7f83c5bd748a3f8a3ecb7c9
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 18:27:36 2015 -0500
+
+    Update README.md
+
+commit 8b4e54ddfcb165ce85eaa2a96a594644259fbb81
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 18:26:59 2015 -0500
+
+    Create README.md
+
+commit c49c2998215bd866eee3a965859dea9c04a6a86a
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Mar 26 23:14:03 2015 +0000
+
+    Took out some imports on the unit test file
+
+commit e02f2a263b6c551d7945249cd6b7dc2ac29d0aa3
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 12:08:33 2015 -0500
+
+    Updated log
+
 commit c47e77d7ce39161f84c9ebd04f7c99d243677a7f
 Author: NotBrianZach <brianzacabel@utexas.edu>
 Date:   Thu Mar 26 17:07:17 2015 +0000
