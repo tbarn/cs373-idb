@@ -1,3 +1,9 @@
+drop table r_and_i;
+drop table c_and_i;
+drop table cuisines;
+drop table ingredients;
+drop table recipes;
+
 CREATE TABLE cuisines (
     cuisine_id integer PRIMARY KEY,
     name varchar(256),
@@ -24,10 +30,10 @@ CREATE TABLE c_and_i (
 CREATE TABLE recipes (
     recipe_id integer PRIMARY KEY,
     name varchar(256),
-    description varchar(256),
-    image_url varchar(256),
-    youtube_url varchar(256),
-    map_url varchar(256),
+    description text,
+    image_url text,
+    youtube_url text,
+    map_url text,
     instructions text,
     cuisine_id integer REFERENCES cuisines (cuisine_id) 
 );
