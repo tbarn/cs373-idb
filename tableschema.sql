@@ -22,7 +22,7 @@ CREATE TABLE c_and_i (
 
 
 CREATE TABLE recipes (
-    recipes_id integer PRIMARY KEY,
+    recipe_id integer PRIMARY KEY,
     name varchar(256),
     description varchar(256),
     image_url varchar(256),
@@ -34,7 +34,7 @@ CREATE TABLE recipes (
 
 
 CREATE TABLE r_and_i (
-    recipes_id integer REFERENCES recipes (recipes_id) on update cascade,
+    recipe_id integer REFERENCES recipes (recipe_id) on update cascade,
     ingredient_id integer REFERENCES ingredients (ingredient_id) on update cascade
 );
 
