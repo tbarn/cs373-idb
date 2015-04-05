@@ -1,12 +1,3 @@
-#!flask/bin/python
-from flask import Flask, jsonify, abort, make_response, render_template, request
-import StringIO
-from tests import TestIDB
-from pprint import pprint
-import unittest
-
-app = Flask(__name__)
-
 index = {
 	"leaning":"/static/pisa_tower.jpeg",
 	"peppers":"/static/mexican_peppers.jpeg",
@@ -908,177 +899,27 @@ ingredients = [
     }
 ]
 
-# API Routes, may split these out later
 
-@app.route('/api/v1.0/cuisines', methods=['GET'])
-def get_cuisines():
-    """
-    API GET request for all cuisines
-    output: returns a response formatted in JSON with all the cuisines and their attributes
-    """
-    return jsonify({'status': 'success', 'data': {'cuisines': cuisines}})
+import psycopg2
 
-@app.route('/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
-def get_cuisine(cuisine_id):
-    """
-    API GET request for a specific cuisine
-    input: cuisine_id 
-    output: returns a response formatted in JSON for the cuisine requested by id with its attributes
-    """
-    cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
-    if len(cuisine) == 0:
-        abort(404)
-    return jsonify({'status': 'success', 'data': {'cuisine': cuisine[0]}})
+connection = "dbname='mydb' user='zach'"
+conn = psycopg2.connect(connection)
 
-@app.route('/api/v1.0/recipes', methods=['GET'])
-def get_recipes():
-    """
-    API GET request for all recipes
+cursor = conn.cursor()
 
-    output: returns a response formatted in JSON with all the recipes and their attributes
-    """
-    return jsonify({'status': 'success', 'data': {'recipes': recipes}})
+for cuisine in cuisines:
+    cuisine_id = cuisine['id']
+    name = cuisine['name']
+    description = cuisine['description']
+    image_url = cuisine['image_URL']
+    youtube_url= cuisine['youtube_URL']
+    map_url = cuisine['map']
+    pinterest_page = cuisine['pinterest_page']
 
-@app.route('/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
-def get_recipe(recipe_id):
-    """
-    API GET request for a specific recipe
+    query =  "INSERT INTO cuisines (cuisine_id, name, description, image_url, youtube_url, map_url, pinterest_page) VALUES (%s, %s, %s, %s, %s, %s, %s);"
+    data = (cuisine_id, name, description, image_url, youtube_url, map_url, pinterest_page)
 
-    input: recipe_id 
+    cursor.execute(query, data)
+conn.commit()
+cursor.close()
 
-    output: returns a response formatted in JSON for the recipe requested by id with its attributes
-    """
-    recipe = [recipe for recipe in recipes if recipe['id'] == recipe_id]
-    if len(recipe) == 0:
-        abort(404)
-    return jsonify({'status': 'success', 'data': {'recipe': recipe[0]}})
-
-@app.route('/api/v1.0/ingredients', methods=['GET'])
-def get_ingredients():
-    """
-    API GET request for all ingredients
-
-    output: returns a response formatted in JSON with all the ingredients and their attributes
-    """
-    return jsonify({'status': 'success', 'data': {'ingredients': ingredients}})
-
-@app.route('/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
-def get_ingredient(ingredient_id):
-    """
-    API GET request for a specific ingredient
-
-    input: ingredient_id
-    
-    output: returns a response formatted in JSON for the ingredient requested by id with its attributes
-    """
-    ingredient = [ingredient for ingredient in ingredients if ingredient['id'] == ingredient_id]
-    if len(ingredient) == 0:
-        abort(404)
-    return jsonify({'status': 'success', 'data': {'ingredient': ingredient[0]}})
-
-# Website routes
-
-@app.route('/', methods=['GET'])
-def get_index_template():
-    """
-    output: returns index page
-    """
-    return render_template("index.html",index=index)
-
-@app.route('/team.html', methods=['GET'])
-def get_team_template():
-    """
-    output: renders team page
-    """
-    return render_template("team.html")
-
-@app.route('/ingredients.html', methods=['GET'])
-def get_ingredients_template():
-    """
-    output: returns a flask template filled in with the ingredients
-    """
-    return render_template("ingredients.html", ingredients=ingredients)
-
-@app.route('/recipes.html', methods=['GET'])
-def get_recipes_template():
-    """
-    output: returns a flask template filled in with the recipes
-    """
-    return render_template("recipes.html", recipes=recipes)
-
-@app.route('/cuisines.html', methods=['GET'])
-def get_cuisines_template():
-    """
-    output: returns a flask template filled in with the cuisines
-    """
-    return render_template("cuisines.html", cuisines=cuisines)
-
-@app.route('/ingredient/<int:ingredient_id>', methods=['GET'])
-def get_ingredient_template(ingredient_id):
-    """
-    input: ingredient id number
-    
-    output: returns a flask template with the data from the ingredient that
-     corresponds to the ingredient id
-    """
-    if ingredient_id > len(ingredients) or ingredient_id == 0:
-        abort(404)
-    ingredient1 = ingredients[ingredient_id - 1]
-    return render_template("ingredient.html",
-       ingredient=ingredient1)
-
-@app.route('/recipe/<int:recipe_id>', methods=['GET'])
-def get_recipe_template(recipe_id):
-    """
-    input: recipe id number
-    
-    output: returns a flask template filled in with the data from the recipe that
-     corresponds to the recipe id
-    """
-    if recipe_id > len(recipes) or recipe_id == 0:
-        abort(404)
-    recipe1 = recipes[recipe_id - 1]
-    return render_template("recipe.html",
-       recipe=recipe1)
-
-@app.route('/cuisine/<int:cuisine_id>', methods=['GET'])
-def get_cuisine_template(cuisine_id):
-    """
-    input: cuisine id number
-    
-    output: returns a flask template filled in with the data from the cuisine that
-     corresponds to the cuisine id
-    """
-    if cuisine_id > len(cuisines) or cuisine_id == 0:
-        abort(404)
-    cuisine1 = cuisines[cuisine_id - 1]
-    return render_template("cuisine.html",cuisine=cuisine1)
-
-@app.route('/unittests', methods=['GET'])
-def run_unittests():
-    """
-    output: returns a response formatted in JSON with output of unittests
-    """
-
-    stream = StringIO()
-    runner = unittest.TextTestRunner(stream=stream)
-    result = runner.run(unittest.makeSuite(TestIDB))
-    pprint(result.testsRun)
-    stream.seek(0)
-
-    return jsonify(stream.read())
-
-# Error responses
-
-@app.errorhandler(404)
-def error_404(error):
-    """
-    output: returns a JSON formatted response for 404 errors from an API route
-     and a HTML 404 page when it the request is from a path not starting with '/api'
-    """
-    if request.path.startswith('/api'):
-        return make_response(jsonify({'status': 'error', 'error_message': 'Not found', 'error_code': 404}), 404)
-    return render_template("404.html",err=request.path)
-
-if __name__ == '__main__':
-    app.run(debug=True, port=8000, host = '0.0.0.0')
