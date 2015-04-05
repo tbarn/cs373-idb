@@ -920,6 +920,69 @@ for cuisine in cuisines:
     data = (cuisine_id, name, description, image_url, youtube_url, map_url, pinterest_page)
 
     cursor.execute(query, data)
+    #for ingredient in cuisine['ingredients']:
+    #    query =  "INSERT INTO c_and_i (cuisine_id, ingredient_id) VALUES (%s, %s);"
+    #    data = (cuisine_id, ingredient['id'])
+    #    cursor.execute(query, data)
+
+
+for recipe in recipes:
+    recipe_id = recipe['id']
+    name = recipe['name']
+    description = recipe['description']
+    image_url = recipe['image_URL']
+    youtube_url = recipe['youtube_URL']
+    instructions = str(recipe['instructions'])
+    cuisine = recipe['cuisine']['id']
+    print instructions
+    print cuisine
+    query =  "INSERT INTO recipes (recipe_id, name, description, image_url, youtube_url, instructions, cuisine_id) VALUES (%s, %s, %s, %s, %s, %s, %s);"
+    data = (recipe_id, name, description, image_url, youtube_url, instructions, cuisine)
+    cursor.execute(query, data)
+    #for ingredient in recipe['ingredients']:
+    #    query =  "INSERT INTO c_and_i (recipe_id, ingredient_id) VALUES (%s, %s);"
+    #    data = (recipe_id, ingredient['id'])
+    #    cursor.execute(query, data)
+
+for ingredient in ingredients:
+    ingredient_id = ingredient['id']
+    name = ingredient['name']
+    description = ingredient['description']
+    image_url = ingredient['image_URL']
+  #  youtube_url= ingredient['youtube_URL']
+  #  map_url = ingredient['map']
+  #  pinterest_page = ingredient['pinterest_page']
+
+    query =  "INSERT INTO ingredients (ingredient_id, name, description, image_url) VALUES (%s, %s, %s, %s);"
+    #data = (ingredient_id, name, description, image_url, youtube_url, map_url, pinterest_page)
+    data = (ingredient_id, name, description, image_url)
+
+    cursor.execute(query, data)
+
+for cuisine in cuisines:
+    cuisine_id = cuisine['id']
+    for ingredient in cuisine['ingredients']:
+        query =  "INSERT INTO c_and_i (cuisine_id, ingredient_id) VALUES (%s, %s);"
+        data = (cuisine_id, ingredient['id'])
+        cursor.execute(query, data)
+
+
+for recipe in recipes:
+    recipe_id = recipe['id']
+    for ingredient in recipe['ingredients']:
+        query =  "INSERT INTO r_and_i (recipe_id, ingredient_id) VALUES (%s, %s);"
+        data = (recipe_id, ingredient['id'])
+        cursor.execute(query, data)
+
+#query =  "drop table r_and_i;"
+#cursor.execute(query)
+#query =  "drop table c_and_i;"
+#cursor.execute(query)
+#query =  "drop table recipes"
+#cursor.execute(query)
+#query =  "drop table cuisines"
+#cursor.execute(query)
+#query =  "drop table ingredients"
+#cursor.execute(query)
 conn.commit()
 cursor.close()
-

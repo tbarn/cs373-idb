@@ -1,9 +1,9 @@
 #!flask/bin/python
 from flask import Flask, jsonify, abort, make_response, render_template, request
-import StringIO
-from tests import TestIDB
-from pprint import pprint
-import unittest
+#import StringIO
+import tests
+#from pprint import pprint
+#import unittest
 
 app = Flask(__name__)
 
@@ -1059,14 +1059,14 @@ def run_unittests():
     """
     output: returns a response formatted in JSON with output of unittests
     """
-
+    """
     stream = StringIO()
     runner = unittest.TextTestRunner(stream=stream)
-    result = runner.run(unittest.makeSuite(TestIDB))
+    result = runner.run(unittest.makeSuite(tests.TestIDB))
     pprint(result.testsRun)
     stream.seek(0)
-
-    return jsonify(stream.read())
+    """
+    return render_template("team.html")
 
 # Error responses
 

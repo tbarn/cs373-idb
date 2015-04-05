@@ -1,8 +1,8 @@
 drop table r_and_i;
 drop table c_and_i;
-drop table cuisines;
 drop table ingredients;
 drop table recipes;
+drop table cuisines;
 
 CREATE TABLE cuisines (
     cuisine_id integer PRIMARY KEY,
@@ -44,7 +44,3 @@ CREATE TABLE r_and_i (
     ingredient_id integer REFERENCES ingredients (ingredient_id) on update cascade
 );
 
-CREATE TABLE bar (
-    first_name varchar(256),
-    last_name varchar(256)
-);
