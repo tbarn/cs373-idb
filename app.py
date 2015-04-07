@@ -915,6 +915,22 @@ ingredients = [
 
 # API Routes, may split these out later
 
+def find_cuisine_relationships(cuisine_id):
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select * from cuisines where cuisine_id = " +  str(cuisine_id)  + ";")
+    result = cur.fetchone()
+
+    cur.execute("select i.ingredient_id, i.name from cuisines inner join c_and_i using (cuisine_id) inner join ingredients i using (ingredient_id) where cuisine_id = " + str(cuisine_id) + ";'")
+    ingredients = cur.fetchall()
+    result['ingredients'] = ingredients
+
+    cur.execute("select r.recipe_id, r.name from cuisines inner join recipes r using (cuisine_id) where cuisine_id = " + str(cuisine_id) + ";")
+    recipes = cur.fetchall()
+    result['recipes'] = recipes
+
+    return result
+
 @app.route('/api/v1.0/cuisines', methods=['GET'])
 def get_cuisines():
     """
@@ -923,8 +939,14 @@ def get_cuisines():
     output: returns a response formatted in JSON with all the cuisines and their attributes
     """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
     cur.execute("select * from cuisines;")
-    results = cur.fetchall()
+    cuisines = cur.fetchall()
+    results = []
+
+    for r in cuisines:
+        results.append(find_cuisine_relationships(r['cuisine_id']))
+
     return jsonify({'status': 'success', 'data': {'type': 'cuisines', 'cuisines': results}})
 
 @app.route('/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
@@ -936,12 +958,15 @@ def get_cuisine(cuisine_id):
     
     output: returns a response formatted in JSON for the cuisine requested by id with its attributes
     """
-    # cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
-    # if len(cuisine) == 0:
-    #    abort(404)
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-    cur.execute("select * from cuisines where cuisine_id = " +  str(cuisine_id)  + ";")
-    result = cur.fetchone()    
+
+    cur.execute("select count(*) from cuisines where cuisine_id = '" + str(cuisine_id) + "';")
+    isValid = cur.fetchone() 
+    if isValid['count'] == 0:
+        abort(404)
+
+    result = find_cuisine_relationships(cuisine_id)
+
     return jsonify({'status': 'success', 'data': {'type': 'cuisine', 'cuisine': result}})
 
 def find_recipe_relationships(recipe_id):
@@ -950,7 +975,7 @@ def find_recipe_relationships(recipe_id):
     cur.execute("select * from recipes where recipe_id = " +  str(recipe_id)  + ";")
     result = cur.fetchone()
 
-    cur.execute("select i.ingredient_id, i.name, ri.quantity from r_and_i ri inner join ingredients i using(ingredient_id) where recipe_id = '" + str(recipe_id) + "';")
+    cur.execute("select i.ingredient_id, i.name, ri.quantity from r_and_i ri inner join ingredients i using(ingredient_id) where recipe_id = " + str(recipe_id) + ";")
     ingredients = cur.fetchall()
     result['ingredients'] = ingredients
 
