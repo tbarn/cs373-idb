@@ -1,9 +1,15 @@
 #!flask/bin/python
+
 from flask import Flask, jsonify, abort, make_response, render_template, request
 #import StringIO
 import tests
 #from pprint import pprint
 #import unittest
+import psycopg2
+import psycopg2.extras
+import json
+
+conn = psycopg2.connect("dbname='mydb' user='taylor2'")
 
 app = Flask(__name__)
 
@@ -916,7 +922,10 @@ def get_cuisines():
     API GET request for all cuisines
     output: returns a response formatted in JSON with all the cuisines and their attributes
     """
-    return jsonify({'status': 'success', 'data': {'cuisines': cuisines}})
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("select * from cuisines;")
+    results = cur.fetchall()
+    return jsonify({'status': 'success', 'data': {'type': 'cuisines', 'cuisines': results}})
 
 @app.route('/api/v1.0/cuisines/<int:cuisine_id>', methods=['GET'])
 def get_cuisine(cuisine_id):
@@ -1082,3 +1091,4 @@ def error_404(error):
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
+
