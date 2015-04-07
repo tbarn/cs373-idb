@@ -936,10 +936,29 @@ def get_cuisine(cuisine_id):
     
     output: returns a response formatted in JSON for the cuisine requested by id with its attributes
     """
-    cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
-    if len(cuisine) == 0:
-        abort(404)
-    return jsonify({'status': 'success', 'data': {'cuisine': cuisine[0]}})
+    # cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
+    # if len(cuisine) == 0:
+    #    abort(404)
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("select * from cuisines where cuisine_id = " +  str(cuisine_id)  + ";")
+    result = cur.fetchone()    
+    return jsonify({'status': 'success', 'data': {'type': 'cuisine', 'cuisine': result}})
+
+def find_recipe_relationships(recipe_id):
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select * from recipes where recipe_id = " +  str(recipe_id)  + ";")
+    result = cur.fetchone()
+
+    cur.execute("select i.ingredient_id, i.name, ri.quantity from r_and_i ri inner join ingredients i using(ingredient_id) where recipe_id = '" + str(recipe_id) + "';")
+    ingredients = cur.fetchall()
+    result['ingredients'] = ingredients
+
+    cur.execute("select c.cuisine_id, c.name from recipes r inner join cuisines c using(cuisine_id) where recipe_id = " + str(recipe_id) + ";")
+    cuisine = cur.fetchall()
+    result['cuisine'] = cuisine
+
+    return result
 
 @app.route('/api/v1.0/recipes', methods=['GET'])
 def get_recipes():
@@ -950,7 +969,12 @@ def get_recipes():
     """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute("select * from recipes;")
-    results = cur.fetchall()
+    recipes = cur.fetchall()
+    results = []
+
+    for r in recipes:
+        results.append(find_recipe_relationships(r['recipe_id']))
+
     return jsonify({'status': 'success', 'data': {'type': 'recipes', 'recipes': results}})
 
 @app.route('/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
@@ -962,10 +986,16 @@ def get_recipe(recipe_id):
 
     output: returns a response formatted in JSON for the recipe requested by id with its attributes
     """
-    recipe = [recipe for recipe in recipes if recipe['id'] == recipe_id]
-    if len(recipe) == 0:
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select count(*) from recipes where recipe_id = '" + str(recipe_id) + "';")
+    isValid = cur.fetchone() 
+    if isValid['count'] == 0:
         abort(404)
-    return jsonify({'status': 'success', 'data': {'recipe': recipe[0]}})
+
+    result = find_recipe_relationships(recipe_id)
+
+    return jsonify({'status': 'success', 'data': {'type': 'recipe', 'recipe': result}})
 
 @app.route('/api/v1.0/ingredients', methods=['GET'])
 def get_ingredients():
