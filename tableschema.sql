@@ -33,7 +33,6 @@ CREATE TABLE recipes (
     description text,
     image_url text,
     youtube_url text,
-    map_url text,
     instructions text,
     cuisine_id integer REFERENCES cuisines (cuisine_id) 
 );
@@ -41,6 +40,7 @@ CREATE TABLE recipes (
 
 CREATE TABLE r_and_i (
     recipe_id integer REFERENCES recipes (recipe_id) on update cascade,
-    ingredient_id integer REFERENCES ingredients (ingredient_id) on update cascade
+    ingredient_id integer REFERENCES ingredients (ingredient_id) on update cascade,
+    quantity varchar(50)
 );
 
