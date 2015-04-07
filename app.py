@@ -7,7 +7,6 @@ import tests
 #import unittest
 import psycopg2
 import psycopg2.extras
-import json
 
 conn = psycopg2.connect("dbname='mydb' user='taylor2'")
 
@@ -920,6 +919,7 @@ ingredients = [
 def get_cuisines():
     """
     API GET request for all cuisines
+
     output: returns a response formatted in JSON with all the cuisines and their attributes
     """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
@@ -931,7 +931,9 @@ def get_cuisines():
 def get_cuisine(cuisine_id):
     """
     API GET request for a specific cuisine
+
     input: cuisine_id 
+    
     output: returns a response formatted in JSON for the cuisine requested by id with its attributes
     """
     cuisine = [cuisine for cuisine in cuisines if cuisine['id'] == cuisine_id]
@@ -946,7 +948,10 @@ def get_recipes():
 
     output: returns a response formatted in JSON with all the recipes and their attributes
     """
-    return jsonify({'status': 'success', 'data': {'recipes': recipes}})
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("select * from recipes;")
+    results = cur.fetchall()
+    return jsonify({'status': 'success', 'data': {'type': 'recipes', 'recipes': results}})
 
 @app.route('/api/v1.0/recipes/<int:recipe_id>', methods=['GET'])
 def get_recipe(recipe_id):
@@ -969,7 +974,10 @@ def get_ingredients():
 
     output: returns a response formatted in JSON with all the ingredients and their attributes
     """
-    return jsonify({'status': 'success', 'data': {'ingredients': ingredients}})
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("select * from ingredients;")
+    results = cur.fetchall()
+    return jsonify({'status': 'success', 'data': {'type': 'ingredients', 'ingredients': results}})
 
 @app.route('/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
 def get_ingredient(ingredient_id):
@@ -1091,4 +1099,3 @@ def error_404(error):
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
-
