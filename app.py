@@ -1117,6 +1117,15 @@ def get_cuisines_template():
     """
     output: returns a flask template filled in with the cuisines
     """
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select * from cuisines;")
+    results = cur.fetchall()
+    cuisines = []
+
+    for r in results:
+        cuisines.append(find_cuisine_relationships(r['cuisine_id']))
+
     return render_template("cuisines.html", cuisines=cuisines)
 
 @app.route('/ingredient/<int:ingredient_id>', methods=['GET'])
@@ -1155,9 +1164,15 @@ def get_cuisine_template(cuisine_id):
     output: returns a flask template filled in with the data from the cuisine that
      corresponds to the cuisine id
     """
-    if cuisine_id > len(cuisines) or cuisine_id == 0:
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select count(*) from cuisines where cuisine_id = " + str(cuisine_id) + ";")
+    isValid = cur.fetchone() 
+    if isValid['count'] == 0:
         abort(404)
-    cuisine1 = cuisines[cuisine_id - 1]
+
+    cuisine1 = find_cuisine_relationships(cuisine_id)
+
     return render_template("cuisine.html",cuisine=cuisine1)
 
 @app.route('/unittests', methods=['GET'])
@@ -1186,3 +1201,4 @@ def error_404(error):
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
+
