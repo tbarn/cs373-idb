@@ -1103,6 +1103,14 @@ def get_ingredients_template():
     """
     output: returns a flask template filled in with the ingredients
     """
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("select * from ingredients;")
+    results = cur.fetchall()
+    ingredients = []
+
+    for r in results:
+        ingredients.append(find_ingredients_relationships(r['ingredient_id']))
+        
     return render_template("ingredients.html", ingredients=ingredients)
 
 @app.route('/recipes.html', methods=['GET'])
@@ -1110,6 +1118,14 @@ def get_recipes_template():
     """
     output: returns a flask template filled in with the recipes
     """
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("select * from recipes;")
+    results = cur.fetchall()
+    recipes = []
+
+    for r in results:
+        recipes.append(find_recipe_relationships(r['recipe_id']))
+
     return render_template("recipes.html", recipes=recipes)
 
 @app.route('/cuisines.html', methods=['GET'])
@@ -1136,9 +1152,15 @@ def get_ingredient_template(ingredient_id):
     output: returns a flask template with the data from the ingredient that
      corresponds to the ingredient id
     """
-    if ingredient_id > len(ingredients) or ingredient_id == 0:
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select count(*) from ingredients where ingredient_id = " + str(ingredient_id) + ";")
+    isValid = cur.fetchone() 
+    if isValid['count'] == 0:
         abort(404)
-    ingredient1 = ingredients[ingredient_id - 1]
+
+    ingredient1 = find_ingredients_relationships(ingredient_id)
+
     return render_template("ingredient.html",
        ingredient=ingredient1)
 
@@ -1150,9 +1172,15 @@ def get_recipe_template(recipe_id):
     output: returns a flask template filled in with the data from the recipe that
      corresponds to the recipe id
     """
-    if recipe_id > len(recipes) or recipe_id == 0:
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select count(*) from recipes where recipe_id = " + str(recipe_id) + ";")
+    isValid = cur.fetchone() 
+    if isValid['count'] == 0:
         abort(404)
-    recipe1 = recipes[recipe_id - 1]
+
+    recipe1 = find_recipe_relationships(recipe_id)
+
     return render_template("recipe.html",
        recipe=recipe1)
 
@@ -1204,4 +1232,5 @@ def error_404(error):
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
+
 
