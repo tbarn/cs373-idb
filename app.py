@@ -1022,6 +1022,22 @@ def get_recipe(recipe_id):
 
     return jsonify({'status': 'success', 'data': {'type': 'recipe', 'recipe': result}})
 
+def find_ingredients_relationships(ingredient_id):
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select * from ingredients where ingredient_id = " +  str(ingredient_id)  + ";")
+    result = cur.fetchone()
+
+    cur.execute("select r.recipe_id, r.name from ingredients inner join r_and_i using (ingredient_id) inner join recipes r using (recipe_id) where ingredient_id = " + str(ingredient_id) + ";")
+    recipes = cur.fetchall()
+    result['recipes'] = recipes
+
+    cur.execute("select c.cuisine_id, c.name from ingredients inner join c_and_i using (ingredient_id) inner join cuisines c using (cuisine_id) where ingredient_id = " + str(ingredient_id) + ";")
+    cuisine = cur.fetchall()
+    result['cuisine'] = cuisine
+
+    return result    
+
 @app.route('/api/v1.0/ingredients', methods=['GET'])
 def get_ingredients():
     """
@@ -1031,7 +1047,12 @@ def get_ingredients():
     """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute("select * from ingredients;")
-    results = cur.fetchall()
+    ingredients = cur.fetchall()
+    results = []
+
+    for r in ingredients:
+        results.append(find_ingredients_relationships(r['ingredient_id']))
+        
     return jsonify({'status': 'success', 'data': {'type': 'ingredients', 'ingredients': results}})
 
 @app.route('/api/v1.0/ingredients/<int:ingredient_id>', methods=['GET'])
@@ -1043,10 +1064,16 @@ def get_ingredient(ingredient_id):
     
     output: returns a response formatted in JSON for the ingredient requested by id with its attributes
     """
-    ingredient = [ingredient for ingredient in ingredients if ingredient['id'] == ingredient_id]
-    if len(ingredient) == 0:
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    cur.execute("select count(*) from ingredients where ingredient_id = '" + str(ingredient_id) + "';")
+    isValid = cur.fetchone() 
+    if isValid['count'] == 0:
         abort(404)
-    return jsonify({'status': 'success', 'data': {'ingredient': ingredient[0]}})
+
+    result = find_ingredients_relationships(ingredient_id)
+
+    return jsonify({'status': 'success', 'data': {'ingredient': result}})
 
 # Website routes
 
@@ -1059,7 +1086,7 @@ def get_index_template():
 
 @app.route('/team.html', methods=['GET'])
 def get_team_template():
-    """
+    """indfsdfs
     output: renders team page
     """
     return render_template("team.html")
