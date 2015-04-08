@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+<!--{% block title %}Index{% endblock %}-->
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unit Tests</title>
+<style>
+@media (max-width:2000px){
+    body {
+
+    }
+    .jumbotron{
+	padding: 2em
+    }
+}
+</style>
+</head>
+<body>
+<div id='info' class='jumbotron'>
+<h1>Unit Tests</h1>
+{% for t in text %}
+<p>{{ t }}<br/></p>
+{% endfor %}
+</div>
+</body>
+</html>
+{% endblock %}

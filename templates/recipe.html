@@ -10,6 +10,12 @@
  <div  class='row line-height:75em'>
   <div class='col-sx-4 col-md-4 col-lg-4'>
     <div class="container-fluid">
+    <p>Cuisine</p>
+    <ul class="list-group">
+      {% for cuisine in recipe.cuisine %}
+        <a href="/cuisine/{{ cuisine.cuisine_id }}"><li class="list-group-item">{{ cuisine.name }}</li></a>
+      {% endfor %}
+    </ul>      
     <p>Ingredients</p>
     <ul class="list-group">
       {% for ingredient in recipe.ingredients %}
@@ -27,11 +33,11 @@
   <div class='col-sx-8 col-md-8 col-lg-8'>
     <div class="container-fluid">
     <div class="container-fluid">
-        <img src="{{ recipe.image_URL }}" class="img-rounded img-responsive" alt="Buffet"> 
+        <img src="{{ recipe.image_url }}" class="img-rounded img-responsive" alt="Buffet"> 
     </div>
     </br>
     <div class="embed-responsive embed-responsive-4by3">
-      <iframe class="embed-responsive-item img-rounded" src="{{ recipe.youtube_URL }}"></iframe>
+      <iframe class="embed-responsive-item img-rounded" src="{{ recipe.youtube_url }}"></iframe>
     </div>
     </div>
   </div>

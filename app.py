@@ -982,6 +982,7 @@ def find_recipe_relationships(recipe_id):
     cur.execute("select * from recipes where recipe_id = " +  str(recipe_id)  + ";")
     result = cur.fetchone()
 
+
     cur.execute("select i.ingredient_id, i.name, ri.quantity from r_and_i ri inner join ingredients i using(ingredient_id) where recipe_id = " + str(recipe_id) + ";")
     ingredients = cur.fetchall()
     result['ingredients'] = ingredients
@@ -990,6 +991,7 @@ def find_recipe_relationships(recipe_id):
     cuisine = cur.fetchall()
     result['cuisine'] = cuisine
 
+    result['instructions'] = eval(result['instructions'])
     return result
 
 @app.route('/api/v1.0/recipes', methods=['GET'])
@@ -1041,7 +1043,7 @@ def find_ingredients_relationships(ingredient_id):
 
     cur.execute("select c.cuisine_id, c.name from ingredients inner join c_and_i using (ingredient_id) inner join cuisines c using (cuisine_id) where ingredient_id = " + str(ingredient_id) + ";")
     cuisine = cur.fetchall()
-    result['cuisine'] = cuisine
+    result['cuisines'] = cuisine
 
     return result    
 
@@ -1232,5 +1234,3 @@ def error_404(error):
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
-
-
