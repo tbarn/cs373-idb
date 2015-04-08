@@ -1,14 +1,13 @@
 #!flask/bin/python
 
 from flask import Flask, jsonify, abort, make_response, render_template, request
-#import StringIO
-import tests
-#from pprint import pprint
-#import unittest
+from io import StringIO
+from tests import app, TestIDB
+from unittest import TextTestRunner, makeSuite
 import psycopg2
 import psycopg2.extras
 
-conn = psycopg2.connect("dbname='mydb' user='taylor2'")
+conn = psycopg2.connect("dbname='mydb' user='zach'")
 
 app = Flask(__name__)
 
@@ -1158,14 +1157,12 @@ def run_unittests():
     """
     output: returns a response formatted in JSON with output of unittests
     """
-    """
     stream = StringIO()
-    runner = unittest.TextTestRunner(stream=stream)
-    result = runner.run(unittest.makeSuite(tests.TestIDB))
-    pprint(result.testsRun)
-    stream.seek(0)
-    """
-    return render_template("team.html")
+    runner = TextTestRunner(stream=stream, verbosity=2)
+    suite = makeSuite(TestIDB)
+    result = runner.run(suite)
+ 
+    return render_template("unittest.html", text="result.testsRun")
 
 # Error responses
 
