@@ -37,7 +37,7 @@ class TestIDB (TestCase) :
         self.assertEqual(j['data']['cuisines'][9]['name'], 'Persian')
 
     def test_api_cuisines_2 (self) :
-# Should this really be an error?
+    # Should this really be an error?
         r = app.test_client().get('/api/v1.0/cuisines/')
         c = r.headers['content-type']
         self.assertEqual(c, 'application/json')
@@ -219,8 +219,7 @@ class TestIDB (TestCase) :
         c = r.headers['content-type']
         t = r.data.decode("utf-8")
         self.assertEqual(c, 'text/html; charset=utf-8')
-
-        self.assertTrue('Responding' in t)
+        self.assertTrue('Redirecting' in t)
 
     def test_html_index_2 (self) :
         r = app.test_client().get('/')
