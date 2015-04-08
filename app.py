@@ -1,15 +1,23 @@
 #!flask/bin/python
 
 from flask import Flask, jsonify, abort, make_response, render_template, request
+
+# For running unittests
 from io import StringIO
 from tests import app, TestIDB
 from unittest import TextTestRunner, makeSuite
+
+# For database
 import psycopg2
 import psycopg2.extras
 
-conn = psycopg2.connect("dbname='mydb' user='zach'")
+import getpass
+username = getpass.getuser()
+#print username
+conn = psycopg2.connect("dbname='mydb' user=" + username)
 
-app = Flask(__name__)
+#conn = psycopg2.connect("dbname='mydb' user='zach'")
+
 
 index = {
 	"leaning":"/static/pisa_tower.jpeg",
@@ -920,7 +928,7 @@ def find_cuisine_relationships(cuisine_id):
     cur.execute("select * from cuisines where cuisine_id = " +  str(cuisine_id)  + ";")
     result = cur.fetchone()
 
-    cur.execute("select i.ingredient_id, i.name from cuisines inner join c_and_i using (cuisine_id) inner join ingredients i using (ingredient_id) where cuisine_id = " + str(cuisine_id) + ";'")
+    cur.execute("select i.ingredient_id, i.name from cuisines inner join c_and_i using (cuisine_id) inner join ingredients i using (ingredient_id) where cuisine_id = " + str(cuisine_id) + ";")
     ingredients = cur.fetchall()
     result['ingredients'] = ingredients
 
@@ -959,7 +967,7 @@ def get_cuisine(cuisine_id):
     """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
-    cur.execute("select count(*) from cuisines where cuisine_id = '" + str(cuisine_id) + "';")
+    cur.execute("select count(*) from cuisines where cuisine_id = " + str(cuisine_id) + ";")
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
@@ -1012,7 +1020,7 @@ def get_recipe(recipe_id):
     """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
-    cur.execute("select count(*) from recipes where recipe_id = '" + str(recipe_id) + "';")
+    cur.execute("select count(*) from recipes where recipe_id = " + str(recipe_id) + ";")
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
@@ -1065,7 +1073,7 @@ def get_ingredient(ingredient_id):
     """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
-    cur.execute("select count(*) from ingredients where ingredient_id = '" + str(ingredient_id) + "';")
+    cur.execute("select count(*) from ingredients where ingredient_id = " + str(ingredient_id) + ";")
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
@@ -1155,14 +1163,14 @@ def get_cuisine_template(cuisine_id):
 @app.route('/unittests', methods=['GET'])
 def run_unittests():
     """
-    output: returns a response formatted in JSON with output of unittests
+    output: returns the output of unittests
     """
     stream = StringIO()
     runner = TextTestRunner(stream=stream, verbosity=2)
     suite = makeSuite(TestIDB)
     result = runner.run(suite)
- 
-    return render_template("unittest.html", text="result.testsRun")
+    #return render_template("unittest.html", text="result.testsRun")
+    return stream.getvalue()
 
 # Error responses
 
