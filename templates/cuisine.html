@@ -15,19 +15,19 @@
     <p>Recipes</p>
     <ul class="list-group">
       {% for recipe in cuisine.recipes %}
-       <a href="/recipe/{{ recipe.id }}"><li class="list-group-item">{{ recipe.name }}</li></a>
+       <a href="/recipe/{{ recipe.recipe_id }}"><li class="list-group-item">{{ recipe.name }}</li></a>
       {% endfor %}
     </ul>      
     <p>Ingredients</p>
     <ul class="list-group">
       {% for ingredient in cuisine.ingredients %}
-        <a href="/ingredient/{{ ingredient.id }}"><li class="list-group-item">{{ ingredient.name }}</li>
+        <a href="/ingredient/{{ ingredient.ingredient_id }}"><li class="list-group-item">{{ ingredient.name }}</li>
       {% endfor %}
     </ul>
     <div class="container-fluid">
       <div class='row line-height:300em'>
         <div class='col-sx-6 col-md-6 col-lg-6'>
-        <iframe src="{{ cuisine.map }}"  class="img-rounded" width="100%" height="390" frameborder="0" style="border:0"></iframe>
+        <iframe src="{{ cuisine.map_url }}"  class="img-rounded" width="100%" height="390" frameborder="0" style="border:0"></iframe>
         </div>
         <div class='col-sx-6 col-md-6 col-lg-6'>
         <a id="pinterest" data-pin-do="embedBoard" href="{{ cuisine.pinterest_page }}"  data-pin-scale-width="80" data-pin-scale-height="360" data-pin-board-width="300"></a>
@@ -41,11 +41,11 @@
   <div class='col-sx-6 col-md-6 col-lg-6'>
     <div class="container-fluid">
     <div class="container-fluid">
-        <img src="{{ cuisine.image_URL }}" class="img-rounded img-responsive" alt="Buffet"> 
+        <img src="{{ cuisine.image_url }}" class="img-rounded img-responsive" alt="Buffet"> 
     </div>
     </br>
     <div class="embed-responsive embed-responsive-4by3">
-      <iframe class="embed-responsive-item img-rounded" src="{{ cuisine.youtube_URL }}"></iframe>
+      <iframe class="embed-responsive-item img-rounded" src="{{ cuisine.youtube_url }}"></iframe>
     </div>
     </div>
   </div>

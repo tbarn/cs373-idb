@@ -13,7 +13,7 @@
     <p>Ingredients</p>
     <ul class="list-group">
       {% for ingredient in recipe.ingredients %}
-        <a href="/ingredient/{{ ingredient.id }}"><li class="list-group-item">{{ ingredient.quantity }} {{ ingredient.name }}</li></a>
+        <a href="/ingredient/{{ ingredient.ingredient_id }}"><li class="list-group-item">{{ ingredient.quantity }} {{ ingredient.name }}</li></a>
       {% endfor %}
     </ul>      
     <p>Instructions</p>

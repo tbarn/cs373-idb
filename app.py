@@ -1184,8 +1184,11 @@ def run_unittests():
     runner = TextTestRunner(stream=stream, verbosity=2)
     suite = makeSuite(TestIDB)
     result = runner.run(suite)
-    #return render_template("unittest.html", text="result.testsRun")
-    return stream.getvalue()
+    output = stream.getvalue()
+    split_output = output.split('\n')
+    return render_template("unittest.html", text=split_output)
+    #return stream.getvalue()
+
 
 # Error responses
 

@@ -7,9 +7,9 @@
     <div class='row'>
       {% for ingredient in ingredients %}
       <div class='col-md-4 text-center'>
-        <a href='/ingredient/{{ ingredient.id }}'><img src="{{ ingredient.image_URL }}" class="img-rounded" alt="Buffet" width="250" height="236"> </a>
+        <a href='/ingredient/{{ ingredient.ingredient_id }}'><img src="{{ ingredient.image_URL }}" class="img-rounded" alt="Buffet" width="250" height="236"> </a>
         <p>
-          <a href='/ingredient/{{ ingredient.id }}'>{{ ingredient.name }}</a>
+          <a href='/ingredient/{{ ingredient.ingredient_id }}'>{{ ingredient.name }}</a>
         </p>
       </div>
       {% endfor %}
