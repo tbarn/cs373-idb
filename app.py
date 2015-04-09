@@ -29,6 +29,13 @@ index = {
 # API Routes, may split these out later
 
 def find_cuisine_relationships(cuisine_id):
+    """
+    Helper function to join a cuisine with its relationships with recipes and ingredients 
+
+    input: cuisine_id
+
+    output: returns an cuisine dict with its relationships included
+    """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
     cur.execute("select * from cuisines where cuisine_id = " +  str(cuisine_id)  + ";")
@@ -86,6 +93,13 @@ def get_cuisine(cuisine_id):
     return jsonify({'status': 'success', 'data': {'type': 'cuisine', 'cuisine': result}})
 
 def find_recipe_relationships(recipe_id):
+    """
+    Helper function to join a recipe with its relationships with ingredients and cuisines 
+
+    input: recipe_id
+
+    output: returns an recipe dict with its relationships included
+    """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
     cur.execute("select * from recipes where recipe_id = " +  str(recipe_id)  + ";")
@@ -144,6 +158,13 @@ def get_recipe(recipe_id):
     return jsonify({'status': 'success', 'data': {'type': 'recipe', 'recipe': result}})
 
 def find_ingredients_relationships(ingredient_id):
+    """
+    Helper function to join an ingredient with its relationships with recipes and cuisines 
+
+    input: ingredient_id
+
+    output: returns an ingredient dict with its relationships included
+    """
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
     cur.execute("select * from ingredients where ingredient_id = " +  str(ingredient_id)  + ";")
@@ -210,7 +231,7 @@ def get_index_template():
 
 @app.route('/team.html', methods=['GET'])
 def get_team_template():
-    """indfsdfs
+    """
     output: renders team page
     """
     return render_template("team.html")
