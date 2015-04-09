@@ -62,13 +62,13 @@ class TestIDB (TestCase) :
         self.assertEqual(j['status'], 'success')
         self.assertEqual(j['data']['cuisine']['name'], 'Persian')
 
-    # Error case
     def test_api_cuisine_3 (self) :
-        r = app.test_client().get('/api/v1.0/cuisines/400')
+        r = app.test_client().get('/api/v1.0/cuisines/5')
         c = r.headers['content-type']
         self.assertEqual(c, 'application/json')
         j = json.loads(r.data)
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['recipe']['name'], 'American')
 
     # Error case
     def test_api_cuisine_4 (self) :
@@ -81,6 +81,14 @@ class TestIDB (TestCase) :
     # Error case
     def test_api_cuisine_5 (self) :
         r = app.test_client().get('/api/v1.0/cuisines/11')
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = json.loads(r.data)
+        self.assertEqual(j['status'], 'error')
+
+    # Error case
+    def test_api_cuisine_6 (self) :
+        r = app.test_client().get('/api/v1.0/cuisines/400')
         c = r.headers['content-type']
         self.assertEqual(c, 'application/json')
         j = json.loads(r.data)
@@ -122,14 +130,14 @@ class TestIDB (TestCase) :
         j = json.loads(r.data)
         self.assertEqual(j['status'], 'success')
         self.assertEqual(j['data']['recipe']['name'], 'Persian Rice')
-
-    # Error case
+    
     def test_api_recipe_3 (self) :
-        r = app.test_client().get('/api/v1.0/recipes/400')
+        r = app.test_client().get('/api/v1.0/recipes/5')
         c = r.headers['content-type']
         self.assertEqual(c, 'application/json')
         j = json.loads(r.data)
-        self.assertEqual(j['status'], 'error')
+        self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['recipe']['name'], 'Chicken and Dumplings')
 
     # Error case
     def test_api_recipe_4 (self) :
@@ -147,6 +155,14 @@ class TestIDB (TestCase) :
         j = json.loads(r.data)
         self.assertEqual(j['status'], 'error')
 
+    # Error case
+    def test_api_recipe_6 (self) :
+        r = app.test_client().get('/api/v1.0/recipes/400')
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = json.loads(r.data)
+        self.assertEqual(j['status'], 'error')
+    
     # -- API Ingredients --
 
     def test_api_ingredients_1 (self) :
@@ -240,6 +256,14 @@ class TestIDB (TestCase) :
         self.assertTrue('Zach Abel' in t)
         self.assertTrue('Andy Chow' in t)
 
+    # Error Case
+    def test_html_team_2 (self) :
+        r = app.test_client().get('/team')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+
     # -- HTML Ingredients --
 
     def test_html_ingredients_1 (self) :
@@ -249,6 +273,14 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('sushi rice' in t)
         self.assertTrue('saffron threads' in t)
+    
+    # Error Case
+    def test_html_ingredients_2 (self) :
+        r = app.test_client().get('/ingredients')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
 
     # -- HTML Recipes --
 
@@ -259,6 +291,15 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('California Roll' in t)
         self.assertTrue('Persian Rice' in t)
+    
+    # Error Case
+    def test_html_ingredients_2 (self) :
+        r = app.test_client().get('/ingredients')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+
 
     # -- HTML Cuisines --
 
@@ -269,7 +310,35 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('Japanese' in t)
         self.assertTrue('Persian' in t)
+    
+    # Error Case
+    def test_html_cuisines_2 (self) :
+        r = app.test_client().get('/cuisines')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
 
+
+    # -- HTML Models --
+
+    def test_html_models_1 (self) :
+        r = app.test_client().get('/models.html')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Models' in t)
+        self.assertTrue('Recipe Name' in t)
+    
+    # Error Case
+    def test_html_models_2 (self) :
+        r = app.test_client().get('/models')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+
+   
     # -- HTML Ingredient --
 
     def test_html_ingredient_1 (self) :
@@ -313,6 +382,14 @@ class TestIDB (TestCase) :
     # Error case
     def test_html_ingredient_6 (self) :
         r = app.test_client().get('/ingredient/a')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+    
+    # Error Case
+    def test_html_ingredient_7 (self) :
+        r = app.test_client().get('/ingredient')
         c = r.headers['content-type']
         t = r.data.decode("utf-8")
         self.assertEqual(c, 'text/html; charset=utf-8')
@@ -365,6 +442,14 @@ class TestIDB (TestCase) :
         t = r.data.decode("utf-8")
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('Are you sure you typed that right' in t)
+ 
+    # Error Case
+    def test_html_recipe_7 (self) :
+        r = app.test_client().get('/recipe')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
 
     # -- HTML Cuisine --
 
@@ -409,6 +494,14 @@ class TestIDB (TestCase) :
     # Error case
     def test_html_cuisine_6 (self) :
         r = app.test_client().get('/cuisine/a')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+    
+    # Error Case
+    def test_html_cuisine_7 (self) :
+        r = app.test_client().get('/cuisine')
         c = r.headers['content-type']
         t = r.data.decode("utf-8")
         self.assertEqual(c, 'text/html; charset=utf-8')

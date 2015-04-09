@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+<!--{% block title %}Index{% endblock %}-->
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Unit Tests</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<style>
+@media (max-width:2000px){
+    body {
+
+    }
+    thead th:hover {
+        background-color: red;
+    }
+    .jumbotron{
+	padding: 2em
+    }
+}
+</style>
+</head>
+<body>
+<div id='info' class='jumbotron'>
+<h1>Models</h1>
+  <table id="modelsTable" class="tablesorter pure-table">
+    <thead>
+      <tr>
+        <th>Recipe Id</th>
+        <th>Recipe Name</th>
+        <th>Cuisine Id</th>
+        <th>Number of Ingredients</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for recipe in recipes %}
+      <tr>
+        <th>{{ recipe.recipe_id }}</th>
+        <th>{{ recipe.name }}</th>
+        <th>{{ recipe.cuisine_id }}</th>
+        <th>{{ recipe.num_ingredients }}</th>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </br>
+  <table id="modelsTable2" class="tablesorter pure-table">
+    <thead>
+      <tr>
+        <th>Cuisine Id</th>
+        <th>Cuisine Name</th>
+        <th>Pinterest Page</th>
+        <th>Number of Ingredients</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for cuisine in cuisines %}
+      <tr>
+        <th>{{ cuisine.cuisine_id }}</th>
+        <th>{{ cuisine.name }}</th>
+        <th>{{ cuisine.pinterest_page }}</th>
+        <th>{{ cuisine.num_ingredients }}</th>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </br>
+  <table id="modelsTable3" class="tablesorter pure-table">
+    <thead>
+      <tr>
+        <th>Ingredient Id</th>
+        <th>Ingredient Name</th>
+        <th>Ingredient Image</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for ingredient in ingredients %}
+      <tr>
+        <th>{{ ingredient.ingredient_id }}</th>
+        <th>{{ ingredient.name }}</th>
+        <th>{{ ingredient.image_url }}</th>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+{% endblock %}

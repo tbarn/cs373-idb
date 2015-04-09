@@ -40,6 +40,7 @@ def find_cuisine_relationships(cuisine_id):
 
     cur.execute("select r.recipe_id, r.name from cuisines inner join recipes r using (cuisine_id) where cuisine_id = " + str(cuisine_id) + ";")
     recipes = cur.fetchall()
+    cur.close()
     result['recipes'] = recipes
 
     return result
@@ -55,6 +56,7 @@ def get_cuisines():
 
     cur.execute("select * from cuisines;")
     cuisines = cur.fetchall()
+    cur.close()
     results = []
 
     for r in cuisines:
@@ -77,6 +79,7 @@ def get_cuisine(cuisine_id):
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
+    cur.close()
 
     result = find_cuisine_relationships(cuisine_id)
 
@@ -95,6 +98,7 @@ def find_recipe_relationships(recipe_id):
 
     cur.execute("select c.cuisine_id, c.name from recipes r inner join cuisines c using(cuisine_id) where recipe_id = " + str(recipe_id) + ";")
     cuisine = cur.fetchall()
+    cur.close()
     result['cuisine'] = cuisine
 
     result['instructions'] = eval(result['instructions'])
@@ -110,6 +114,7 @@ def get_recipes():
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute("select * from recipes;")
     recipes = cur.fetchall()
+    cur.close()
     results = []
 
     for r in recipes:
@@ -132,6 +137,7 @@ def get_recipe(recipe_id):
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
+    cur.close()
 
     result = find_recipe_relationships(recipe_id)
 
@@ -149,6 +155,7 @@ def find_ingredients_relationships(ingredient_id):
 
     cur.execute("select c.cuisine_id, c.name from ingredients inner join c_and_i using (ingredient_id) inner join cuisines c using (cuisine_id) where ingredient_id = " + str(ingredient_id) + ";")
     cuisine = cur.fetchall()
+    cur.close()
     result['cuisines'] = cuisine
 
     return result    
@@ -163,6 +170,7 @@ def get_ingredients():
     cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute("select * from ingredients;")
     ingredients = cur.fetchall()
+    cur.close()
     results = []
 
     for r in ingredients:
@@ -185,6 +193,7 @@ def get_ingredient(ingredient_id):
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
+    cur.close()
 
     result = find_ingredients_relationships(ingredient_id)
 
@@ -215,6 +224,7 @@ def get_ingredients_template():
     cur.execute("select * from ingredients;")
     results = cur.fetchall()
     ingredients = []
+    cur.close()
 
     for r in results:
         ingredients.append(find_ingredients_relationships(r['ingredient_id']))
@@ -230,6 +240,7 @@ def get_recipes_template():
     cur.execute("select * from recipes;")
     results = cur.fetchall()
     recipes = []
+    cur.close()
 
     for r in results:
         recipes.append(find_recipe_relationships(r['recipe_id']))
@@ -246,6 +257,7 @@ def get_cuisines_template():
     cur.execute("select * from cuisines;")
     results = cur.fetchall()
     cuisines = []
+    cur.close()
 
     for r in results:
         cuisines.append(find_cuisine_relationships(r['cuisine_id']))
@@ -266,6 +278,7 @@ def get_ingredient_template(ingredient_id):
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
+    cur.close()
 
     ingredient1 = find_ingredients_relationships(ingredient_id)
 
@@ -286,11 +299,47 @@ def get_recipe_template(recipe_id):
     isValid = cur.fetchone() 
     if isValid['count'] == 0:
         abort(404)
+    cur.close()
 
     recipe1 = find_recipe_relationships(recipe_id)
 
     return render_template("recipe.html",
        recipe=recipe1)
+
+@app.route('/models.html', methods=['GET'])
+def get_models():
+    """
+    input: recipe id number
+    
+    output: returns a flask template filled in with the data from the recipe that
+     corresponds to the recipe id
+    """
+    cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute("select * from recipes;")
+    results = cur.fetchall()
+    recipes = []
+    i = 0
+    for r in results:
+        recipes.append(find_recipe_relationships(r['recipe_id']))
+        recipes[i]['num_ingredients'] = len(recipes[i]['ingredients'])
+        i = i+1
+    print(len(recipes[0]['ingredients']))
+
+    cur.execute("select * from cuisines;")
+    results = cur.fetchall()
+    cuisines = []
+
+    i = 0
+    for r in results:
+        cuisines.append(find_cuisine_relationships(r['cuisine_id']))
+        cuisines[i]['num_ingredients'] = len(cuisines[i]['ingredients'])
+        i = i+1
+
+    cur.execute("select * from ingredients;")
+    ingredients = cur.fetchall()
+
+    cur.close()
+    return render_template("models.html", recipes=recipes, cuisines=cuisines, ingredients=ingredients)
 
 @app.route('/cuisine/<int:cuisine_id>', methods=['GET'])
 def get_cuisine_template(cuisine_id):
@@ -304,6 +353,7 @@ def get_cuisine_template(cuisine_id):
 
     cur.execute("select count(*) from cuisines where cuisine_id = " + str(cuisine_id) + ";")
     isValid = cur.fetchone() 
+    cur.close()
     if isValid['count'] == 0:
         abort(404)
 
@@ -311,7 +361,7 @@ def get_cuisine_template(cuisine_id):
 
     return render_template("cuisine.html",cuisine=cuisine1)
 
-@app.route('/unittests', methods=['GET'])
+@app.route('/unittests.html', methods=['GET'])
 def run_unittests():
     """
     output: returns the output of unittests
@@ -322,7 +372,7 @@ def run_unittests():
     result = runner.run(suite)
     output = stream.getvalue()
     split_output = output.split('\n')
-    return render_template("unittest.html", text=split_output)
+    return render_template("unittests.html", text=split_output)
     #return stream.getvalue()
 
 

@@ -1,7 +1,9 @@
 # cs373-idb
 
-For the graders: 
-Our models.py is actually app.py. According to Downing, we do not need a models.py. This causes models.html to be app.html. 
+#####For the graders:    
+Our models.py is actually app.py. According to Downing, we do not need a models.py. This causes models.html to be app.html.    
+We updated the largest sized images, per graders' request, to speed up page loading.
+We added a models page that allows the user to sort the pillar's attributes on various criteras
 
 ##Overview
 A Flask app hosted on Rackspace with Python and Bootstrap that emulates IMDB to track three pillars.

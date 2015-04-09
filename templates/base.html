@@ -37,7 +37,8 @@
               <li><a href="/recipes.html">Recipes</a></li>
               <li><a href="/cuisines.html">Cuisines</a></li>
               <li><a href="/team.html">The Team</a></li>
-              <li><a href="/unittests">Unit Tests</a></li>
+              <li><a href="/unittests.html">Unit Tests</a></li>
+              <li><a href="/models.html">Models</a></li>
               <li><a href="http://docs.idb15.apiary.io/">API Docs</a><li>
             </ul>
           </div>
@@ -78,6 +79,24 @@
               </footer>
               <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	      <script type="text/javascript" src="/static/jquery.tablesorter.js"></script> 
+	      <script type="text/javascript">
+	      $(document).ready(function() 
+	          { 
+	              $("#modelsTable").tablesorter(); 
+	          } 
+	      ); 
+	      $(document).ready(function() 
+	          { 
+	              $("#modelsTable2").tablesorter(); 
+	          } 
+	      ); 
+	      $(document).ready(function() 
+	          { 
+	              $("#modelsTable3").tablesorter(); 
+	          } 
+	      ); 
+	      </script> 
               <!-- Include all compiled plugins (below), or include individual files as needed -->
               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         {% endblock %}
