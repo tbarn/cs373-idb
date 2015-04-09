@@ -1,3 +1,254 @@
+commit 7009dd1e18a53bdcf16bb69c9efbca6099ecd412
+Merge: 9cba75f b061d3b
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 9 23:31:28 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 9cba75f6e2cf3a02cc3d7b08631d5f9e9792b784
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 9 23:30:33 2015 +0000
+
+    Updated team page, closes #58
+
+commit b061d3b4caecc8f402f3e043debcc64b6ece7b2b
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 9 23:27:11 2015 +0000
+
+    Updated pydoc
+
+commit 6b9b2a6000dd74535b508096403b62b9168fb5fd
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 9 23:25:32 2015 +0000
+
+    Fixed print thing, and added more unit tests and updated out file
+
+commit d36dad56fb3fc774f2d7d1352d79fbc45d29b994
+Merge: aa48e84 48e0e46
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Apr 9 23:12:28 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit aa48e849e8eaf7457ea19de99865d98bff810849
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Thu Apr 9 23:11:50 2015 +0000
+
+    added models page
+
+commit 48e0e46580ebe79512e1578cc5ee3997b39f5b7f
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 9 17:49:21 2015 -0500
+
+    Added pydoc strings for helper functions
+
+commit 4e31481c7897eedf777f050ce7d0c990a0a0db44
+Author: andy1815 <andycchow@utexas.edu>
+Date:   Thu Apr 9 17:32:28 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 29b2b1f7cc0049fe4a0552a56f5bc4ad4e466b09
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Apr 9 22:26:35 2015 +0000
+
+    Fixed insertion of quantity attribute
+
+commit db76a2e6819876cf6fa3c2fb755f9d1cf565b6bb
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 9 21:44:13 2015 +0000
+
+    Updated readme to match the piazza posts requirements
+
+commit bd33b629dcccf148886bcc29c9d7c84fb2cc9421
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Apr 9 21:23:11 2015 +0000
+
+    updated README
+
+commit 38ca6bd3b878d787a12a150bc9c9032a4928da57
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 9 21:00:45 2015 +0000
+
+    Updated some information on the team page
+
+commit 212da4c737b13d0356c9d0392beac35488567e2f
+Author: baibye <carlbai@gmail.com>
+Date:   Thu Apr 9 15:36:12 2015 -0500
+
+    Added how to setup from scratch
+
+commit 8bdfc06244c182ddd7f3fbd3bf7ad57627ac04d2
+Author: baibye <carlbai@gmail.com>
+Date:   Thu Apr 9 15:31:12 2015 -0500
+
+    Removed print statements from insertionDict.py so it can be run by python3 now
+
+commit a73de4452c451989bfaa1c31996dd4eae4ed2256
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Thu Apr 9 00:49:24 2015 +0000
+
+    updated db with smaller sized images
+
+commit 12f4d85236ee7955bb92a98c0e7102df16497e8a
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Apr 8 18:48:46 2015 -0500
+
+    Adding UML pictures
+
+commit 48085c67cfab622f2948779ce4bd2200f83994da
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Apr 8 18:35:06 2015 -0500
+
+    New UML to show data model relationship
+
+commit b4d5b27cd9f4074d5a1011192fd200692f412ae6
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Wed Apr 8 23:30:31 2015 +0000
+
+    removed hard coded data in app.py
+
+commit cfc5043823bd5dd19abfe0ec58bd7a1ef1586603
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Wed Apr 8 23:27:18 2015 +0000
+
+    changed to rely on db backend instead of python objects
+
+commit 8b8db87ce46d7dff8c3a8ded2b71262e8be7189a
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Apr 8 22:45:49 2015 +0000
+
+    [WIP] Recipes and Ingredients website routes
+
+commit 8a1eef729fbd54fc3bfddf24d3fbba9e1f8de189
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Apr 8 22:38:38 2015 +0000
+
+    Changed templates to reflect ew DB names
+
+commit 49fa7a1703efb033e22a6c9152043cffc51ca765
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Apr 8 22:26:29 2015 +0000
+
+    [WIP] Cuisine website routes
+
+commit 8c8138bd1831bc547b891af3db8d90e4114f9666
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Apr 8 22:06:11 2015 +0000
+
+    Fixed quote error
+
+commit fb753dd10a6e2b40be75865019e4cae64342deec
+Author: Joey <jjc2011@gmail.com>
+Date:   Wed Apr 8 16:21:53 2015 +0000
+
+    Got tests to run, need to fix app.py in order to get it to appear on the webpage
+
+commit 2e4beb60c10f902e73a32462fefcf366bc4573c9
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Apr 8 14:36:09 2015 +0000
+
+    test.py modified by joey I presume
+
+commit 286eb05aa53b97bbcb5428d313db51599c9f32a3
+Merge: 6a5667f 7bbd304
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Apr 8 03:21:16 2015 +0000
+
+    updatin
+
+commit 7bbd304ed983010fc30ba16b2bc554515c49e331
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 7 19:24:24 2015 -0500
+
+    [WIP] Ingredients API routes done, added joins
+
+commit e7ff191941fa2b670acf476fcf8ff3854b4e2362
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 7 18:51:56 2015 -0500
+
+    [WIP] Cuisines API routes, done, added joins
+
+commit e8a006e0c82eb1dc89f0b657c47e90419045ec52
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 7 18:28:45 2015 -0500
+
+    [WIP] Recipes API routes done, added joins
+
+commit 6a5667f09dc273f2d5599bd4f7ca9dc2f2192a84
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Apr 7 23:26:32 2015 +0000
+
+    Removed map_url and added quantity
+
+commit 0cbd4822a812a3dc2296c5060f308557f3bdd3ff
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 7 15:35:51 2015 -0500
+
+    [WIP] More return all route updates
+
+commit 48a3819ef81a358fe28636e206d0cd213202ff60
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 7 17:33:01 2015 +0000
+
+    [WIP] Converted first API call to using db
+
+commit 8cfa48c0b433cd240ad96d3e6ff46597e1b70dce
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Sun Apr 5 22:07:44 2015 +0000
+
+    sql insertion working
+
+commit d7f7b27423bb29a32c285dccf780f321a0e65205
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Apr 5 17:03:08 2015 -0500
+
+    Added drop statements
+
+commit 383c0bbc93020c9f71263b6e598c02bdb4813b8e
+Merge: 5200f16 b5b656a
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Apr 5 16:27:50 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 5200f16803b26c5c5d037b403371516a214b50ca
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Apr 5 16:27:42 2015 -0500
+
+    Fixed names
+
+commit b5b656ab50cf8e8145683b420cc4ed4ae8d59f57
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Sun Apr 5 20:54:42 2015 +0000
+
+    added a data insertion script
+
+commit 2ff5fe1a53ce06a207d38f69eb7ee7f87ea4cc75
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Apr 5 15:53:15 2015 -0500
+
+    Table Creations
+
+commit fea1d869443f70b5e9d7487cde7719ccf42c075a
+Merge: cf63510 21afcb8
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 18:33:07 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit cf635108ad1d855fbb1c81ca527edf3c10400d2c
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 18:32:10 2015 -0500
+
+    Updated log
+
+commit 21afcb899e75e281dd2d9408507f8e5f316e49db
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Mar 26 18:30:50 2015 -0500
+
+    Update README.md
+
 commit 4943ffc135ad1209d7f83c5bd748a3f8a3ecb7c9
 Author: Taylor Barnett <taylormbarnett@utexas.edu>
 Date:   Thu Mar 26 18:27:36 2015 -0500
