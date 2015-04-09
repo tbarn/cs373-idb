@@ -344,7 +344,6 @@ def get_models():
         recipes.append(find_recipe_relationships(r['recipe_id']))
         recipes[i]['num_ingredients'] = len(recipes[i]['ingredients'])
         i = i+1
-    print(len(recipes[0]['ingredients']))
 
     cur.execute("select * from cuisines;")
     results = cur.fetchall()

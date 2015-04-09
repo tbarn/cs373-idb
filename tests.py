@@ -68,7 +68,7 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'application/json')
         j = json.loads(r.data)
         self.assertEqual(j['status'], 'success')
-        self.assertEqual(j['data']['recipe']['name'], 'American')
+        self.assertEqual(j['data']['cuisine']['name'], 'American')
 
     # Error case
     def test_api_cuisine_4 (self) :
@@ -200,14 +200,14 @@ class TestIDB (TestCase) :
         self.assertEqual(j['status'], 'success')
         self.assertEqual(j['data']['ingredient']['name'], 'saffron threads')
 
-    # Error case
     def test_api_ingredient_3 (self) :
-        r = app.test_client().get('/api/v1.0/ingredients/400')
+        r = app.test_client().get('/api/v1.0/ingredients/5')
         c = r.headers['content-type']
         self.assertEqual(c, 'application/json')
         j = json.loads(r.data)
-        self.assertEqual(j['status'], 'error')
-
+        self.assertEqual(j['status'], 'success')
+        self.assertEqual(j['data']['ingredient']['name'], 'nori')
+    
     # Error case
     def test_api_ingredient_4 (self) :
         r = app.test_client().get('/api/v1.0/ingredients/0')
@@ -224,6 +224,14 @@ class TestIDB (TestCase) :
         j = json.loads(r.data)
         self.assertEqual(j['status'], 'error')
 
+    # Error case
+    def test_api_ingredient_6 (self) :
+        r = app.test_client().get('/api/v1.0/ingredients/400')
+        c = r.headers['content-type']
+        self.assertEqual(c, 'application/json')
+        j = json.loads(r.data)
+        self.assertEqual(j['status'], 'error')
+    
     # --------------
     # Website Routes
     # --------------
@@ -319,7 +327,6 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('Are you sure you typed that right' in t)
 
-
     # -- HTML Models --
 
     def test_html_models_1 (self) :
@@ -337,8 +344,7 @@ class TestIDB (TestCase) :
         t = r.data.decode("utf-8")
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('Are you sure you typed that right' in t)
-
-   
+ 
     # -- HTML Ingredient --
 
     def test_html_ingredient_1 (self) :
@@ -390,6 +396,14 @@ class TestIDB (TestCase) :
     # Error Case
     def test_html_ingredient_7 (self) :
         r = app.test_client().get('/ingredient')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+
+    # Error case
+    def test_html_ingredient_8 (self) :
+        r = app.test_client().get('/ingredients/1')
         c = r.headers['content-type']
         t = r.data.decode("utf-8")
         self.assertEqual(c, 'text/html; charset=utf-8')
@@ -451,6 +465,14 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('Are you sure you typed that right' in t)
 
+    # Error case
+    def test_html_recipe_8 (self) :
+        r = app.test_client().get('/recipes/1')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+
     # -- HTML Cuisine --
 
     def test_html_cuisine_1 (self) :
@@ -502,6 +524,21 @@ class TestIDB (TestCase) :
     # Error Case
     def test_html_cuisine_7 (self) :
         r = app.test_client().get('/cuisine')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+
+    # Error case
+    def test_html_cuisine_8 (self) :
+        r = app.test_client().get('/cuisines/1')
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertEqual(c, 'text/html; charset=utf-8')
+        self.assertTrue('Are you sure you typed that right' in t)
+    
+    def test_html_unittest_1 (self) :
+        r = app.test_client().get('/unittests')
         c = r.headers['content-type']
         t = r.data.decode("utf-8")
         self.assertEqual(c, 'text/html; charset=utf-8')
