@@ -939,8 +939,6 @@ for recipe in recipes:
     youtube_url = recipe['youtube_URL']
     instructions = str(recipe['instructions'])
     cuisine = recipe['cuisine']['id']
-    print instructions
-    print cuisine
     query =  "INSERT INTO recipes (recipe_id, name, description, image_url, youtube_url, instructions, cuisine_id) VALUES (%s, %s, %s, %s, %s, %s, %s);"
     data = (recipe_id, name, description, image_url, youtube_url, instructions, cuisine)
     cursor.execute(query, data)
