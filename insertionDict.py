@@ -76,7 +76,7 @@ cuisines = [
         "id": 5, 
         "name": "American", 
         "description": "The European colonization of the Americas yielded the introduction of a number of ingredients and cooking styles to the latter. The various styles continued expanding well into the 19th and 20th centuries, proportional to the influx of immigrants from many foreign nations; such influx developed a rich diversity in food preparation throughout the country.", 
-        "image_URL": "http://4.bp.blogspot.com/-orD_RDCpWFw/Ugy4wurMOdI/AAAAAAAANM0/9a0O6MfSIp4/s1600/Omnibus.jpg", 
+        "image_URL": "http://www.energytimes.com/images/features/0413/cooking.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/aWgLTg5hVFg", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25895663.485556163!2d-95.665!3d37.599999999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sus!4v1427331962550", 
         "ingredients": [
@@ -445,7 +445,7 @@ ingredients = [
 		"id": 3, 
 		"name": "imitation crab meat", 
         "description": "Imitation crab meat is processed seafood made of finely pulverized white fish flesh (surimi), shaped and cured to resemble leg meat of snow crab or Japanese spider crab, widely used in America as a replacement for 100% crab meat in many dishes - popularly used in American sushi.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Kanikama.jpg", 
+        "image_URL": "http://clarkfish.com/wp-content/uploads/2012/05/Imitation-Crab.jpg", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
 	},
@@ -453,7 +453,7 @@ ingredients = [
 		"id": 4, 
         "name": "cucumber", 
         "description": "Long cylindrical green-skinned fruit with edible seeds and soft white flesh. Smaller cucumbers (kirbys) are used for pickling.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Cucumber_and_cross_section.jpg", 
+        "image_URL": "http://i2.mirror.co.uk/incoming/article131074.ece/ALTERNATES/s615/cucumber-pic-getty-images-image-1-23194017.jpg", 
         "recipes": [{"id": 1, "name": "California Roll"}], 
         "cuisines": [{"id": 1, "name": "Japanese"}]
 	},
@@ -559,7 +559,7 @@ ingredients = [
         "id": 15, 
         "name": "olive oil", 
         "description": "Olive oil is the main cooking oil in countries surrounding the Mediterranean Sea. It is also used with foods to be eaten cold. If uncompromised by heat, the flavor is stronger. It also can be used for sauteing.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/1/10/Olives_in_olive_oil.jpg", 
+        "image_URL": "http://cdn.marksdailyapple.com/wordpress/wp-content/themes/Marks-Daily-Apple-Responsive/images/blog2/oliveoil2.jpg", 
         "recipes": [
         {"id": 3, "name": "Tofu Lo-Mein"}, 
         {"id": 4, "name": "Spinach Garlic Pasta"}], 
@@ -579,7 +579,7 @@ ingredients = [
         "id": 17, 
         "name": "frozen stir-fry vegetables", 
         "description": "Frozen vegetables are commercially packaged and sold in supermarkets. They have a very long shelf life when kept in a freezer and may be more economical to purchase than their fresh counterparts.", 
-        "image_URL": "http://www.mccain.com.au/resources.ashx/Products/218/ProductImage/15957480D2E1E945B1271B50F28C4BD1/87638_StirfrySupreme1kg.png", 
+        "image_URL": "https://lh3.googleusercontent.com/_OaYG005JPDs/TanIBH9hGYI/AAAAAAAADEE/yLNU_aT2hW0/s640/5%20vegetables.jpg", 
         "recipes": [{"id": 3, "name": "Tofu Lo-Mein"}], 
         "cuisines": [{"id": 3, "name": "Chinese"}]
     }, 
@@ -651,7 +651,7 @@ ingredients = [
         "id": 25, 
         "name": "chicken broth", 
         "description": "Broth is a liquid food preparation, typically consisting of water, in which bones, meat, fish, cereal grains, or vegetables have been simmered. Broth is used as a basis for other edible liquids such as soup, gravy, or sauce. It can be eaten alone or with garnish.", 
-        "image_URL": "http://www.campbellsoup.com/Images/products/10880.png", 
+        "image_URL": "http://ecx.images-amazon.com/images/I/81r64SFvqXL._SY679SX388_SY679_CR,0,0,388,679_PIbundle-12,TopRight,0,0_SX388_SY679_CR,0,0,388,679_SH20_.jpg", 
         "recipes": [{"id": 5, "name": "Chicken and Dumplings"}], 
         "cuisines": [{"id": 5, "name": "American"}]
     }, 
@@ -717,7 +717,7 @@ ingredients = [
         "id": 32, 
         "name": "crushed red pepper", 
         "description": "Crushed red pepper or red pepper flakes is a condiment consisting of dried and crushed red chili peppers.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/4/45/Redchiliflakes.jpg", 
+        "image_URL": "http://scene7.samsclub.com/is/image/samsclub/0005210010650_A?$img_size_380x380$", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
         "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
@@ -725,7 +725,7 @@ ingredients = [
         "id": 33, 
         "name": "bean sprouts", 
         "description": "Bean sprouts are a common ingredient, especially in Eastern Asian cuisine, made from sprouting beans.", 
-        "image_URL": "http://barfblog.com/wp-content/uploads/2014/04/Bean_sprouts.jpg", 
+        "image_URL": "http://www.cdc.gov/salmonella/enteritidis-11-14/images/bean-sprouts.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
         "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
@@ -741,7 +741,7 @@ ingredients = [
         "id": 35, 
         "name": "green onions", 
         "description": "Scallions or green onions may be cooked or used raw as a part of salads, salsas, or Asian recipes. Diced scallions are used in soup, noodle and seafood dishes, as well as sandwiches, curries or as part of a stir fry.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/4/41/Spring_onion.jpg", 
+        "image_URL": "http://www.bonappetit.com/wp-content/uploads/2008/04/ttar_scallions_v.jpg", 
         "recipes": [
         {"id": 6, "name": "Pad Thai"},
         {"id": 9, "name": "Beef Bulgogi"}], 
@@ -761,7 +761,7 @@ ingredients = [
         "id": 37, 
         "name": "refrigerated fresh salsa", 
         "description": "Salsa is the Spanish term for sauce, and in English-speaking countries usually refers to the sauces typical of Mexican cuisine known as salsa picante, particularly those used as dips. They are often tomato-based, and they are typically piquant, ranging from mild to extremely hot.", 
-        "image_URL": "http://sweetpeaskitchen.com/wp-content/uploads/2013/09/Thick-and-Chunky-Salsa1.jpg", 
+        "image_URL": "http://brightcove.vo.llnwd.net/d22/unsecured/media/1033249144001/1033249144001_1619861961001_ari-origin05-arc-144-1336068424031.jpg?pubId=1033249144001", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
         "cuisines": [{"id": 7, "name": "Mexican"}]
     },
@@ -769,7 +769,7 @@ ingredients = [
         "id": 38, 
         "name": "canned black beans", 
         "description": "The black turtle bean, or simply called black bean, has a dense, meaty texture, which makes it popular in vegetarian dishes, such as frijoles negros and the Mexican-American black bean burrito.", 
-        "image_URL": "http://www.rosarita.com/images/product-details/canned-black-beans.png", 
+        "image_URL": "http://www.foodservicedirect.com/productimageslarge/OT494406L.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
         "cuisines": [{"id": 7, "name": "Mexican"}]
     },
@@ -785,7 +785,7 @@ ingredients = [
         "id": 40, 
         "name": "flour tortillas", 
         "description": "A flour tortilla is a type of soft, thin flatbread made from finely ground wheat flour. Flour tortillas are commonly prepared with meat, mashed potatoes, cheese and other ingredients to make dishes such as tacos, quesadillas and burritos (a dish originating in northern Mexico).", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/5/56/NCI_flour_tortillas.jpg", 
+        "image_URL": "http://www.bonappetit.com/wp-content/uploads/2008/05/ttar_flourtortillas_h.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
         "cuisines": [{"id": 7, "name": "Mexican"}]
     },
@@ -821,7 +821,7 @@ ingredients = [
         "id": 44, 
         "name": "garam masala", 
         "description": "Garam masala is a blend of ground spices common in North Indian and other South Asian cuisines. A typical Indian version of garam masala contains black and white peppercorns, cloves, cinnamon or cassia bark, nutmeg and mace, black and green cardamom pods, bay leaf, and caraway.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/5/58/Garammasalaphoto.jpg", 
+        "image_URL": "http://www.finecooking.com/assets/uploads/posts/5347/ING-garam-masala-2_sql.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
         "cuisines": [{"id": 8, "name": "Indian"}]
     },
@@ -837,7 +837,7 @@ ingredients = [
         "id": 46, 
         "name": "long-grain white rice", 
         "description": "Long-grain rice is 4-5 times its width and are light, dry grains that separate easily when cooked. Basmati rice is a perfumy East Indian variety of long-grain rice.", 
-        "image_URL": "http://www.thehealthjournals.com/wp-content/uploads/2013/06/6121221-raw-long-grain-white-rice-grains-in-burlap-bag.jpg", 
+        "image_URL": "http://img.21food.com/20110609/product/1305795214437.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
         "cuisines": [{"id": 8, "name": "Indian"}]
     },
@@ -861,7 +861,7 @@ ingredients = [
         "id": 49, 
         "name": "flank steak", 
         "description": "The flank steak is a beef steak cut from the abdominal muscles or butt of the cow. A relatively long and flat cut, flank steak is used in a variety of dishes including London broil and as an alternative to the traditional skirt steak in fajitas. It can be grilled, pan-fried, broiled, or braised for increased tenderness.", 
-        "image_URL": "http://cookingwithdrew.com/wp-content/uploads/2010/10/Cut-Raw-Flank.jpg", 
+        "image_URL": "http://www-tc.pbs.org/parents/kitchenexplorers/wp-content/uploads/2013/06/raw-flank-steak.jpg", 
         "recipes": [{"id": 9, "name": "Beef Bulgogi"}], 
         "cuisines": [{"id": 9, "name": "Korean"}]
     },
@@ -877,7 +877,7 @@ ingredients = [
         "id": 51, 
         "name": "basmati rice", 
         "description": "Basmati rice is a variety of long grain rice which is traditionally from North India and Pakistan.", 
-        "image_URL": "http://lowfatveganchef.com/blog/wp-content/uploads/2012/10/Basmati-Rice.jpg", 
+        "image_URL": "http://i00.i.aliimg.com/photo/v0/144417206/Basmati_Rice_1121_Raw_Best_Quality.jpg", 
         "recipes": [{"id": 10, "name": "Persian Rice"}], 
         "cuisines": [{"id": 10, "name": "Persian"}]
     },
@@ -893,7 +893,7 @@ ingredients = [
         "id": 53, 
         "name": "saffron threads", 
         "description": "Saffron's aroma is often described by connoisseurs as reminiscent of metallic honey with grassy or hay-like notes, while its taste has also been noted as hay-like and sweet. Saffron also contributes a luminous yellow-orange colouring to foods. Saffron is widely used in Indian, Persian, European, Arab, and Turkish cuisines. Confectioneries and liquors also often include saffron.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/7/79/Iran_saffron_threads.jpg", 
+        "image_URL": "http://www.thetimes.co.uk/tto/multimedia/archive/00292/106241857__292846c.jpg", 
         "recipes": [{"id": 10, "name": "Persian Rice"}], 
         "cuisines": [{"id": 10, "name": "Persian"}]
     }
@@ -973,8 +973,8 @@ for cuisine in cuisines:
 for recipe in recipes:
     recipe_id = recipe['id']
     for ingredient in recipe['ingredients']:
-        query =  "INSERT INTO r_and_i (recipe_id, ingredient_id) VALUES (%s, %s);"
-        data = (recipe_id, ingredient['id'])
+        query =  "INSERT INTO r_and_i (recipe_id, ingredient_id, quantity) VALUES (%s, %s, %s);"
+        data = (recipe_id, ingredient['id'], ingredient['quantity'])
         cursor.execute(query, data)
 
 #query =  "drop table r_and_i;"
