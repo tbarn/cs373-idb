@@ -9,7 +9,7 @@ cuisines = [
         "id": 1, 
         "name": "Japanese", 
         "description": "The Japanese diet consists principally of rice; fresh, lean seafood; and pickled or boiled vegetables.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/a/a5/Tempura%2C_sashimi%2C_pickles%2C_ris_og_misosuppe_%286289116752%29.jpg", 
+        "image_URL": "http://therealwinefair.com/wp-content/uploads/sushi.163101001_std.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/nxxx0-CgQ0o", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483472.813068145!2d136.4664008!3d37.4900318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e0!3m2!1sen!2sus!4v1427331816383", 
         "ingredients": [
@@ -44,7 +44,7 @@ cuisines = [
         "id": 3, 
         "name": "Chinese", 
         "description": "Styles and tastes varied by class, region, and ethnic background. This led to an unparalleled range of ingredients, techniques, dishes and eating styles in what could be called Chinese food, leading Chinese to pride themselves on eating a wide variety of foods while remaining true to the spirit and traditions of Chinese food culture.", 
-        "image_URL": "https://americantaitai.files.wordpress.com/2012/06/dim-sum-in-hk-att.jpg", 
+        "image_URL": "http://www.thechinesequest.com/wp-content/uploads/2014/02/chinesefood1.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/DKowg30XQ0Y", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26489489.382952295!2d104.13611184999999!3d35.85929485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sus!4v1427331865203", 
         "ingredients": [
@@ -61,7 +61,7 @@ cuisines = [
         "id": 4, 
         "name": "Italian", 
         "description": "Italian cuisine is characterized by its simplicity, with many dishes having only four to eight ingredients. Italian cooks rely chiefly on the quality of the ingredients rather than on elaborate preparation. Significant changes occurred with the discovery of the New World and the introduction of potatoes, tomatoes, bell peppers and maize, now central to the cuisine but not introduced in quantity until the 18th century. Cheese and wine are a major part of the cuisine. Coffee, specifically espresso, has become important in Italian cuisine.", 
-        "image_URL": "http://img2.10bestmedia.com/Images/Photos/116063/buca-di-beppo-buca-table-setting_54_990x660_201404220749.jpg", 
+        "image_URL": "http://www.personal.psu.edu/srh122/italian%201.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/Gh1lRSYXzOU", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6139400.007323359!2d12.57361079999999!3d41.29246005000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4fe82448dd203%3A0xe22cf55c24635e6f!2sItaly!5e0!3m2!1sen!2sus!4v1427331909959", 
         "ingredients": [
@@ -91,7 +91,7 @@ cuisines = [
         "id": 6, 
         "name": "Thai", 
         "description": "Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge. It is known for its complex interplay of at least three and up to four or five fundamental taste senses in each dish or the overall meal: sour, sweet, salty, bitter and spicy.", 
-        "image_URL": "http://blog.petaasiapacific.com/wp-content/uploads/Pad-Thai.jpg", 
+        "image_URL": "http://drinks.seriouseats.com/images/2011/11/20111103padthai.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/QM6uH_ZN7Sk", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7960473.106064411!2d101.490104!3d13.03887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d8df747424db1%3A0x9ed72c880757e802!2sThailand!5e0!3m2!1sen!2sus!4v1427331998891", 
         "ingredients": [
@@ -132,7 +132,7 @@ cuisines = [
         "id": 8, 
         "name": "Indian", 
         "description": "Indian cuisine encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.", 
-        "image_URL": "http://a.mktgcdn.com/p/u2T6mowIYsc-hwm33sxuX2ZOo3DjpoEudkCuPsWHs1g/2048x1371.jpg", 
+        "image_URL": "http://www.theeverestcuisine.com/tec/wp-content/uploads/2014/05/image4.jpeg", 
         "youtube_URL": "https://www.youtube.com/embed/MkiTbH8hLdE", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15243406.195009712!2d82.7792231!3d21.131108349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sus!4v1427332072214", 
         "ingredients": [
@@ -243,7 +243,7 @@ recipes = [
         "id": 3, 
         "name": "Tofu Lo-Mein", 
         "description": "The term lo-mein translates to 'stirred noodles' in Cantonese. This dish contains tofu and vegetables.", 
-        "image_URL": "http://thevword.net/wp-content/uploads/2015/02/crispy-tofu-lo-mein-8.jpg", 
+        "image_URL": "http://www.dispatch.com/content/graphics/2012/01/04/1aa-real04-gppfebko-11aareal042-jpg.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/XdXyFAIsxMc", 
         "ingredients": [
         {"id": 14, "name": "extra firm tofu", "quantity": "16 ounces"}, 
@@ -267,7 +267,7 @@ recipes = [
         "id": 4, 
         "name": "Spinach Garlic Pasta", 
         "description": "A quick and easy Italian dish.", 
-        "image_URL": "https://cupsandspoonfuls.files.wordpress.com/2013/06/kh10055.jpg", 
+        "image_URL": "http://diethood.com/wp-content/uploads/2013/08/Spinach-and-Pasta-Diethood-Recipe.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/Uknj5jGk04s", 
         "ingredients": [
         {"id": 15, "name": "olive oil", "quantity": "1 tablespoon"},
@@ -305,7 +305,7 @@ recipes = [
         "id": 6, 
         "name": "Pad Thai", 
         "description": "A stir-fried rice noodle dish commonly served as a street food and at casual local eateries in Thailand.", 
-        "image_URL": "https://omnomculture.files.wordpress.com/2012/04/dsc_0804.jpg", 
+        "image_URL": "http://drinks.seriouseats.com/images/2011/11/20111103padthai.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/Ns8su84olsQ", 
         "ingredients": [
         {"id": 8, "name": "sugar", "quantity": "3 tablespoons"},
@@ -469,7 +469,7 @@ ingredients = [
         "id": 6, 
         "name": "sesame seeds", 
         "description": "Sesame seed is one of the first recorded seasonings. It grows widely in India and Asia. These tiny seeds come in shades of brown, red and black, but the most common color is a pale grayish-ivory. Sesame seeds have a nutty, sweet aroma with a milk-like, buttery taste.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/3/38/Sesame_seeds.JPG", 
+        "image_URL": "http://www.elanaspantry.com/blog/wp-content/uploads/sesame-seeds-flickr.jpg", 
         "recipes": [
         {"id": 1, "name": "California Roll"},
         {"id": 9, "name": "Beef Bulgogi"}], 
@@ -543,7 +543,7 @@ ingredients = [
         "id": 13, 
         "name": "shredded swiss cheese", 
         "description": "Swiss cheese is a mild cheese made from cow's milk and has a firmer texture than baby Swiss. The flavor is mild, sweet and nut-like. Swiss cheese is known for being shiny, pale yellow, and having large holes (called eyes) resulting from carbon dioxide released during the maturation process.", 
-        "image_URL": "http://wildflourskitchen.com/wp-content/uploads/2015/02/swiss-cheese-shredded.jpg", 
+        "image_URL": "http://bakedbree.com/wp-content/uploads/2011/04/ham-and-cheese-tarts_3.jpg", 
         "recipes": [{"id": 2, "name": "French Onion Soup"}], 
         "cuisines": [{"id": 2, "name": "French"}]
     },
@@ -571,7 +571,7 @@ ingredients = [
         "id": 16, 
         "name": "ramen noodles", 
         "description": "Ramen is a Japanese noodle soup dish. It consists of Chinese-style wheat noodles served in broth. The term ramen is mostly used in North America to refer to instant noodles, a precooked and usually dried noodle block.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/a/a8/Fresh_ramen_noodle_001.jpg",
+        "image_URL": "http://sharing.kshb.com/sharekgtv/photo/2014/08/15/instant_ramen_noodles_1408131512923_7390899_ver1.0_640_480.jpg",
         "recipes": [{"id": 3, "name": "Tofu Lo-Mein"}], 
         "cuisines": [{"id": 3, "name": "Chinese"}]
     }, 
@@ -681,7 +681,7 @@ ingredients = [
         "id": 28, 
         "name": "butter", 
         "description": "Butter is a dairy product made by churning fresh or fermented cream or milk, to separate the butterfat from the buttermilk. It is generally used as a spread and a condiment, as well as in cooking, such as baking, sauce making, and pan frying. Butter consists of butterfat, milk proteins and water and is most frequently made from cows' milk", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/f/fd/Western-pack-butter.jpg", 
+        "image_URL": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2013/10/22/1382469492427/Butter-008.jpg", 
         "recipes": [
         {"id": 6, "name": "Pad Thai"},
         {"id": 10, "name": "Persian Rice"}], 
@@ -693,7 +693,7 @@ ingredients = [
         "id": 29, 
         "name": "eggs", 
         "description": "The egg most often consumed by humans is the chicken egg, though duck, goose and other fowl are available in some areas. Chicken eggs are widely used in many types of dishes, both sweet and savory, including many baked goods. Some of the most common preparation methods include scrambled, fried, hard-boiled, soft-boiled, omelettes and pickled. They can also be eaten raw.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/White-%26-Brown-Eggs.jpg", 
+        "image_URL": "https://www.weightwatchers.com/images/1033/dynamic/GCMSImages/Egg_000001615195_main.jpg", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
         "cuisines": [{"id": 6, "name": "Thai"}]
     }, 
@@ -753,7 +753,7 @@ ingredients = [
         "id": 36, 
         "name": "lemon", 
         "description": "A very sour citrus fruit similar to limes with the same refreshing smell and tart flavor, but generally larger. The whole fruit can be used (juice, skin, and less often the pulp).", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Lemon-Whole-Split.jpg", 
+        "image_URL": "http://images.canberratimes.com.au/2013/01/10/3943139/art-626117583.jpg?rand=1357795390773", 
         "recipes": [{"id": 6, "name": "Pad Thai"}], 
         "cuisines": [{"id": 6, "name": "Thai"}]
     },
@@ -793,7 +793,7 @@ ingredients = [
         "id": 41, 
         "name": "shredded Monterey Jack cheese", 
         "description": "Monterey Jack (sometimes shortened simply to Jack cheese) is an American semihard cheese, customarily pale yellow, made using cow's milk.", 
-        "image_URL": "http://www.everydaybites.com/wp-content/uploads/2010/07/IMG_8584.jpg", 
+        "image_URL": "http://img2.timeinc.net/health/img/web/2013/04/slides/shredded-monterey-jack-cheese-400x400.jpg", 
         "recipes": [{"id": 7, "name": "Chicken Quesadilla"}], 
         "cuisines": [{"id": 7, "name": "Mexican"}]
     },
@@ -845,7 +845,7 @@ ingredients = [
         "id": 47, 
         "name": "frozen peas", 
         "description": "Frozen vegetables are commercially packaged and sold in supermarkets. They have a very long shelf life when kept in a freezer and may be more economical to purchase than their fresh counterparts.", 
-        "image_URL": "http://upload.wikimedia.org/wikipedia/commons/e/e3/Frozen_peas.JPG", 
+        "image_URL": "http://i.telegraph.co.uk/multimedia/archive/01590/frozenPeas_1590681c.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
         "cuisines": [{"id": 8, "name": "Indian"}]
     },
@@ -853,7 +853,7 @@ ingredients = [
         "id": 48, 
         "name": "carrot, grated", 
         "description": "Carrots are commonly used in soups and stews. Grated carrots can be used for salads. Carrots can also be cut in thin strips and added to rice, can form part of a dish of mixed roast vegetables or can be blended with tamarind to make chutney.", 
-        "image_URL": "http://chefhermes.com/wp-content/uploads/2011/03/rcb-grated-carrot.jpg", 
+        "image_URL": "http://www.gingerandtoastedsesame.com/wp-content/uploads/2013/08/Grated-Carrot-and-Apple-Salad-Edited-2.jpg", 
         "recipes": [{"id": 8, "name": "Tandoori Shrimp"}], 
         "cuisines": [{"id": 8, "name": "Indian"}]
     },
@@ -902,8 +902,13 @@ ingredients = [
 
 import psycopg2
 
-connection = "dbname='mydb' user='zach'"
-conn = psycopg2.connect(connection)
+import getpass
+username = getpass.getuser()
+#print username
+conn = psycopg2.connect("dbname='mydb' user=" + username)
+#connection = "dbname='mydb' user='zach'"
+
+#conn = psycopg2.connect(connection)
 
 cursor = conn.cursor()
 
