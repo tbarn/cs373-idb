@@ -4,7 +4,7 @@ from flask import Flask, jsonify, abort, make_response, render_template, request
 
 # For running unittests
 from io import StringIO
-from tests import app, TestIDB
+import tests
 from unittest import TextTestRunner, makeSuite
 
 # For database
@@ -18,13 +18,14 @@ conn = psycopg2.connect("dbname='mydb' user=" + username)
 
 #conn = psycopg2.connect("dbname='mydb' user='zach'")
 
+app = Flask(__name__)
+
 
 index = {
 	"leaning":"/static/pisa_tower.jpeg",
 	"peppers":"/static/mexican_peppers.jpeg",
 	"bagel":"/static/french_bagel.jpeg"
 }
-
 
 # API Routes, may split these out later
 
@@ -386,9 +387,10 @@ def run_unittests():
     """
     output: returns the output of unittests
     """
+    
     stream = StringIO()
     runner = TextTestRunner(stream=stream, verbosity=2)
-    suite = makeSuite(TestIDB)
+    suite = makeSuite(tests.TestIDB)
     result = runner.run(suite)
     output = stream.getvalue()
     split_output = output.split('\n')
