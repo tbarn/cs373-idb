@@ -73,13 +73,16 @@ DROP MATERIALIZED VIEW searchRecipes;
 CREATE MATERIALIZED VIEW searchRecipes AS
 SELECT
 	recipe_id,
-	name,
-	to_tsvector(name) || 
-	to_tsvector(description) as document
+	recipes.name as name,
+	to_tsvector(recipes.name) || 
+	to_tsvector(recipes.description) ||
+	to_tsvector(ingredients.name) as document
 FROM recipes
-GROUP BY recipe_id;
+inner join r_and_i using (recipe_id)
+inner join ingredients using (ingredient_id)
+GROUP BY recipe_id, ingredients.name;
 
 
-select recipe_id, name
+select distinct(recipe_id), name
 from searchRecipes
 where document @@ to_tsquery('roll');
