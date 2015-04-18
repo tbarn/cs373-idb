@@ -88,3 +88,24 @@
 </body>
 </html>
 {% endblock %}
+{% block footer %}
+{{ super() }}
+<script type="text/javascript" src="/static/jquery.tablesorter.js"></script>
+<script type="text/javascript">
+$(document).ready(function() 
+    { 
+        $("#modelsTable").tablesorter(); 
+    } 
+); 
+$(document).ready(function() 
+    { 
+        $("#modelsTable2").tablesorter(); 
+    } 
+); 
+$(document).ready(function() 
+    { 
+        $("#modelsTable3").tablesorter(); 
+    } 
+); 
+</script>
+{% endblock %}
