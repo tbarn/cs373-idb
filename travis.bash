@@ -31,6 +31,8 @@ check_file "jquery-latest.js"
 check_file "jquery.tablesorter.js"
 cd ..
 
+postgres createuser owning_user 
+postgres createdb -O owning_user mydb
 psql mydb < tableschema.sql
 python3 insertionDict.py
 
