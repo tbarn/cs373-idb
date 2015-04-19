@@ -42,8 +42,8 @@ GROUP BY ingredient_id;
 
 select ingredient_id, name
 from searchIngredients
-where document @@ to_tsquery('eggs');
-
+where document @@ to_tsquery('frozen')
+ORDER BY ts_rank(searchIngredients.document, to_tsquery('frozen')) DESC;
 
 
 
@@ -54,17 +54,20 @@ DROP MATERIALIZED VIEW searchCuisines;
 CREATE MATERIALIZED VIEW searchCuisines AS
 SELECT
 	cuisine_id,
-	name,
-	to_tsvector(name) || 
-	to_tsvector(description) as document
+	cuisines.name as name,
+	to_tsvector(cuisines.name) || 
+	to_tsvector(cuisines.description) ||
+	to_tsvector(ingredients.name) as document
 FROM cuisines
-GROUP BY cuisine_id;
+inner join c_and_i using (cuisine_id)
+inner join ingredients using (ingredient_id)
+GROUP BY cuisine_id, ingredients.name;
 
 
-select cuisine_id, name
+select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('chinese'))
 from searchCuisines
-where document @@ to_tsquery('chinese');
-
+where document @@ to_tsquery('chinese')
+ORDER BY ts_rank(searchCuisines.document, to_tsquery('chinese')) DESC;
 
 
 
@@ -83,6 +86,7 @@ inner join ingredients using (ingredient_id)
 GROUP BY recipe_id, ingredients.name;
 
 
-select distinct(recipe_id), name
+select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('eggs'))
 from searchRecipes
-where document @@ to_tsquery('roll');
+where document @@ to_tsquery('eggs')
+ORDER BY ts_rank(searchRecipes.document, to_tsquery('eggs')) DESC;
