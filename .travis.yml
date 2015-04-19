@@ -7,6 +7,6 @@ branches:
   only:
     - master
  
-install: "pip install -r required.txt"
+install: "pip install -r requirements.txt"
  
 script: "bash travis.bash"
