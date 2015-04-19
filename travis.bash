@@ -31,6 +31,9 @@ check_file "jquery-latest.js"
 check_file "jquery.tablesorter.js"
 cd ..
 
+psql mydb < tableschema.sql
+python3 insertionDict.py
+
 python3 tests.py
 
 echo "Done."

@@ -8,5 +8,8 @@ branches:
     - master
  
 install: "pip install -r requirements.txt"
+
+addons:
+  postgresql: "9.3"
  
 script: "bash travis.bash"
