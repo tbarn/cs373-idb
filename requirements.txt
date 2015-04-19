@@ -1,5 +1,5 @@
 argh==0.26.1
-chardet==2.0.1
+chardet==2.1.1
 Cheetah==2.4.4
 cloud-init==0.7.5
 colorama==0.2.5
