@@ -2,9 +2,6 @@
 <!--{% block title %}Index{% endblock %}-->
 {% block content %}
 <!DOCTYPE html>
-<html>
-<head>
-<title>Unit Tests</title>
 <style>
 @media (max-width:2000px){
     body {
@@ -15,14 +12,12 @@
     }
 }
 </style>
-</head>
-<body>
+<div class="container" style="width:100%; margin: 0px; padding-top: 5em !important">
 <div id='info' class='jumbotron'>
 <h1>Unit Tests</h1>
 {% for t in text %}
 <p>{{ t }}<br/></p>
 {% endfor %}
 </div>
-</body>
-</html>
+</div>
 {% endblock %}

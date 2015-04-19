@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {% block head %}
-<head style="padding: 0">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,24 +21,20 @@
 
 </head>
     {% endblock %}
-
 <body>
     <div id="content">
-    <div  class='container-fill' style="padding:-100 ; margin:-10 ; border:0 !important;">
-      <nav class="navbar navbar-inverse" style="padding:0">
-        <div class="container-fluid" style="padding:0">
-          <div class="navbar-header" style="padding:0">
+      <nav class="navbar-inverse navbar-fixed-top" style="text-shadow: 2px 2px #000000;" >
+          <div class="navbar-header" style="font-size: 110%;">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Discover Ingredients, Recipes, and Cuisines</a>
-          </div>
+            <a class="navbar-brand" href="/" style="height: 100%;">Discover Ingredients, Recipes, and Cuisines</a>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="">
               <li><a href="/ingredients.html">Ingredients</a></li>
               <li><a href="/recipes.html">Recipes</a></li>
               <li><a href="/cuisines.html">Cuisines</a></li>
@@ -51,7 +47,6 @@
           </div>
         </div>
       </nav>
-    </div>
       {% block content %}{% endblock %}
     </div>
 

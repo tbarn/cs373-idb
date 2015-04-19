@@ -1,11 +1,6 @@
 {% extends "base.html" %}
 <!--{% block title %}Index{% endblock %}-->
 {% block content %}
-<!DOCTYPE html>
-<html>
-<head>
-
-<title>Unit Tests</title>
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <style>
 @media (max-width:2000px){
@@ -20,8 +15,7 @@
     }
 }
 </style>
-</head>
-<body>
+<div class="container" style="width:100%; margin: 0px; padding-top: 5em !important">
 <div id='info' class='jumbotron'>
 <h1>Models</h1>
   <table id="modelsTable" class="tablesorter pure-table">
@@ -35,12 +29,12 @@
     </thead>
     <tbody>
     {% for recipe in recipes %}
-      <tr>
-        <th>{{ recipe.recipe_id }}</th>
+      <a href="/recipe/{{ recipe.recipe_id }}"><tr>
+        <th>{{ recipe.recipe_id }}</th></a>
         <th>{{ recipe.name }}</th>
         <th>{{ recipe.cuisine_id }}</th>
         <th>{{ recipe.num_ingredients }}</th>
-      </tr>
+      </tr></a>
     {% endfor %}
     </tbody>
   </table>
@@ -56,12 +50,12 @@
     </thead>
     <tbody>
     {% for cuisine in cuisines %}
-      <tr>
+      <a href="/cuisine/{{ cuisine.cuisine_id }}"><tr>
         <th>{{ cuisine.cuisine_id }}</th>
         <th>{{ cuisine.name }}</th>
         <th>{{ cuisine.pinterest_page }}</th>
         <th>{{ cuisine.num_ingredients }}</th>
-      </tr>
+      </tr></a>
     {% endfor %}
     </tbody>
   </table>
@@ -76,7 +70,7 @@
     </thead>
     <tbody>
     {% for ingredient in ingredients %}
-      <tr>
+      <a href="/ingredient/{{ ingredient.ingredient_id }}"><tr>
         <th>{{ ingredient.ingredient_id }}</th>
         <th>{{ ingredient.name }}</th>
         <th>{{ ingredient.image_url }}</th>
@@ -85,8 +79,7 @@
     </tbody>
   </table>
 </div>
-</body>
-</html>
+</div>
 {% endblock %}
 {% block footer %}
 {{ super() }}

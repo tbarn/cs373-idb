@@ -382,6 +382,16 @@ def get_cuisine_template(cuisine_id):
 
     return render_template("cuisine.html",cuisine=cuisine1)
 
+@app.route('/hodor.html', methods=['GET'])
+def get_hodor_template():
+    """
+    input: hodor?
+    
+    output:hodor hodor.
+    """
+
+    return render_template("hodor.html")
+
 @app.route('/unittests.html', methods=['GET'])
 def run_unittests():
     """
