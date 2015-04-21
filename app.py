@@ -392,6 +392,15 @@ def get_hodor_template():
 
     return render_template("hodor.html")
 
+@app.route('/GoTFoods.html', methods=['GET'])
+def get_GoTFoods_template():
+    """
+    input: hodor?
+    
+    output:hodor hodor.
+    """
+    return render_template("GoTFoods.html")
+
 @app.route('/unittests.html', methods=['GET'])
 def run_unittests():
     """
