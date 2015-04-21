@@ -249,10 +249,14 @@ def search_database():
         print("DIFFERENCE:")
         print(or_ingredient_results)
 
-        cur.execute("select cuisine_id, name from searchCuisines where document @@ to_tsquery('" + and_search_query + "');")
+        cur.execute("select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + and_search_query 
+            + "')) from searchCuisines where document @@ to_tsquery('" + and_search_query 
+            + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ and_search_query +"')) DESC;")
         and_cuisine_results = cur.fetchall()
 
-        cur.execute("select cuisine_id, name from searchCuisines where document @@ to_tsquery('" + or_search_query + "');")
+        cur.execute("select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + or_search_query 
+            + "')) from searchCuisines where document @@ to_tsquery('" + or_search_query 
+            + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ or_search_query +"')) DESC;")
         temp_cuisines = cur.fetchall()
 
         or_cuisine_results = [i for i in temp_cuisines if i not in and_cuisine_results]
@@ -264,10 +268,15 @@ def search_database():
         print("DIFFERENCE:")
         print(or_cuisine_results)        
 
-        cur.execute("select recipe_id, name from searchRecipes where document @@ to_tsquery('" + and_search_query + "');")
+        cur.execute("select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + and_search_query 
+            + "')) from searchRecipes where document @@ to_tsquery('" + and_search_query 
+            + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + and_search_query + "')) DESC;")
         and_recipe_results = cur.fetchall()
 
-        cur.execute("select recipe_id, name from searchRecipes where document @@ to_tsquery('" + or_search_query + "');")
+
+        cur.execute("select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + or_search_query 
+            + "')) from searchRecipes where document @@ to_tsquery('" + or_search_query 
+            + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + or_search_query + "')) DESC;")
         temp_recipes = cur.fetchall()
 
         or_recipe_results = [i for i in temp_recipes if i not in and_recipe_results]
