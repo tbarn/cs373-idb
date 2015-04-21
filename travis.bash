@@ -1,4 +1,5 @@
 #!/bin/bash
+
 check_file () {
     if [ -f "$1" ]
     then
@@ -30,8 +31,6 @@ check_file "jquery-latest.js"
 check_file "jquery.tablesorter.js"
 cd ..
 
-sudo -u postgres createuser owning_user 
-sudo -u postgres createdb -O owning_user mydb
 psql mydb < tableschema.sql
 python3 insertionDict.py
 

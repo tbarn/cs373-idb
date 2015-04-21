@@ -13,5 +13,8 @@ install: "pip install -r requirements.txt"
 
 addons:
   postgresql: "9.3"
+
+before_script:
+  - psql -c 'create database mydb;' -U postgres
  
 script: "bash travis.bash"
