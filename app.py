@@ -221,6 +221,79 @@ def get_ingredient(ingredient_id):
 
     return jsonify({'status': 'success', 'data': {'ingredient': result}})
 
+# Search functionality
+
+@app.route('/search', methods=['GET', 'POST'])
+def search_database():
+    if request.method == "POST":
+        cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        search_query = request.form['search']
+
+        and_search_query = "&".join(search_query.split())
+        or_search_query = "|".join(search_query.split())
+
+        cur.execute("select ingredient_id, name from searchIngredients where document @@ to_tsquery('" + and_search_query 
+            + "') ORDER BY ts_rank(searchIngredients.document, to_tsquery('" + and_search_query + "')) DESC;")
+        and_ingredient_results = cur.fetchall()
+
+        cur.execute("select ingredient_id, name from searchIngredients where document @@ to_tsquery('" + or_search_query 
+            + "') ORDER BY ts_rank(searchIngredients.document, to_tsquery('" + or_search_query + "')) DESC;")
+        temp_ingredients = cur.fetchall()
+
+        or_ingredient_results = [i for i in temp_ingredients if i not in and_ingredient_results]
+
+        print("AND:")
+        print(and_ingredient_results)
+        print("OR:")
+        print(temp_ingredients)
+        print("DIFFERENCE:")
+        print(or_ingredient_results)
+
+        cur.execute("select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + and_search_query 
+            + "')) from searchCuisines where document @@ to_tsquery('" + and_search_query 
+            + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ and_search_query +"')) DESC;")
+        and_cuisine_results = cur.fetchall()
+
+        cur.execute("select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + or_search_query 
+            + "')) from searchCuisines where document @@ to_tsquery('" + or_search_query 
+            + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ or_search_query +"')) DESC;")
+        temp_cuisines = cur.fetchall()
+
+        or_cuisine_results = [i for i in temp_cuisines if i not in and_cuisine_results]
+
+        print("AND:")
+        print(and_cuisine_results)
+        print("OR:")
+        print(temp_cuisines)
+        print("DIFFERENCE:")
+        print(or_cuisine_results)        
+
+        cur.execute("select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + and_search_query 
+            + "')) from searchRecipes where document @@ to_tsquery('" + and_search_query 
+            + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + and_search_query + "')) DESC;")
+        and_recipe_results = cur.fetchall()
+
+
+        cur.execute("select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + or_search_query 
+            + "')) from searchRecipes where document @@ to_tsquery('" + or_search_query 
+            + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + or_search_query + "')) DESC;")
+        temp_recipes = cur.fetchall()
+
+        or_recipe_results = [i for i in temp_recipes if i not in and_recipe_results]
+
+        print("AND:")
+        print(and_recipe_results)
+        print("OR:")
+        print(temp_recipes)
+        print("DIFFERENCE:")
+        print(or_recipe_results) 
+
+
+    return render_template("search.html", search_query=search_query, 
+        and_ingredient_results=and_ingredient_results, or_ingredient_results=or_ingredient_results, 
+        and_cuisine_results=and_cuisine_results, or_cuisine_results=or_cuisine_results, 
+        and_recipe_results=and_recipe_results, or_recipe_results=or_recipe_results)
+
 # Website routes
 
 @app.route('/', methods=['GET'])

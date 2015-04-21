@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+<!--{% block title %}Index{% endblock %}-->
+{% block content %}
+<!DOCTYPE html>
+<html>
+<div class="container" style="width:100%; margin: 0px; padding-top: 5em !important">
+	<head>
+		<h1>Search Results for "{{ search_query }}"</h1>
+	</head>
+	<body>
+		<h3>Ingredient results:</h3>
+
+		{% for result in and_ingredient_results %}
+			<p>
+				<a href="http://104.239.168.220/ingredient/{{ result['ingredient_id'] }}">{{ result['name'] }}</a>
+			</p>
+		{% endfor %}
+		{% for result in or_ingredient_results %}
+			<p>
+				<a href="http://104.239.168.220/ingredient/{{ result['ingredient_id'] }}">{{ result['name'] }}</a>
+			</p>
+		{% endfor %}
+
+		<h3>Recipe results:</h3>
+
+		{% for result in and_recipe_results %}
+			<p>
+				<a href="http://104.239.168.220/recipe/{{ result['recipe_id'] }}">{{ result['name'] }}</a>
+			</p>
+		{% endfor %}
+		{% for result in or_recipe_results %}
+			<p>
+				<a href="http://104.239.168.220/recipe/{{ result['recipe_id'] }}">{{ result['name'] }}</a>
+			</p>
+		{% endfor %}
+
+		<h3>Cuisine results:</h3>
+
+		{% for result in and_cuisine_results %}
+			<p>
+				<a href="http://104.239.168.220/cuisine/{{ result['cuisine_id'] }}">{{ result['name'] }}</a>
+			</p>
+		{% endfor %}
+		{% for result in or_cuisine_results %}
+			<p>
+				<a href="http://104.239.168.220/cuisine/{{ result['cuisine_id'] }}">{{ result['name'] }}</a>
+			</p>
+		{% endfor %}
+	</body>
+</div>
+</html>
+{% endblock %}

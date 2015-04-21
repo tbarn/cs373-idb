@@ -63,11 +63,11 @@ inner join c_and_i using (cuisine_id)
 inner join ingredients using (ingredient_id)
 GROUP BY cuisine_id, ingredients.name;
 
-
-select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('chinese'))
+select distinct cuisine_id,name from(
+select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('vegetable|oil'))
 from searchCuisines
-where document @@ to_tsquery('chinese')
-ORDER BY ts_rank(searchCuisines.document, to_tsquery('chinese')) DESC;
+where document @@ to_tsquery('vegetable|oil')
+ORDER BY ts_rank(searchCuisines.document, to_tsquery('vegetable|oil')) DESC) t1;
 
 
 
@@ -85,8 +85,8 @@ inner join r_and_i using (recipe_id)
 inner join ingredients using (ingredient_id)
 GROUP BY recipe_id, ingredients.name;
 
-
-select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('eggs'))
+select distinct recipe_id,name from(
+select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('vegetable|oil'))
 from searchRecipes
-where document @@ to_tsquery('eggs')
-ORDER BY ts_rank(searchRecipes.document, to_tsquery('eggs')) DESC;
+where document @@ to_tsquery('vegetable|oil')
+ORDER BY ts_rank(searchRecipes.document, to_tsquery('vegetable|oil')) DESC) t1;
