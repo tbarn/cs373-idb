@@ -1,5 +1,4 @@
 #!/bin/bash
-
 check_file () {
     if [ -f "$1" ]
     then
