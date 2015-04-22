@@ -17,6 +17,15 @@
         </div>
       </div>
 </div>
+<div class="container" style="width:100%; margin: 0px; padding-top: 2em !important; padding-bottom: 2em !important">
+  <center>
+    <form action="/search" method=post>
+      <input type=text name=search style="width:20em" value="{{ request.form.search }}">
+      <div class="actions" style="display:inline-block;">
+        <input type=submit value="Search">
+      </div>
+  </center>
+</div>
 <div class='container-fluid'>
   <div class='container'>
   <div id='info' class='jumbotron'>
@@ -42,12 +51,23 @@
     </div>
    </div>
   </div>
-  <center><form action="/search" method=post><input type=text name=search value="{{ request.form.search }}"><div class="actions"><input type=submit value="Search"></div></center>
-  <center>
-      <a class="twitter-timeline" href="https://twitter.com/FoodNetwork" data-widget-id="581118978052866048">Tweets by @FoodNetwork</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      <a class="twitter-timeline" href="https://twitter.com/foodandwine" data-widget-id="581119382044082176">Tweets by @foodandwine</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </center>
+</div>
+<div class='container-fluid'>
+  <div class='container'>
+  <div id='info' class='jumbotron'>
+    <div class="row">
+        <div class="col-md-6">
+          <a class="twitter-timeline" href="https://twitter.com/FoodNetwork" data-widget-id="581118978052866048">Tweets by @FoodNetwork</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+
+        <div class="col-md-6">
+          <a class="twitter-timeline" href="https://twitter.com/foodandwine" data-widget-id="581119382044082176">Tweets by @foodandwine</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+  </div>
+  </div>
 </div>
 {% endblock %}
+
