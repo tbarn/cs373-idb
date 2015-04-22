@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+<!--{% block title %}Cuisines{% endblock %}-->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container" style="width:100%; margin: 0px; padding-top: 5em !important">
+<div  class='container-fluid'>
+  <div class='container'>
+  <div id='info' class='jumbotron'>
+    <div class='row' id="GoTFoods">
+    </div>
+   </div>
+  </div>
+</div>
+</div>
+    <script type="text/javascript">
+bigList = [
+        {
+                "Quote": "Cersei set a tasty table, that could not be denied. They started with a creamy chestnut soup, crusty hot bread, and greens dressed with apples and pine nuts.",
+                "Character": "Cersei Lannister",
+                "Character_Id": "2",
+                "Organization": "House Lannister",
+                "Location": "King’s Landing",
+                "Food": "Creamy Chestnut Soup",
+                "image_URL": "http://www.hojiblanca.com/wp-content/uploads/sopa-de-castanas.jpg"
+        },
+        {
+                "Quote": "A leg of lamb would be nice... Perhaps a dish of peas and onions, some fresh baked bread with butter, and a flagon of mulled wine to wash it down. Or beer, if that's easier. I try not to be overly particular.",
+                "Character": "Tyrion Lannister",
+                "Character_Id": "3",
+                "Organization": "House Lannister",
+                "Location": "The Eyrie",
+                "Food": "Lamb with Peas and Onions",
+                "image_URL": "http://us.123rf.com/450wm/robynmac/robynmac1302/robynmac130200014/17842638-lamb-cutlets-served-with-roasted-potatoes-baby-peas-and-onions.jpg"
+        },
+        {
+                "Quote": "There was still half a honeyed chicken in the center of the table. Jon reached out to tear off a leg, then had a better idea. He knifed the bird whole and let the carcass slide to the floor between his legs. Ghost ripped into it in savage silence.",
+                "Character": "Jon Snow",
+                "Character_Id": "5",
+                "Organization": "Nights Watch",
+                "Location": "The Wall",
+                "Food": "Honeyed Chicken",
+                "image_URL": "http://www.joyofkosher.com/wp-content/uploads/2011/04/honey-chicken4.jpg"
+        },
+        {
+                "Quote": "Later came sweetbread and pigeon pie and baked apples fragrant with cinnamon.",
+                "Character": "Sansa Stark",
+                "Character_Id": "28",
+                "Organization": "House Stark",
+                "Location": "King’s Landing",
+                "Food": "Baked apples",
+                "image_URL": "http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2008/12/14/0/NY0309_Baked-Apples.jpg.rend.sni12col.landscape.jpeg"
+        },
+        {
+                "Quote": "Sansa was so stuffed that she could not manage more than two little lemon cakes, as much as she loved them.",
+                "Character": "Sansa Stark",
+                "Character_Id": "28",
+                "Organization": "House Stark",
+                "Location": "King’s Landing",
+                "Food": "Lemon Cakes",
+                "image_URL": "http://notyourmommascookie.com/wp-content/uploads/2012/04/289.jpg"
+        },
+        {
+                "Quote": "There was much more than she’d asked for: hot bread, butter and honey and blackberry preserves, a rasher of bacon and a soft-boiled egg, a wedge of cheese, a pot of mint tea. And with came Maester Luwin.",
+                "Character": "Catelyn Stark",
+                "Character_Id": "29",
+                "Organization": "House Stark",
+                "Location": "Winterfell",
+                "Food": "Breakfast of bread, bacon, eggs, and tea",
+                "image_URL": "http://media-cdn.tripadvisor.com/media/photo-s/04/26/3a/75/douceur-du-cambodge-boulangeri.jpg"
+        },
+        {
+                "Quote": "He commanded the serving men to bring them mutton chops and a slice off the aurochs and fill their trenchers with beef-and-barley stew. They seemed to like that well…",
+                "Character": "Bran Stark",
+                "Character_Id": "18",
+                "Organization": "House Stark",
+                "Location": "Winterfell",
+                "Food": "Beef and Barley Stew",
+                "image_URL": "http://www.daringgourmet.com/wp-content/uploads/2014/02/Angus-Beef-Stew-11.jpg"
+        },
+        {
+                "Quote": "Food was brought to her, steaming joints of meat and thick black sausages and Dothraki blood pies, and later fruits and sweetgrass stews and delicate pastries from the kitchens of Pentos…",
+                "Character": "Daenerys Targaryen",
+                "Character_Id": "8",
+                "Organization": "House Targaryen",
+                "Location": "Vaes Dothrak",
+                "Food": "Dothraki Blood Pie",
+                "image_URL": "http://i2.wp.com/www.innatthecrossroads.com/wp-content/uploads/2012/06/IMG_0797.jpg?resize=467%2C350"
+        },
+        {
+                "Quote": "Excellent lamprey pie. Were you slaving away in the kitchen all day?",
+                "Character": "Tyrion Lannister",
+                "Character_Id": "3",
+                "Organization": "House Lannister",
+                "Location": "King’s Landing",
+                "Food": "Lamprey Pie",
+                "image_URL": "http://veganlatina.com/wp-content/uploads/2013/03/piescoop.jpg"
+        },
+        {
+                "Quote": "She has to eat the whole heart? Hope that wasn’t my horse",
+                "Character": "Daenerys Targaryen",
+                "Character_Id": "8",
+                "Organization": "House Targaryen",
+                "Location": "Vaes Dothrak",
+                "Food": "Stallion Heart",
+                "image_URL": "http://notyourmommascookie.com/wp-content/uploads/2012/04/dothraki-dessert-5.jpg"
+        },
+        {
+                "Quote": "Look, the pie!",
+                "Character": "Joffrey Baratheon",
+                "Character_Id": "25",
+                "Organization": "House Baratheon",
+                "Location": "King’s Landing",
+                "Food": "Pigeon Pie",
+                "image_URL": "https://s-media-cache-ak0.pinimg.com/736x/e9/85/61/e9856154f4a6b0c3ef75f11dcf100779.jpg"
+        }
+]
+	var arrayLength = bigList.length;
+        var i = 0;
+	var results = [];
+        //while (i < arrayLength) {
+	for (var i = 0; i < arrayLength; i++) {
+	    console.log(bigList[i].Character_Id);
+	    //console.log("<div class='col-md-4 text-center'><p>" + bigList[i].Quote  + "</p></div>");
+	    $.ajaxSetup({
+		async:false
+		});
+	
+	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[i].Character_Id,function(data) {
+	            console.log(JSON.stringify(data,null,2));
+	            $("#GoTFoods").append("<div class='col-md-4 text-center'>"+"<img src=" + bigList[i].image_URL +
+                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>" + bigList[i].Quote  +
+			 "</p><p> Character name: " + data.first_name + " " + data.last_name + "</p><p> Status: " + data.status +  "</p></div>");
+	    })
+            if (arrayLength - i - 1 == arrayLength % 3)
+		break;
+	}
+	if (arrayLength % 3 == 1){
+	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[arrayLength - 1].Character_Id,function(data) {
+	            console.log(JSON.stringify(data,null,2));
+	            $("#GoTFoods").append("<div class='col-md-12 text-center'>"+"<img src=" + bigList[arrayLength - 1].image_URL +
+                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>"
+			 + bigList[arrayLength - 1].Quote  + "</p><p> Character name: " + data.first_name + " " + data.last_name
+			 + "</p><p> Status: " + data.status +  "</p></div>");
+		});
+
+	     //$("#GoTFoods").append("<div class='col-md-12 text-center'>"+"<img src=" + bigList[arrayLength - 1].image_URL
+             //+ " class='img-rounded' alt='Buffet' width='250' height='236' />"
+             //+ "<p>" + bigList[arrayLength - 1].Quote  + "</p></div>");
+	}
+	if (arrayLength % 3 == 2){
+
+	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[arrayLength - 1].Character_Id,function(data) {
+	            console.log(JSON.stringify(data,null,2));
+	            $("#GoTFoods").append("<div class='col-md-6 text-center'>"+"<img src=" + bigList[arrayLength - 1].image_URL +
+                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>"
+			 + bigList[arrayLength - 1].Quote  + "</p><p> Character name: " + data.first_name + " " + data.last_name
+			 + "</p><p> Status: " + data.status +  "</p></div>");
+		});
+	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[arrayLength - 2].Character_Id,function(data) {
+	            console.log(JSON.stringify(data,null,2));
+	            $("#GoTFoods").append("<div class='col-md-6 text-center'>"+"<img src=" + bigList[arrayLength - 2].image_URL +
+                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>"
+			 + bigList[arrayLength - 2].Quote  + "</p><p> Character name: " + data.first_name + " " + data.last_name
+			 + "</p><p> Status: " + data.status +  "</p></div>");
+		});
+	}
+
+//	$("#alias").text("Character alias: ".concat(data.alias));
+//	$("#name").text("Character name: ".concat(data.first_name.concat(" ".concat(data.last_name))));
+//	$("#gender").text("Character gender: ".concat(data.gender));
+//	$("#status").text("Character status: ".concat(data.status));
+    </script>
+{% endblock %}
