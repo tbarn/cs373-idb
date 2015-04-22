@@ -1,4 +1,4 @@
-# cs373-idb
+# cs373-idb  ![travis-ci-badge](https://travis-ci.org/tbarn/cs373-idb.svg?branch=master)
 
 #####For the graders:    
 Our models.py is actually app.py. According to Downing, we do not need a models.py. This causes models.html to be app.html.    
@@ -53,4 +53,5 @@ python3 insertionDict.py
 python3 app.py
 
 Go to local server 
+
 
