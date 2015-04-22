@@ -54,3 +54,4 @@ python3 app.py
 
 Go to local server 
 
+![travis-ci-badge](https://travis-ci.org/tbarn/cs373-idb.svg?branch=master)
