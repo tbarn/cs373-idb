@@ -29,12 +29,12 @@
     </thead>
     <tbody>
     {% for recipe in recipes %}
-      <a href="/recipe/{{ recipe.recipe_id }}"><tr>
-        <th>{{ recipe.recipe_id }}</th></a>
-        <th>{{ recipe.name }}</th>
-        <th>{{ recipe.cuisine_id }}</th>
+      <tr>
+        <th><a href="/recipe/{{ recipe.recipe_id }}">{{ recipe.recipe_id }}</a></th>
+        <th><a href="/recipe/{{ recipe.recipe_id }}">{{ recipe.name }}</a></th>
+        <th><a href="/cuisine/{{ recipe.cuisine_id}}">{{ recipe.cuisine_id }}</a></th>
         <th>{{ recipe.num_ingredients }}</th>
-      </tr></a>
+      </tr>
     {% endfor %}
     </tbody>
   </table>
@@ -50,12 +50,12 @@
     </thead>
     <tbody>
     {% for cuisine in cuisines %}
-      <a href="/cuisine/{{ cuisine.cuisine_id }}"><tr>
-        <th>{{ cuisine.cuisine_id }}</th>
-        <th>{{ cuisine.name }}</th>
-        <th>{{ cuisine.pinterest_page }}</th>
+      <tr>
+        <th><a href="/cuisine/{{ cuisine.cuisine_id }}">{{ cuisine.cuisine_id }}</a></th>
+        <th><a href="/cuisine/{{ cuisine.cuisine_id }}">{{ cuisine.name }}</a></th>
+        <th><a href="{{ cuisine.pinterest_page }}">{{ cuisine.pinterest_page }}</a></th>
         <th>{{ cuisine.num_ingredients }}</th>
-      </tr></a>
+      </tr>
     {% endfor %}
     </tbody>
   </table>
@@ -70,10 +70,10 @@
     </thead>
     <tbody>
     {% for ingredient in ingredients %}
-      <a href="/ingredient/{{ ingredient.ingredient_id }}"><tr>
-        <th>{{ ingredient.ingredient_id }}</th>
-        <th>{{ ingredient.name }}</th>
-        <th>{{ ingredient.image_url }}</th>
+      <tr>
+        <th><a href="/ingredient/{{ ingredient.ingredient_id }}">{{ ingredient.ingredient_id }}</a></th>
+        <th><a href="/ingredient/{{ ingredient.ingredient_id }}">{{ ingredient.name }}</a></th>
+        <th><a href="{{ ingredient.image_url }}">{{ ingredient.image_url }}</a></th>
       </tr>
     {% endfor %}
     </tbody>
