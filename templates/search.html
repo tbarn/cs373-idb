@@ -3,50 +3,62 @@
 {% block content %}
 <!DOCTYPE html>
 <html>
-<div class="container" style="width:100%; margin: 0px; padding-top: 5em !important">
+<div class="container" style="width:100%; margin: 0px; padding-top: 6em !important">
 	<head>
 		<h1>Search Results for "{{ search_query }}"</h1>
+		<h5>Exact results (and results) are in <b>bold</b> followed by match any word results (or results)</h5>
 	</head>
 	<body>
-		<h3>Ingredient results:</h3>
 
-		{% for result in and_ingredient_results %}
-			<p>
-				<a href="http://104.239.168.220/ingredient/{{ result['ingredient_id'] }}">{{ result['name'] }}</a>
-			</p>
-		{% endfor %}
-		{% for result in or_ingredient_results %}
-			<p>
-				<a href="http://104.239.168.220/ingredient/{{ result['ingredient_id'] }}">{{ result['name'] }}</a>
-			</p>
-		{% endfor %}
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Ingredient results:</h3>
 
-		<h3>Recipe results:</h3>
+				{% for result in and_ingredient_results %}
+					<p>
+						<b><a href="http://104.239.168.220/ingredient/{{ result['ingredient_id'] }}">{{ result['name'] }}</a></b>
+					</p>
+				{% endfor %}
+				{% for result in or_ingredient_results %}
+					<p>
+						<a href="http://104.239.168.220/ingredient/{{ result['ingredient_id'] }}">{{ result['name'] }}</a>
+					</p>
+				{% endfor %}
+			</div>
+		  
+		  	<div class="col-md-4">
+				<h3>Recipe results:</h3>
 
-		{% for result in and_recipe_results %}
-			<p>
-				<a href="http://104.239.168.220/recipe/{{ result['recipe_id'] }}">{{ result['name'] }}</a>
-			</p>
-		{% endfor %}
-		{% for result in or_recipe_results %}
-			<p>
-				<a href="http://104.239.168.220/recipe/{{ result['recipe_id'] }}">{{ result['name'] }}</a>
-			</p>
-		{% endfor %}
+				{% for result in and_recipe_results %}
+					<p>
+						<b><a href="http://104.239.168.220/recipe/{{ result['recipe_id'] }}">{{ result['name'] }}</a></b>
+					</p>
+				{% endfor %}
+				{% for result in or_recipe_results %}
+					<p>
+						<a href="http://104.239.168.220/recipe/{{ result['recipe_id'] }}">{{ result['name'] }}</a>
+					</p>
+				{% endfor %}
+		  	</div>
+		  	
+		  	<div class="col-md-4">
+				<h3>Cuisine results:</h3>
 
-		<h3>Cuisine results:</h3>
-
-		{% for result in and_cuisine_results %}
-			<p>
-				<a href="http://104.239.168.220/cuisine/{{ result['cuisine_id'] }}">{{ result['name'] }}</a>
-			</p>
-		{% endfor %}
-		{% for result in or_cuisine_results %}
-			<p>
-				<a href="http://104.239.168.220/cuisine/{{ result['cuisine_id'] }}">{{ result['name'] }}</a>
-			</p>
-		{% endfor %}
+				{% for result in and_cuisine_results %}
+					<p>
+						<b><a href="http://104.239.168.220/cuisine/{{ result['cuisine_id'] }}">{{ result['name'] }}</a></b>
+					</p>
+				{% endfor %}
+				{% for result in or_cuisine_results %}
+					<p>
+						<a href="http://104.239.168.220/cuisine/{{ result['cuisine_id'] }}">{{ result['name'] }}</a>
+					</p>
+				{% endfor %}
+		  	</div>
+		</div>
+		<center><a href="http://104.239.168.220/">Back to Home</a></center>
 	</body>
 </div>
 </html>
 {% endblock %}
+
