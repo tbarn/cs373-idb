@@ -19,7 +19,8 @@
 <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="getpass.html">getpass</a><br>
 </td><td width="25%" valign=top><a href="psycopg2.html">psycopg2</a><br>
-</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+</td><td width="25%" valign=top><a href="tests.html">tests</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#eeaa77">
 <td colspan=3 valign=bottom>&nbsp;<br>
@@ -43,6 +44,9 @@ output:&nbsp;returns&nbsp;an&nbsp;ingredient&nbsp;dict&nbsp;with&nbsp;its&nbsp;r
 input:&nbsp;recipe_id<br>
 &nbsp;<br>
 output:&nbsp;returns&nbsp;an&nbsp;recipe&nbsp;dict&nbsp;with&nbsp;its&nbsp;relationships&nbsp;included</tt></dd></dl>
+ <dl><dt><a name="-get_GoTFoods_template"><strong>get_GoTFoods_template</strong></a>()</dt><dd><tt>input:&nbsp;hodor?<br>
+&nbsp;<br>
+output:hodor&nbsp;hodor.</tt></dd></dl>
  <dl><dt><a name="-get_cuisine"><strong>get_cuisine</strong></a>(cuisine_id)</dt><dd><tt>API&nbsp;GET&nbsp;request&nbsp;for&nbsp;a&nbsp;specific&nbsp;cuisine<br>
 &nbsp;<br>
 input:&nbsp;cuisine_id&nbsp;<br>
@@ -56,6 +60,9 @@ output:&nbsp;returns&nbsp;a&nbsp;flask&nbsp;template&nbsp;filled&nbsp;in&nbsp;wi
 &nbsp;<br>
 output:&nbsp;returns&nbsp;a&nbsp;response&nbsp;formatted&nbsp;in&nbsp;JSON&nbsp;with&nbsp;all&nbsp;the&nbsp;cuisines&nbsp;and&nbsp;their&nbsp;attributes</tt></dd></dl>
  <dl><dt><a name="-get_cuisines_template"><strong>get_cuisines_template</strong></a>()</dt><dd><tt>output:&nbsp;returns&nbsp;a&nbsp;flask&nbsp;template&nbsp;filled&nbsp;in&nbsp;with&nbsp;the&nbsp;cuisines</tt></dd></dl>
+ <dl><dt><a name="-get_hodor_template"><strong>get_hodor_template</strong></a>()</dt><dd><tt>input:&nbsp;hodor?<br>
+&nbsp;<br>
+output:hodor&nbsp;hodor.</tt></dd></dl>
  <dl><dt><a name="-get_index_template"><strong>get_index_template</strong></a>()</dt><dd><tt>output:&nbsp;returns&nbsp;index&nbsp;page</tt></dd></dl>
  <dl><dt><a name="-get_ingredient"><strong>get_ingredient</strong></a>(ingredient_id)</dt><dd><tt>API&nbsp;GET&nbsp;request&nbsp;for&nbsp;a&nbsp;specific&nbsp;ingredient<br>
 &nbsp;<br>
@@ -89,6 +96,7 @@ output:&nbsp;returns&nbsp;a&nbsp;response&nbsp;formatted&nbsp;in&nbsp;JSON&nbsp;
  <dl><dt><a name="-get_recipes_template"><strong>get_recipes_template</strong></a>()</dt><dd><tt>output:&nbsp;returns&nbsp;a&nbsp;flask&nbsp;template&nbsp;filled&nbsp;in&nbsp;with&nbsp;the&nbsp;recipes</tt></dd></dl>
  <dl><dt><a name="-get_team_template"><strong>get_team_template</strong></a>()</dt><dd><tt>output:&nbsp;renders&nbsp;team&nbsp;page</tt></dd></dl>
  <dl><dt><a name="-run_unittests"><strong>run_unittests</strong></a>()</dt><dd><tt>output:&nbsp;returns&nbsp;the&nbsp;output&nbsp;of&nbsp;unittests</tt></dd></dl>
+ <dl><dt><a name="-search_database"><strong>search_database</strong></a>()</dt></dl>
 </td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#55aa55">
@@ -97,8 +105,8 @@ output:&nbsp;returns&nbsp;a&nbsp;response&nbsp;formatted&nbsp;in&nbsp;JSON&nbsp;
     
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>abort</strong> = &lt;werkzeug.exceptions.Aborter object&gt;<br>
-<strong>app</strong> = &lt;Flask 'tests'&gt;<br>
-<strong>conn</strong> = &lt;connection object at 0x7f08008c4488; dsn: 'dbname='mydb' user=taylor2', closed: 0&gt;<br>
+<strong>app</strong> = &lt;Flask 'app'&gt;<br>
+<strong>conn</strong> = &lt;connection object at 0x7f4bce493488; dsn: 'dbname='mydb' user=taylor2', closed: 0&gt;<br>
 <strong>index</strong> = {'bagel': '/static/french_bagel.jpeg', 'leaning': '/static/pisa_tower.jpeg', 'peppers': '/static/mexican_peppers.jpeg'}<br>
 <strong>request</strong> = &lt;LocalProxy unbound&gt;<br>
 <strong>username</strong> = 'taylor2'</td></tr></table>
