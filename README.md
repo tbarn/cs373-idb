@@ -1,4 +1,4 @@
-# cs373-idb  ![travis-ci-badge](https://travis-ci.org/tbarn/cs373-idb.svg?branch=master)
+# cs373-idb  [![travis-ci-badge](https://travis-ci.org/tbarn/cs373-idb.svg?branch=master)](https://travis-ci.org/tbarn/cs373-idb)
 
 #####For the graders:    
 Our models.py is actually app.py. According to Downing, we do not need a models.py. This causes models.html to be app.html.    
@@ -47,6 +47,9 @@ psql mydb < tableschema.sql
 
 ---- insert data into tables
 python3 insertionDict.py 
+
+---- insert materialized views for searching
+psql mydb < search.sql
 
 
 --Run the flask app
