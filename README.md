@@ -48,6 +48,9 @@ psql mydb < tableschema.sql
 ---- insert data into tables
 python3 insertionDict.py 
 
+---- insert materialized views for searching
+psql mydb < search.sql
+
 
 --Run the flask app
 python3 app.py
