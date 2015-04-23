@@ -232,39 +232,45 @@ def search_database():
         and_search_query = "&".join(search_query.split())
         or_search_query = "|".join(search_query.split())
 
-        cur.execute("select ingredient_id, name from searchIngredients where document @@ to_tsquery('" + and_search_query 
-            + "') ORDER BY ts_rank(searchIngredients.document, to_tsquery('" + and_search_query + "')) DESC;")
-        and_ingredient_results = cur.fetchall()
+        try:
+            cur.execute("select ingredient_id, name from searchIngredients where document @@ to_tsquery('" + and_search_query 
+                + "') ORDER BY ts_rank(searchIngredients.document, to_tsquery('" + and_search_query + "')) DESC;")
+            and_ingredient_results = cur.fetchall()
 
-        cur.execute("select ingredient_id, name from searchIngredients where document @@ to_tsquery('" + or_search_query 
-            + "') ORDER BY ts_rank(searchIngredients.document, to_tsquery('" + or_search_query + "')) DESC;")
-        temp_ingredients = cur.fetchall()
+            cur.execute("select ingredient_id, name from searchIngredients where document @@ to_tsquery('" + or_search_query 
+                + "') ORDER BY ts_rank(searchIngredients.document, to_tsquery('" + or_search_query + "')) DESC;")
+            temp_ingredients = cur.fetchall()
 
-        or_ingredient_results = [i for i in temp_ingredients if i not in and_ingredient_results]       
+            or_ingredient_results = [i for i in temp_ingredients if i not in and_ingredient_results]       
 
-        cur.execute("select recipe_id,name from ( select distinct recipe_id,name,max(rank) from( select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + and_search_query 
-            + "')) as rank from searchRecipes where document @@ to_tsquery('" + and_search_query 
-            + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + and_search_query + "')) DESC) t1 GROUP BY recipe_id,name ORDER BY max(rank) DESC) t2;")
-        and_recipe_results = cur.fetchall()
+            cur.execute("select recipe_id,name from ( select distinct recipe_id,name,max(rank) from( select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + and_search_query 
+                + "')) as rank from searchRecipes where document @@ to_tsquery('" + and_search_query 
+                + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + and_search_query + "')) DESC) t1 GROUP BY recipe_id,name ORDER BY max(rank) DESC) t2;")
+            and_recipe_results = cur.fetchall()
 
-        cur.execute("select recipe_id,name from ( select distinct recipe_id,name,max(rank) from( select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + or_search_query 
-            + "')) as rank from searchRecipes where document @@ to_tsquery('" + or_search_query 
-            + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + or_search_query + "')) DESC) t1 GROUP BY recipe_id,name ORDER BY max(rank) DESC) t2;")
-        temp_recipes = cur.fetchall()
+            cur.execute("select recipe_id,name from ( select distinct recipe_id,name,max(rank) from( select distinct recipe_id, name, ts_rank(searchRecipes.document, to_tsquery('" + or_search_query 
+                + "')) as rank from searchRecipes where document @@ to_tsquery('" + or_search_query 
+                + "') ORDER BY ts_rank(searchRecipes.document, to_tsquery('" + or_search_query + "')) DESC) t1 GROUP BY recipe_id,name ORDER BY max(rank) DESC) t2;")
+            temp_recipes = cur.fetchall()
 
-        or_recipe_results = [i for i in temp_recipes if i not in and_recipe_results]
+            or_recipe_results = [i for i in temp_recipes if i not in and_recipe_results]
 
-        cur.execute("select cuisine_id,name from ( select distinct cuisine_id,name,max(rank) from( select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + and_search_query 
-            + "')) as rank from searchCuisines where document @@ to_tsquery('" + and_search_query 
-            + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ and_search_query +"')) DESC) t1 GROUP BY cuisine_id,name ORDER BY max(rank) DESC) t2;")
-        and_cuisine_results = cur.fetchall()
+            cur.execute("select cuisine_id,name from ( select distinct cuisine_id,name,max(rank) from( select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + and_search_query 
+                + "')) as rank from searchCuisines where document @@ to_tsquery('" + and_search_query 
+                + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ and_search_query +"')) DESC) t1 GROUP BY cuisine_id,name ORDER BY max(rank) DESC) t2;")
+            and_cuisine_results = cur.fetchall()
 
-        cur.execute("select cuisine_id,name from ( select distinct cuisine_id,name,max(rank) from( select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + or_search_query 
-            + "')) as rank from searchCuisines where document @@ to_tsquery('" + or_search_query 
-            + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ or_search_query +"')) DESC) t1 GROUP BY cuisine_id,name ORDER BY max(rank) DESC) t2;")
-        temp_cuisines = cur.fetchall()
+            cur.execute("select cuisine_id,name from ( select distinct cuisine_id,name,max(rank) from( select distinct cuisine_id, name, ts_rank(searchCuisines.document, to_tsquery('" + or_search_query 
+                + "')) as rank from searchCuisines where document @@ to_tsquery('" + or_search_query 
+                + "') ORDER BY ts_rank(searchCuisines.document, to_tsquery('"+ or_search_query +"')) DESC) t1 GROUP BY cuisine_id,name ORDER BY max(rank) DESC) t2;")
+            temp_cuisines = cur.fetchall()
 
-        or_cuisine_results = [i for i in temp_cuisines if i not in and_cuisine_results]       
+            or_cuisine_results = [i for i in temp_cuisines if i not in and_cuisine_results]  
+        except Exception:
+            conn.rollback()
+            #return render_template("index.html",index=index) 
+            return render_template("search.html", search_query=search_query) 
+            
 
         return render_template("search.html", search_query=search_query, 
             and_ingredient_results=and_ingredient_results, or_ingredient_results=or_ingredient_results, 
@@ -483,3 +489,4 @@ def error_404(error):
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000, host = '0.0.0.0')
+
