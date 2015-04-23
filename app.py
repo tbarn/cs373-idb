@@ -225,6 +225,13 @@ def get_ingredient(ingredient_id):
 
 @app.route('/search', methods=['GET', 'POST'])
 def search_database():
+    """
+    Function to search the database
+
+    input: data from the HTML form in the form a string
+
+    output: returns a search template with search results 
+    """
     if request.method == "POST":
         cur=conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         search_query = request.form['search']
