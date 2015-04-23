@@ -1,3 +1,22 @@
+commit fabe04a25f63480cf0cbbe8c6a7ec7b5738cf69d
+Merge: 8cf7972 4a5fb4a
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 17:01:34 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 8cf797272f170dd30d4f0638ded49c0fada61b90
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 17:01:22 2015 +0000
+
+    Updated pydocs
+
+commit 4a5fb4a042347b3fa2d8b8c11f9a0ddae826ad70
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Apr 23 11:55:35 2015 -0500
+
+    Updated log
+
 commit cde026a117a23c48833bc0f3a7e0ee65d6a29143
 Merge: 47e029d cc5863f
 Author: Joey <jjc2011@gmail.com>
