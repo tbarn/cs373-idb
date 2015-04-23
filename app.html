@@ -96,7 +96,11 @@ output:&nbsp;returns&nbsp;a&nbsp;response&nbsp;formatted&nbsp;in&nbsp;JSON&nbsp;
  <dl><dt><a name="-get_recipes_template"><strong>get_recipes_template</strong></a>()</dt><dd><tt>output:&nbsp;returns&nbsp;a&nbsp;flask&nbsp;template&nbsp;filled&nbsp;in&nbsp;with&nbsp;the&nbsp;recipes</tt></dd></dl>
  <dl><dt><a name="-get_team_template"><strong>get_team_template</strong></a>()</dt><dd><tt>output:&nbsp;renders&nbsp;team&nbsp;page</tt></dd></dl>
  <dl><dt><a name="-run_unittests"><strong>run_unittests</strong></a>()</dt><dd><tt>output:&nbsp;returns&nbsp;the&nbsp;output&nbsp;of&nbsp;unittests</tt></dd></dl>
- <dl><dt><a name="-search_database"><strong>search_database</strong></a>()</dt></dl>
+ <dl><dt><a name="-search_database"><strong>search_database</strong></a>()</dt><dd><tt>Function&nbsp;to&nbsp;search&nbsp;the&nbsp;database<br>
+&nbsp;<br>
+input:&nbsp;data&nbsp;from&nbsp;the&nbsp;HTML&nbsp;form&nbsp;in&nbsp;the&nbsp;form&nbsp;a&nbsp;string<br>
+&nbsp;<br>
+output:&nbsp;returns&nbsp;a&nbsp;search&nbsp;template&nbsp;with&nbsp;search&nbsp;results</tt></dd></dl>
 </td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#55aa55">
@@ -106,7 +110,7 @@ output:&nbsp;returns&nbsp;a&nbsp;response&nbsp;formatted&nbsp;in&nbsp;JSON&nbsp;
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>abort</strong> = &lt;werkzeug.exceptions.Aborter object&gt;<br>
 <strong>app</strong> = &lt;Flask 'app'&gt;<br>
-<strong>conn</strong> = &lt;connection object at 0x7f4bce493488; dsn: 'dbname='mydb' user=taylor2', closed: 0&gt;<br>
+<strong>conn</strong> = &lt;connection object at 0x7ffde369b488; dsn: 'dbname='mydb' user=taylor2', closed: 0&gt;<br>
 <strong>index</strong> = {'bagel': '/static/french_bagel.jpeg', 'leaning': '/static/pisa_tower.jpeg', 'peppers': '/static/mexican_peppers.jpeg'}<br>
 <strong>request</strong> = &lt;LocalProxy unbound&gt;<br>
 <strong>username</strong> = 'taylor2'</td></tr></table>
