@@ -8,7 +8,7 @@ cuisines = [
     {
         "id": 1, 
         "name": "Japanese", 
-        "description": "The Japanese diet consists principally of rice; fresh, lean seafood; and pickled or boiled vegetables.", 
+        "description": "Cuisine of Japan. The Japanese diet consists principally of rice; fresh, lean seafood; and pickled or boiled vegetables.", 
         "image_URL": "http://therealwinefair.com/wp-content/uploads/sushi.163101001_std.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/nxxx0-CgQ0o", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483472.813068145!2d136.4664008!3d37.4900318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e0!3m2!1sen!2sus!4v1427331816383", 
@@ -25,7 +25,7 @@ cuisines = [
     {
         "id": 2, 
         "name": "French", 
-        "description": "Meals range from the very basic, such as the traditional baguette plus cheese plus inexpensive wine, to very elaborate affairs than can involve a dozen courses and different wines consumed over several hours.", 
+        "description": "Cuisine of France. Meals range from the very basic, such as the traditional baguette plus cheese plus inexpensive wine, to very elaborate affairs than can involve a dozen courses and different wines consumed over several hours.", 
         "image_URL": "http://www.henit.ie/wp-content/uploads/2013/12/french_cuisine.jpeg", 
         "youtube_URL": "https://www.youtube.com/embed/B7EgCPAca_0", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5602772.070080925!2d1.7191036000000002!3d46.71109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sen!2sus!4v1427331699142", 
@@ -43,7 +43,7 @@ cuisines = [
     {
         "id": 3, 
         "name": "Chinese", 
-        "description": "Styles and tastes varied by class, region, and ethnic background. This led to an unparalleled range of ingredients, techniques, dishes and eating styles in what could be called Chinese food, leading Chinese to pride themselves on eating a wide variety of foods while remaining true to the spirit and traditions of Chinese food culture.", 
+        "description": "Cuisine of China. Styles and tastes varied by class, region, and ethnic background. This led to an unparalleled range of ingredients, techniques, dishes and eating styles in what could be called Chinese food, leading Chinese to pride themselves on eating a wide variety of foods while remaining true to the spirit and traditions of Chinese food culture.", 
         "image_URL": "http://www.thechinesequest.com/wp-content/uploads/2014/02/chinesefood1.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/DKowg30XQ0Y", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26489489.382952295!2d104.13611184999999!3d35.85929485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChina!5e0!3m2!1sen!2sus!4v1427331865203", 
@@ -60,7 +60,7 @@ cuisines = [
     {
         "id": 4, 
         "name": "Italian", 
-        "description": "Italian cuisine is characterized by its simplicity, with many dishes having only four to eight ingredients. Italian cooks rely chiefly on the quality of the ingredients rather than on elaborate preparation. Significant changes occurred with the discovery of the New World and the introduction of potatoes, tomatoes, bell peppers and maize, now central to the cuisine but not introduced in quantity until the 18th century. Cheese and wine are a major part of the cuisine. Coffee, specifically espresso, has become important in Italian cuisine.", 
+        "description": "Cuisine of Italy. Italian cuisine is characterized by its simplicity, with many dishes having only four to eight ingredients. Italian cooks rely chiefly on the quality of the ingredients rather than on elaborate preparation. Significant changes occurred with the discovery of the New World and the introduction of potatoes, tomatoes, bell peppers and maize, now central to the cuisine but not introduced in quantity until the 18th century. Cheese and wine are a major part of the cuisine. Coffee, specifically espresso, has become important in Italian cuisine.", 
         "image_URL": "http://www.personal.psu.edu/srh122/italian%201.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/Gh1lRSYXzOU", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6139400.007323359!2d12.57361079999999!3d41.29246005000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4fe82448dd203%3A0xe22cf55c24635e6f!2sItaly!5e0!3m2!1sen!2sus!4v1427331909959", 
@@ -75,7 +75,7 @@ cuisines = [
     {
         "id": 5, 
         "name": "American", 
-        "description": "The European colonization of the Americas yielded the introduction of a number of ingredients and cooking styles to the latter. The various styles continued expanding well into the 19th and 20th centuries, proportional to the influx of immigrants from many foreign nations; such influx developed a rich diversity in food preparation throughout the country.", 
+        "description": "Cuisine of United States. The European colonization of the Americas yielded the introduction of a number of ingredients and cooking styles to the latter. The various styles continued expanding well into the 19th and 20th centuries, proportional to the influx of immigrants from many foreign nations; such influx developed a rich diversity in food preparation throughout the country.", 
         "image_URL": "http://www.energytimes.com/images/features/0413/cooking.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/aWgLTg5hVFg", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25895663.485556163!2d-95.665!3d37.599999999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sus!4v1427331962550", 
@@ -90,7 +90,7 @@ cuisines = [
     {
         "id": 6, 
         "name": "Thai", 
-        "description": "Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge. It is known for its complex interplay of at least three and up to four or five fundamental taste senses in each dish or the overall meal: sour, sweet, salty, bitter and spicy.", 
+        "description": "Cuisine of Thailand. Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge. It is known for its complex interplay of at least three and up to four or five fundamental taste senses in each dish or the overall meal: sour, sweet, salty, bitter and spicy.", 
         "image_URL": "http://drinks.seriouseats.com/images/2011/11/20111103padthai.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/QM6uH_ZN7Sk", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7960473.106064411!2d101.490104!3d13.03887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d8df747424db1%3A0x9ed72c880757e802!2sThailand!5e0!3m2!1sen!2sus!4v1427331998891", 
@@ -114,7 +114,7 @@ cuisines = [
     {
         "id": 7, 
         "name": "Mexican", 
-        "description": "Mexican cuisine is primarily a fusion of indigenous Mesoamerican cooking with European, especially Spanish, elements added after the Spanish conquest of the Aztec Empire in the 16th century. The basic staples remain native foods such as corn, beans and chili peppers, but the Europeans introduced a large number of other foods, the most important of which were meat from domesticated animals (beef, pork, chicken, goat and sheep), dairy products (especially cheese) and various herbs and spices.", 
+        "description": "Cuisine of Mexico. Mexican cuisine is primarily a fusion of indigenous Mesoamerican cooking with European, especially Spanish, elements added after the Spanish conquest of the Aztec Empire in the 16th century. The basic staples remain native foods such as corn, beans and chili peppers, but the Europeans introduced a large number of other foods, the most important of which were meat from domesticated animals (beef, pork, chicken, goat and sheep), dairy products (especially cheese) and various herbs and spices.", 
         "image_URL": "http://www.allcateringmenuprices.com/wp-content/uploads/2014/11/MexicanFoodTacos.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/a_JstVCs4ao", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14972496.527264042!2d-102.53750054999999!3d23.6260333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84043a3b88685353%3A0xed64b4be6b099811!2sMexico!5e0!3m2!1sen!2sus!4v1427332035871", 
@@ -131,7 +131,7 @@ cuisines = [
     {
         "id": 8, 
         "name": "Indian", 
-        "description": "Indian cuisine encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.", 
+        "description": "Cuisine of India. Indian cuisine encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits. Indian food is also heavily influenced by religious and cultural choices and traditions.", 
         "image_URL": "http://www.theeverestcuisine.com/tec/wp-content/uploads/2014/05/image4.jpeg", 
         "youtube_URL": "https://www.youtube.com/embed/MkiTbH8hLdE", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15243406.195009712!2d82.7792231!3d21.131108349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sus!4v1427332072214", 
@@ -149,7 +149,7 @@ cuisines = [
     {
         "id": 9, 
         "name": "Korean", 
-        "description": "Korean cuisine is largely based upon rice, vegetables, and meats. Traditional Korean meals are noted for the number of side dishes (banchan) that accompany steam-cooked short-grain rice. Kimchi is served often, sometimes at every meal. Commonly used ingredients include sesame oil, doenjang (fermented bean paste), soy sauce, salt, garlic, ginger, pepper flakes and gochujang (fermented red chili paste).", 
+        "description": "Cuisine of Korea. Korean cuisine is largely based upon rice, vegetables, and meats. Traditional Korean meals are noted for the number of side dishes (banchan) that accompany steam-cooked short-grain rice. Kimchi is served often, sometimes at every meal. Commonly used ingredients include sesame oil, doenjang (fermented bean paste), soy sauce, salt, garlic, ginger, pepper flakes and gochujang (fermented red chili paste).", 
         "image_URL": "http://upload.wikimedia.org/wikipedia/commons/3/3e/Korean.food-Hanjungsik-01.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/VpQ94EkzG6c", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311093.540572555!2d127.09640499999999!3d35.8615124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356455ebcb11ba9b%3A0x91249b00ba88db4b!2sSouth+Korea!5e0!3m2!1sen!2sus!4v1427332130243", 
@@ -168,7 +168,7 @@ cuisines = [
     {
         "id": 10, 
         "name": "Persian", 
-        "description": "Fresh green herbs are frequently used along with fruits such as plums, pomegranates, quince, prunes, apricots, and raisins. Typical Persian main dishes are combinations of rice with meat, such as lamb, chicken, or fish, and vegetables such as onions, various herbs, and nuts. To achieve a balanced taste, characteristic Persian flavorings such as saffron, dried lime, cinnamon, and parsley are mixed delicately and used in some special dishes.", 
+        "description": "Cuisine of Iran (Persia). Fresh green herbs are frequently used along with fruits such as plums, pomegranates, quince, prunes, apricots, and raisins. Typical Persian main dishes are combinations of rice with meat, such as lamb, chicken, or fish, and vegetables such as onions, various herbs, and nuts. To achieve a balanced taste, characteristic Persian flavorings such as saffron, dried lime, cinnamon, and parsley are mixed delicately and used in some special dishes.", 
         "image_URL": "http://www.anvari.org/db/iran/Persian_Food_Recipes/.image.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/E-cbi185Izs", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6897542.874587717!2d53.683015749999996!3d32.4207423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef7ec2ec16b1df1%3A0x40b095d39e51face!2sIran!5e0!3m2!1sen!2sus!4v1427332190446", 

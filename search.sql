@@ -28,12 +28,13 @@ SELECT
 	to_tsvector(cuisines.name) || 
 	to_tsvector(cuisines.description) ||
 	to_tsvector(ingredients.name) ||
-	to_tsvector(recipes.name) as document
+	to_tsvector(recipes.name) ||
+	to_tsvector(recipes.description) as document
 FROM cuisines
 inner join c_and_i using (cuisine_id)
 inner join ingredients using (ingredient_id)
 inner join recipes using(cuisine_id)
-GROUP BY cuisine_id, ingredients.name, recipes.name;
+GROUP BY cuisine_id, ingredients.name, recipes.name, recipes.description;
 
 select cuisine_id,name from(
 select distinct cuisine_id,name,max(rank) from(
@@ -54,12 +55,13 @@ SELECT
 	to_tsvector(recipes.name) || 
 	to_tsvector(recipes.description) ||
 	to_tsvector(ingredients.name) ||
-	to_tsvector(cuisines.name) as document
+	to_tsvector(cuisines.name) ||
+	to_tsvector(cuisines.description) as document
 FROM recipes
 inner join r_and_i using (recipe_id)
 inner join ingredients using (ingredient_id)
 inner join cuisines using (cuisine_id)
-GROUP BY recipe_id, ingredients.name, cuisines.name;
+GROUP BY recipe_id, ingredients.name, cuisines.name, cuisines.description;
 
 select recipe_id,name from(
 select distinct recipe_id,name, max(rank) from(
