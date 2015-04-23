@@ -569,6 +569,82 @@ class TestIDB (TestCase) :
         t = r.data.decode("utf-8")
         self.assertTrue('dog' in t)
 
+    def test_search_5 (self) :
+        r = app.app.test_client().post('/search', data=dict({'search':'Japan'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('Japanese' in t)
+        self.assertTrue('California Roll' in t)
+
+    def test_search_6 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'frozen epas'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('frozen peas' in t)
+
+    def test_search_7 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'vegetable oil'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('olive oil' in t)
+
+    def test_search_8 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'roll'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('Japanese' in t)
+
+    def test_search_9 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'Punjabis'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('Indian' in t)
+
+    def test_search_10 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'street food'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('Pad Thai' in t)
+
+    def test_search_11 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'lettuce'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('Beef Bulgogi' in t)
+
+    def test_search_12 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'sugarcane'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('sugar' in t)
+
+    def test_search_13 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'united states'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('American' in t)
+
+    #Error Case
+    def test_search_14 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'||||'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('||||' in t)
+
+    #Error Case
+    def test_search_15 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'!'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('!' in t)
+    
+    #Error Case
+    def test_search_16 (self):
+        r = app.app.test_client().post('/search', data=dict({'search':'&'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        self.assertTrue('&' in t)
+
     # -------------
     # Error Handler
     # -------------
