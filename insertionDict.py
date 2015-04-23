@@ -9,7 +9,7 @@ cuisines = [
         "id": 1, 
         "name": "Japanese", 
         "description": "Cuisine of Japan. The Japanese diet consists principally of rice; fresh, lean seafood; and pickled or boiled vegetables.", 
-        "image_URL": "http://therealwinefair.com/wp-content/uploads/sushi.163101001_std.jpg", 
+        "image_URL": "http://www.lexisnexis.com/COMMUNITY/LITIGATIONRESOURCECENTER/cfs-filesystemfile.ashx/__key/CommunityServer.Blogs.Components.WeblogFiles/litigationblog/japanese-food.jpg", 
         "youtube_URL": "https://www.youtube.com/embed/nxxx0-CgQ0o", 
         "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483472.813068145!2d136.4664008!3d37.4900318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e0!3m2!1sen!2sus!4v1427331816383", 
         "ingredients": [
