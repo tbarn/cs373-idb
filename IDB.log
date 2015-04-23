@@ -1,3 +1,455 @@
+commit cde026a117a23c48833bc0f3a7e0ee65d6a29143
+Merge: 47e029d cc5863f
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 16:53:43 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit cc5863ff5979de69e395161616090be3f4b97724
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 11:53:40 2015 -0500
+
+    Updated team page
+
+commit 47e029d9d266850dc47f415be278d479666b6be4
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 16:53:26 2015 +0000
+
+    Updated out
+
+commit 7f5bce0a8f4e628a712ef6d37b8a136ecf2aa301
+Merge: 9538acd 70726f6
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 16:51:04 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 9538acdff909bf6b86f40f2598b34277ac73e70e
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 16:50:42 2015 +0000
+
+    Updated pydocs
+
+commit 70726f6341f5bf72c46a74cef389a4bde53dd51f
+Merge: fa4098c af3f1a8
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 11:49:46 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit fa4098cddbdd04ff1c467e1f21e94fc737864d32
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 11:49:26 2015 -0500
+
+    Added pydoc string
+
+commit af3f1a810d6713174e028f3006183add5a30d2cb
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 16:39:26 2015 +0000
+
+    Added pydocs
+
+commit eb66ca0e0efb50014d2de3a3842b613208770b4d
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 16:35:28 2015 +0000
+
+    Fixed broken URL for japanese cuisine
+
+commit dd386c39e17a78b0e8b7f5fd25edefd542fe37eb
+Merge: 7e66939 5d28137
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 16:25:53 2015 +0000
+
+    Finished team page, updated numbers, close #87
+
+commit 7e66939b2622f96abddcd0efa406c7f190fdee69
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 16:21:54 2015 +0000
+
+    Updating team page
+
+commit 5d28137b7791fc3136f1213566dcd4034ff0a42e
+Merge: 63b960d 06189db
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 11:21:51 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 63b960d66f6274f64985aad2cd1f11c75eca7719
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 11:21:40 2015 -0500
+
+    Updated team page
+
+commit 06189db42b30e37fb79393d2f0e82819764c024c
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 16:20:21 2015 +0000
+
+    Added error cases and error handling for search and its unit tests
+
+commit cb2a1b160abaf8e3b0070a74d077dd08c5833df2
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 16:19:18 2015 +0000
+
+    Fixed descriptions for cuisines
+
+commit 8fe571b7c875ac56f4eb9878d3db9de71e133cc8
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 10:59:04 2015 -0500
+
+    Fix for search getting other than posts
+
+commit 72f5e74768de8f6c6d418130695390d285837460
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 10:42:06 2015 -0500
+
+    Added search tests
+
+commit 3f8d499bd041e0782f613b090b91c8e720c95989
+Merge: c49d903 da31dc9
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 15:13:49 2015 +0000
+
+    Merge conflicts in search.sql
+
+commit c49d903b8ca1dc833aba0e43140afcf04131207d
+Author: Joey <jjc2011@gmail.com>
+Date:   Thu Apr 23 15:09:19 2015 +0000
+
+    Adding changes from yesterday
+
+commit da31dc9b64faeb10add847f440ff9cc02ad364a4
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Thu Apr 23 10:01:54 2015 -0500
+
+    Update README.md
+
+commit 467d621b2dadf4d2f2a2c1bbfb8dc45a66df741e
+Merge: 8825d54 2757a1f
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 05:16:04 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 8825d5472169fc9ae41f887ed6dacbe3430f92ff
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 23 05:15:50 2015 +0000
+
+    Maybe fixed the header image for good?
+
+commit 2757a1f0ce98eeeb47a6488f9ba80e4e2dbad20a
+Merge: 9b4e329 d9085cf
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Apr 22 17:47:59 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 9b4e329b2dc5bbce7c0bf599ea7e92d118f61c90
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Wed Apr 22 17:47:48 2015 -0500
+
+    Shortened Query
+
+commit d9085cfa3d5b3a947eca74efc16208b7c5cbd0cc
+Author: andy1815 <andytchow@gmail.com>
+Date:   Wed Apr 22 17:10:54 2015 -0500
+
+    Update README.md
+
+commit 667b547246d1cf1c0913b6b81ed10b8a3ad35ecd
+Merge: a4babb8 b200191
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Apr 22 16:30:10 2015 +0000
+
+    merged taylors search into GoT api page commit
+
+commit a4babb837b7474887bd767abcd6875fad11703aa
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Wed Apr 22 16:27:13 2015 +0000
+
+    GoT api calls page kind've done?
+
+commit b2001913ed0b534e91f643085d54618390470a27
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Apr 22 00:36:12 2015 -0500
+
+    Tiny fix on search page
+
+commit d84f639ea4a16b68d4e828b180ea79148df7cb8e
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Apr 22 05:32:38 2015 +0000
+
+    Fixed header image
+
+commit 8c12e7ebe3fc9d8f1fe0ff428168813b18120929
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Apr 22 05:21:52 2015 +0000
+
+    Search page update
+
+commit 172cd54617354da872fdb2f4e451ac452be89bb2
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Wed Apr 22 05:21:18 2015 +0000
+
+    Index page update
+
+commit 28975afca66947607a735d60eb79083923b9c27d
+Author: andy1815 <andytchow@gmail.com>
+Date:   Tue Apr 21 19:27:12 2015 -0500
+
+    Update README.md
+
+commit 60648fb25d0d0578f7d4b0ee69f0800e0d62016a
+Author: andy1815 <andytchow@gmail.com>
+Date:   Tue Apr 21 19:26:48 2015 -0500
+
+    Update README.md
+
+commit bdeb5c5536a604698281b3cd952b41c48b85bcb0
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Wed Apr 22 00:17:33 2015 +0000
+
+    removed sudo requirement in yml
+
+commit 92dd70c55378b1d720f708f2eb546cdb7e01fa26
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Tue Apr 21 23:59:56 2015 +0000
+
+    changed yml and script files
+
+commit fa385b870075a70e33c423b82e7fe9d9fff75ce3
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 21 18:49:53 2015 -0500
+
+    [WIP] Updated search
+
+commit 3250d813f3a76393f77634b91e712793484f317e
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Apr 21 17:53:06 2015 -0500
+
+    new query to put ranking back in
+
+commit 48909d2e7a803adeae2ab112b87429202807056f
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Tue Apr 21 22:19:56 2015 +0000
+
+    changed travis.bash
+
+commit 8c6f1c2dd42ccae14c9088690116320ead492137
+Merge: e963eef fdbc37c
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Tue Apr 21 22:16:00 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit e963eefdbc7940f163ed9662f1439f9c8447889f
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Tue Apr 21 22:15:07 2015 +0000
+
+    changed app.py
+
+commit fdbc37ccc94d9c11048bd367661d0ee51539d330
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Tue Apr 21 16:56:20 2015 -0500
+
+    Modified query to not repeat
+
+commit ab7bdb432db9b0d90479725371387c47fa2f6fb7
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 21 15:49:49 2015 -0500
+
+    [WIP] Updated search queries
+
+commit 05250f1fffbca245c7bf4fa7500b0b22e7bfde6e
+Merge: 127d269 e03fbaf
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 21 12:21:43 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 127d2698ed9cc6ecb913e9cab4a04fd35bf27060
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Tue Apr 21 12:21:25 2015 -0500
+
+    [WIP] Template not complete, repetition bug
+
+commit e03fbaf29447fbb4182a355fb235ab2f8a05ec23
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Mon Apr 20 00:04:36 2015 +0000
+
+    changed .travis.yml
+
+commit fd5b9e85fc49b518dfd5c3c59545325bfc8b10d7
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:58:47 2015 +0000
+
+    changed .travis.yml
+
+commit f9bbbc1df8c761e0a436178e538499eb2b2e1666
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:53:00 2015 +0000
+
+    changed travis.bash
+
+commit 37e7813833df4342e11d463089083b8922772937
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:41:14 2015 +0000
+
+    added to travis.bash to create mydb before running tests
+
+commit 26ace976af1e541ad98cb173424ee50708957ce5
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:26:26 2015 +0000
+
+    changed travis.bash to setup db before running tests
+
+commit 5073044eed35009b0b1884c71079964de7b50620
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:18:42 2015 +0000
+
+    deleted lines from requirements.txt
+
+commit 86d9551d77c500ff22a445d4a513c104ac1e7449
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:14:59 2015 +0000
+
+    made new requirement file
+
+commit df11e986d094e833f487ef4a1949081e5b6b22ab
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:12:58 2015 +0000
+
+    made new requirement file
+
+commit b2bc5fc7d3f89497fcc2c44cf96dfa290a3a5c78
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 23:04:24 2015 +0000
+
+    changed requirements.txt
+
+commit cc42859660a0dcad46f2457f05d93c47b50a0452
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 22:46:58 2015 +0000
+
+    changed requirements.txt
+
+commit 8aec33aee774c9ba9caa97a2b384ee99caf5bd36
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 22:45:50 2015 +0000
+
+    changed requirements.txt
+
+commit 21dd614d4c6272cd284349d30d6e6d1c4b64d9c4
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 22:40:19 2015 +0000
+
+    changed requirements.txt
+
+commit cfce59cd50c10af8b1c280aff40a0a9ed53a21a1
+Merge: 1d81fa3 98d5028
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Sun Apr 19 17:38:50 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 1d81fa3436e84d66f50f2ef54c38191460e8077d
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Sun Apr 19 17:38:31 2015 -0500
+
+    Removed line break for search button
+
+commit 98d50288a860bdf7e0e361407bd9416765ad66a9
+Merge: 02fb075 6b1e498
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 22:34:16 2015 +0000
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit 02fb075723d6183ac094b5b8a705133f57367973
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 22:33:40 2015 +0000
+
+    changed requirements.txt
+
+commit 6b1e498b9dbe94ba21660056e0631a538788676c
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Sun Apr 19 17:30:54 2015 -0500
+
+    New queries that include weights
+
+commit ca1da1348c8be901b6acb7f9d9a9b58f53b9458f
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 21:51:07 2015 +0000
+
+    added travis.bash
+
+commit 34d2030ee09e7d9fd8dc26cd08bfc0c4edac8076
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Sun Apr 19 21:31:17 2015 +0000
+
+    fixed css issue with banner thru dirty hackz
+
+commit 5ba1649173b4331bc385cf7d7f26b0a5aa15d455
+Author: Andy Chow <andytchow@gmail.com>
+Date:   Sun Apr 19 21:27:58 2015 +0000
+
+    added .travis.yml
+
+commit 2799314754d98405a1eb9d9d813266b2ddbe89db
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Sat Apr 18 02:50:44 2015 +0000
+
+    cannot fixeh the white space
+
+commit 4f7108b6af05f93e82bc1c2abbfd9629e3623abe
+Author: Joey <jjc2011@gmail.com>
+Date:   Fri Apr 17 20:47:25 2015 +0000
+
+    Fixed the unit tests not working correctly, needed to fix some imports, closes #69
+
+commit 1643bfe9eef78e77e36cabe994796871be406bd9
+Merge: a284a5e 29b0ad3
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Fri Apr 17 13:49:43 2015 -0500
+
+    Merge branch 'master' of https://github.com/tbarn/cs373-idb
+
+commit a284a5e67b86d394dbbff92d61b1d05b63b9482a
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Fri Apr 17 13:49:28 2015 -0500
+
+    Added searching functionality
+
+commit 29b0ad3e26bb0402d4f3006d0eddd57ae8608ad1
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Fri Apr 17 13:15:31 2015 -0500
+
+    Fixed broken image
+
+commit 7598cdc5864c18918295a7241a919f4c3dbfef29
+Author: Carl Bai <carlbai@gmail.com>
+Date:   Fri Apr 17 12:04:38 2015 -0500
+
+    Search queries
+
+commit b1a779f66f7f4f86d74b12cc4ccf45a172f2ecfe
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Fri Apr 17 11:44:45 2015 -0500
+
+    added requirements for travisci config
+
+commit f5504dfe83b24ffa1ca38364dfc9928bec4eabd1
+Author: NotBrianZach <brianzacabel@utexas.edu>
+Date:   Fri Apr 17 16:15:09 2015 +0000
+
+    front end for search
+
+commit 571bddd9be4912e0c7f95f7e3d46a572e3370f24
+Author: Taylor Barnett <taylormbarnett@utexas.edu>
+Date:   Thu Apr 9 18:37:11 2015 -0500
+
+    Updated git log
+
 commit 7009dd1e18a53bdcf16bb69c9efbca6099ecd412
 Merge: 9cba75f b061d3b
 Author: Joey <jjc2011@gmail.com>
