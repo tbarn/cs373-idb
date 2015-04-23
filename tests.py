@@ -544,6 +544,15 @@ class TestIDB (TestCase) :
         self.assertEqual(c, 'text/html; charset=utf-8')
         self.assertTrue('Are you sure you typed that right' in t)
 
+    def test_search_1 (self) :
+        self.maxDiff = None
+        r = app.app.test_client().post('/search', data=dict({'search':'eggs'}))
+        c = r.headers['content-type']
+        t = r.data.decode("utf-8")
+        #self.assertEqual(t, 'text/html; charset=utf-8')
+        self.assertTrue('Thai' in t)
+
+
     # -------------
     # Error Handler
     # -------------

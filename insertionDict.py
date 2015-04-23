@@ -469,7 +469,7 @@ ingredients = [
         "id": 6, 
         "name": "sesame seeds", 
         "description": "Sesame seed is one of the first recorded seasonings. It grows widely in India and Asia. These tiny seeds come in shades of brown, red and black, but the most common color is a pale grayish-ivory. Sesame seeds have a nutty, sweet aroma with a milk-like, buttery taste.", 
-        "image_URL": "http://www.elanaspantry.com/blog/wp-content/uploads/sesame-seeds-flickr.jpg", 
+        "image_URL": "http://www.comco-group.com/wp-content/uploads/2012/01/sesame-seeds-flickr.jpg", 
         "recipes": [
         {"id": 1, "name": "California Roll"},
         {"id": 9, "name": "Beef Bulgogi"}], 

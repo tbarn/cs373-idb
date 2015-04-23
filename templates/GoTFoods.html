@@ -8,8 +8,10 @@
 <div  class='container-fluid'>
   <div class='container'>
   <div id='info' class='jumbotron'>
+    <p> Foods from Game of Thrones with relevant character names and status, alive or dead, pulled from the House Downing API.
     <div class='row' id="GoTFoods">
     </div>
+	<p style="font-size:90%">Data pulled from http://www.huffingtonpost.com/food-52/10-royal-recipes-for-a-ga_b_5143886.html  and  http://www.buzzfeed.com/seancurry1/game-of-thrones-recipes</p>
    </div>
   </div>
 </div>
@@ -130,8 +132,9 @@ bigList = [
 	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[i].Character_Id,function(data) {
 	            console.log(JSON.stringify(data,null,2));
 	            $("#GoTFoods").append("<div class='col-md-4 text-center'>"+"<img src=" + bigList[i].image_URL +
-                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>" + bigList[i].Quote  +
-			 "</p><p> Character name: " + data.first_name + " " + data.last_name + "</p><p> Status: " + data.status +  "</p></div>");
+                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p>"
+			 + bigList[i].Food + "</p><p style='font-size:90%; font-style: italic;'>'" + bigList[i].Quote  +
+			 "'</p><p style='font-size:90%; padding:-50px; border:-50px'> Character name: " + data.first_name + " " + data.last_name + "</p><p style='font-size:90%;'> Status: " + data.status +  "</p><p style='font-size:90%;'> Organization: " + data.affiliations[0].org_name + "</p></div>");
 	    })
             if (arrayLength - i - 1 == arrayLength % 3)
 		break;
@@ -140,9 +143,10 @@ bigList = [
 	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[arrayLength - 1].Character_Id,function(data) {
 	            console.log(JSON.stringify(data,null,2));
 	            $("#GoTFoods").append("<div class='col-md-12 text-center'>"+"<img src=" + bigList[arrayLength - 1].image_URL +
-                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>"
-			 + bigList[arrayLength - 1].Quote  + "</p><p> Character name: " + data.first_name + " " + data.last_name
-			 + "</p><p> Status: " + data.status +  "</p></div>");
+                         " class='img-rounded' alt='Buffet' width='250' height='236' /><p>" +
+			 bigList[arrayLength - 1].Food + "</p><p style='font-size:90%; font-style: italic;'>'"
+			 + bigList[arrayLength - 1].Quote  + "'</p><p style='font-size:90%;'> Character name: " + data.first_name + " " + data.last_name
+			 + "</p><p style='font-size:90%;'> Status: " + data.status +  "</p><p style='font-size:90%;'> Organization: " + data.affiliations[0].org_name +  "</p></div>");
 		});
 
 	     //$("#GoTFoods").append("<div class='col-md-12 text-center'>"+"<img src=" + bigList[arrayLength - 1].image_URL
@@ -154,18 +158,19 @@ bigList = [
 	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[arrayLength - 1].Character_Id,function(data) {
 	            console.log(JSON.stringify(data,null,2));
 	            $("#GoTFoods").append("<div class='col-md-6 text-center'>"+"<img src=" + bigList[arrayLength - 1].image_URL +
-                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>"
-			 + bigList[arrayLength - 1].Quote  + "</p><p> Character name: " + data.first_name + " " + data.last_name
-			 + "</p><p> Status: " + data.status +  "</p></div>");
+                         " class='img-rounded' alt='Buffet' width='250' height='236' /><p>"
+			 + bigList[arrayLength - 1].Food +"</p><p style='font-size:90%; font-style: italic;'>'"
+			 + bigList[arrayLength - 1].Quote  + "'</p><p style='font-size:90%;' > Character name: " + data.first_name + " " + data.last_name
+			 + "</p><p style='font-size:90%;' > Status: " + data.status +  "</p><p style='font-size:90%;' > Organization: " + data.affiliations[0].org_name + "</p></div>");
 		});
 	    $.getJSON('http://valar-morghulis.charuri.me/api/characters/' + bigList[arrayLength - 2].Character_Id,function(data) {
 	            console.log(JSON.stringify(data,null,2));
 	            $("#GoTFoods").append("<div class='col-md-6 text-center'>"+"<img src=" + bigList[arrayLength - 2].image_URL +
-                         " class='img-rounded' alt='Buffet' width='250' height='236' />" +"<p style='font-size:90%; font-style: italic;'>"
-			 + bigList[arrayLength - 2].Quote  + "</p><p> Character name: " + data.first_name + " " + data.last_name
-			 + "</p><p> Status: " + data.status +  "</p></div>");
+                         " class='img-rounded' alt='Buffet' width='250' height='236' /><p>"  + bigList[arrayLength - 2].Food + "</p><p style='font-size:90%; font-style: italic;'>'"
+			 + bigList[arrayLength - 2].Quote  + "'</p><p style='font-size:90%;' > Character name: " + data.first_name + " " + data.last_name
+			 + "</p><p style='font-size:90%;' > Status: " + data.status +  "</p><p style='font-size:90%;' > Organization: " + data.affiliations[0].org_name +  "</p></div>");
 		});
-	}
+        }
 
 //	$("#alias").text("Character alias: ".concat(data.alias));
 //	$("#name").text("Character name: ".concat(data.first_name.concat(" ".concat(data.last_name))));

@@ -33,6 +33,7 @@ cd ..
 
 psql mydb < tableschema.sql
 python3 insertionDict.py
+psql mydb < search.sql
 
 python3 tests.py
 

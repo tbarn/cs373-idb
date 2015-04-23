@@ -1,3 +1,6 @@
+DROP MATERIALIZED VIEW searchIngredients;
+DROP MATERIALIZED VIEW searchRecipes;
+DROP MATERIALIZED VIEW searchCuisines;
 drop table r_and_i;
 drop table c_and_i;
 drop table ingredients;
