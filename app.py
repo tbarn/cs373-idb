@@ -266,10 +266,12 @@ def search_database():
 
         or_cuisine_results = [i for i in temp_cuisines if i not in and_cuisine_results]       
 
-    return render_template("search.html", search_query=search_query, 
-        and_ingredient_results=and_ingredient_results, or_ingredient_results=or_ingredient_results, 
-        and_cuisine_results=and_cuisine_results, or_cuisine_results=or_cuisine_results, 
-        and_recipe_results=and_recipe_results, or_recipe_results=or_recipe_results)
+        return render_template("search.html", search_query=search_query, 
+            and_ingredient_results=and_ingredient_results, or_ingredient_results=or_ingredient_results, 
+            and_cuisine_results=and_cuisine_results, or_cuisine_results=or_cuisine_results, 
+            and_recipe_results=and_recipe_results, or_recipe_results=or_recipe_results)
+    else:
+        return render_template("index.html",index=index)
 
 # Website routes
 
