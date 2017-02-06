@@ -13,7 +13,7 @@ Our pillars:
 * Recipes
 * Ingredients
 
-For more information refer to [Introduction](https://github.com/tbarn/cs373-idb/wiki/(1)-Introduction) Wiki page
+For more information refer to [Introduction](https://github.com/tbarn/cs373-idb/wiki/Introduction) Wiki page
 
 ##Dependencies
 Needed libraries to run app: flask (need to install), psycogp2 (need to install), unittest, getpass, io
@@ -21,7 +21,7 @@ Needed libraries to run app: flask (need to install), psycogp2 (need to install)
 Needed libraries to run tests: flask (need to install) and unittest
 
 ##Important Files
-Refer to [Application Structure](https://github.com/tbarn/cs373-idb/wiki/(5)-Application-Structure) Wiki Page
+Refer to [Application Structure](https://github.com/tbarn/cs373-idb/wiki/Application%20Structure) Wiki Page
 
 ##Quick setup (assumes you have git, python3 and pip for python3)
 --Clone github project
