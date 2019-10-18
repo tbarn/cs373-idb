@@ -15,7 +15,7 @@ psycopg2==2.4.5
 PyYAML==3.10
 requests==2.6.0
 roman==2.0.0
-urllib3==1.7.1
+urllib3==1.24.2
 uWSGI==2.0.9
 virtualenv==1.11.4
 watchdog==0.8.3
